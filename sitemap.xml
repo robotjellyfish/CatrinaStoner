@@ -1,40 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Sitemap generated for robotjellyfish.jimdofree.com converted to static site -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://robotjellyfish.jimdofree.com/</loc>
-    <lastmod>2025-12-04</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-
-  <url>
-    <loc>https://robotjellyfish.jimdofree.com/#artwork</loc>
-    <lastmod>2025-12-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://robotjellyfish.jimdofree.com/#brain</loc>
-    <lastmod>2025-12-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://robotjellyfish.jimdofree.com/#poetry</loc>
-    <lastmod>2025-12-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://catrinastoner.blogspot.com/</loc>
-    <lastmod>2025-12-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-
-  <!-- Add more URLs for galleries, individual artwork pages, or blog posts as you create them -->
+   <url>
+      <loc>https://robotjellyfish.github.io/</loc>
+   </url>
+   <url>
+      <loc>https://robotjellyfish.github.io/arthive.html</loc>
+   </url>
+   <url>
+      <loc>https://robotjellyfish.github.io/brainvomit.html</loc>
+   </url>
+   <url>
+      <loc>https://robotjellyfish.github.io/poetry.html</loc>
+   </url>
 </urlset>
