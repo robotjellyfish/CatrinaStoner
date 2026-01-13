@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CATRINA•STONER</title>
+
+  <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/robotjellyfish/CatrinaStoner/refs/heads/main/icon.png"/>
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Fjalla+One&family=Amarante&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --text-main: #f9f9f9;
+      --warning-pink: #ff6ec2;
+      --warning-border: #ff4081;
+      --yellow-alert: #fff700;
+      --tagline-green: #92CC00;
+      --btn-bg: #470176;
+      --btn-hover: #8702F4;
+      --btn-border: #FFC400;
+      --btn-text: #C4FF00;
+      --btn-text-hover: #C4FF00;
+      --shadow-text: 0 2px 8px rgba(0,0,0,0.85);
+      --bg-shade: rgba(0,0,0,0.55);
+    }
+
+    * { margin:0; padding:0; box-sizing:border-box; }
+
+    body {
+      background: #000 url('https://raw.githubusercontent.com/robotjellyfish/CatrinaStoner/refs/heads/main/background.jpg') center/cover fixed no-repeat;
+      color: var(--text-main);
+      font-family: 'Roboto', sans-serif;
+      line-height: 1.5;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    .container { max-width: 1380px; margin: 0 auto; padding: 0 1.2rem; }
+
+    img { max-width: 100%; height: auto; display: block; }
+
+    /* NAVIGATION */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(0,0,0,0.78);
+      backdrop-filter: blur(10px);
+      padding: 0.9rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.12);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.9rem;
+    }
+
+    .nav-logo img { height: 48px; width: auto; }
+
+    .nav-site-name {
+      color: white;
+      font-family: 'Fjalla One', sans-serif;
+      font-size: clamp(1.3rem, 3.8vw, 1.9rem);
+      letter-spacing: 0.04em;
+      white-space: nowrap;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2.2rem;
+      font-size: 1.1rem;
+      font-weight: 500;
+    }
+
+    .nav-links a { color: white; text-decoration: none; transition: color 0.3s; }
+    .nav-links a:hover { color: #ffc800; }
+
+    .dropdown { position: relative; }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background: rgba(0,0,0,0.92);
+      min-width: 180px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.6);
+      z-index: 1;
+      border-radius: 8px;
+      overflow: hidden;
+      top: 100%;
+      left: 0;
+    }
+    .dropdown:hover .dropdown-content { display: block; }
+    .dropdown-content a {
+      padding: 12px 16px;
+      display: block;
+      color: white;
+    }
+    .dropdown-content a:hover { background: rgba(255,255,255,0.08); }
+
+    /* HEADER */
+    header {
+      position: relative;
+      height: clamp(35vh, 65vw, 80vh);
+      min-height: 480px;
+      overflow: hidden;
+    }
+
+    .header-banner {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center;
+      background: #000;
+    }
+
+    /* TITLE ON FEATHER */
+    .title-banner-section {
+      position: relative;
+      margin: 4rem 0 3rem;
+      text-align: center;
+    }
+
+    .title-feather-bg {
+      width: 100%;
+      height: auto;
+      display: block;
+      filter: brightness(0.78);
+      border-radius: 12px;
+    }
+
+    h1 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-family: 'Fjalla One', sans-serif;
+      font-size: clamp(5rem, 9.5vw, 10.5rem);
+      color: white;
+      letter-spacing: -0.03em;
+      line-height: 1;
+      white-space: nowrap;
+      text-shadow: var(--shadow-text);
+    }
+
+    /* RAINBOW DIVIDER */
+    .rainbow-divider {
+      height: 11px;
+      margin: 3.2rem auto;
+      width: 100%;
+      max-width: 1100px;
+      border-radius: 6px;
+      animation: rainbowCycle 10s linear infinite;
+      position: relative;
+    }
+
+    @keyframes rainbowCycle {
+      0%   { background: #FF00AA; }
+      20%  { background: #FF8A3C; }
+      40%  { background: #FFF700; }
+      60%  { background: #92CC00; }
+      80%  { background: #03A6F7; }
+      100% { background: #8702F4; }
+    }
+
+    /* WARNING */
+    .warning-box {
+      max-width: 860px;
+      margin: 4rem auto;
+      padding: 3rem 1.8rem;
+      border: 6px double var(--warning-border);
+      border-radius: 16px;
+      background: var(--bg-shade);
+      text-align: center;
+    }
+
+    .alert {
+      color: var(--yellow-alert);
+      font-size: clamp(3.8rem, 9.5vw, 6.5rem);
+      line-height: 0.85;
+      margin: 0 0.25em;
+    }
+
+    .warning-title {
+      font-family: 'Fjalla One', sans-serif;
+      font-size: clamp(2.6rem, 7vw, 4.2rem);
+      color: var(--warning-pink);
+      font-weight: bold;
+      margin: 0.4rem 0 1.6rem;
+    }
+
+    .warning-text {
+      color: white;
+      font-size: clamp(1.55rem, 4.4vw, 2.15rem);
+      font-weight: 500;
+      line-height: 1.4;
+      text-shadow: var(--shadow-text);
+    }
+
+    /* TAGLINE */
+    .tagline {
+      font-family: 'Amarante', cursive;
+      font-size: clamp(1.7rem, 4.8vw, 2.6rem);
+      color: var(--tagline-green);
+      letter-spacing: 0.08em;
+      text-align: center;
+      margin: 2.5rem 0 4rem;
+      text-shadow: var(--shadow-text);
+      background: var(--bg-shade);
+      padding: 1.2rem 2rem;
+      border-radius: 14px;
+      display: inline-block;
+    }
+
+    /* TEXT BLOCKS */
+    .text-block {
+      max-width: 1000px;
+      margin: 3.5rem auto;
+      font-size: clamp(1.6rem, 4.2vw, 2.3rem);
+      line-height: 1.45;
+      text-align: center;
+      text-shadow: var(--shadow-text);
+    }
+
+    .text-block strong { font-weight: 700; }
+
+    /* QUOTES */
+    .quote-block {
+      font-family: serif;
+      font-style: italic;
+      font-size: clamp(1.9rem, 4.8vw, 2.8rem);
+      margin: 4rem auto;
+      max-width: 950px;
+      text-shadow: var(--shadow-text);
+    }
+
+    .quote-left  { text-align: left; }
+    .quote-right { text-align: right; }
+
+    /* BUTTONS */
+    .btn {
+      display: block;
+      width: fit-content;
+      margin: 2rem auto;
+      padding: 0.9rem 2.6rem;
+      background: var(--btn-bg);
+      color: var(--btn-text);
+      font-family: 'Fjalla One', sans-serif;
+      font-size: 2.2rem;
+      text-decoration: none;
+      border: 3px solid var(--btn-border);
+      border-radius: 14px;
+      transition: all 0.35s ease;
+      letter-spacing: 0.05em;
+      text-align: center;
+      min-width: 300px;
+    }
+
+    .btn:hover {
+      background: var(--btn-hover);
+      color: var(--btn-text-hover);
+      transform: translateY(-3px);
+    }
+
+    /* TWO COLUMN */
+    .two-col {
+      display: flex;
+      flex-wrap: nowrap;
+      gap: 3rem;
+      justify-content: center;
+      margin: 4.5rem 0;
+    }
+
+    @media (max-width: 900px) {
+      .two-col { flex-wrap: wrap; gap: 2.5rem; }
+    }
+
+    .col { flex: 1 1 45%; text-align: center; }
+
+    .small-img {
+      width: 100%;
+      max-width: 520px;
+      height: auto;
+      border-radius: 12px;
+      margin: 0;
+    }
+
+    /* ROCK + SELFIES */
+    .rock-overlay {
+      position: relative;
+      margin: 4.5rem 0;
+    }
+
+    .rock-overlay img.bg { width: 100%; height: auto; display: block; filter: brightness(0.68); }
+
+    .selfies-overlay {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      transform: translateY(-50%);
+      z-index: 1;
+    }
+
+    .selfies-overlay img { width: 100%; height: auto; display: block; }
+
+    /* FOOTER */
+    footer {
+      padding: 5rem 1.5rem 3.5rem;
+      background: rgba(0,0,0,0.7);
+      backdrop-filter: blur(10px);
+      text-align: center;
+    }
+
+    @media (max-width: 640px) {
+      .rainbow-divider { margin: 2.8rem auto; }
+      .warning-box { padding: 2.5rem 1.5rem; }
+      .btn { padding: 0.85rem 2.2rem; font-size: 2rem; min-width: 260px; }
+      h1 { font-size: clamp(4rem, 9vw, 9rem); }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+  <div class="container nav-inner">
+    <div class="nav-logo">
+      <img src="https://raw.githubusercontent.com/robotjellyfish/CatrinaStoner/refs/heads/main/icon.png" alt="Icon" height="54">
+      <span class="nav-site-name">CATRINA•STONER</span>
+    </div>
+    <div class="nav-links">
+      <a href="https://robotjellyfish.github.io/CatrinaStoner/">MA𝗜𝗡</a>
+      <div class="dropdown">
+        <a href="#">ART𝗛𝗜𝗩𝗘</a>
+        <div class="dropdown-content">
+          <a href="https://photos.app.goo.gl/pp1PdFq5dbE7Q2XaA">𝗣𝗛𝗢𝗧𝗢GRAPHY</a>
+          <a href="https://sites.google.com/view/robot-jellyfish/arthive/">ART𝗛𝗜𝗩𝗘</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <a href="#">𝗕𝗥𝗔𝗜𝗡 VOMIT</a>
+        <div class="dropdown-content">
+          <a href="https://sites.google.com/view/thevespaveda">𝗩𝗘𝗦𝗣𝗔 VEDA</a>
+          <a href="https://robotjellyfish.jimdofree.com/brainvomit/">𝗕𝗥𝗔𝗜𝗡 VOMIT</a>
+          <a href="https://catrinastoner.blogspot.com/">𝗕LOG</a>
+          <a href="https://robotjellyfish.jimdofree.com/poetry/">𝗣OEMS</a>
+        </div>
+      </div>
+      <a href="https://sites.google.com/view/robot-jellyfish/about/">AB𝗢𝗨𝗧</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HEADER -->
+<header>
+  <img src="https://raw.githubusercontent.com/robotjellyfish/CatrinaStoner/refs/heads/main/header.png"
+       alt="Header banner" class="header-banner" loading="lazy">
+</header>
+
+<main class="container">
+
+  <div class="rainbow-divider"></div>
+
+  <!-- TITLE ON FEATHER -->
+  <section class="title-banner-section">
+    <img src="https://raw.githubusercontent.com/robotjellyfish/CatrinaStoner/refs/heads/main/rainbow%20feather%20banner%20(1).png"
+         alt="Rainbow feather background" class="title-feather-bg" loading="lazy">
+    <h1>CATRINA STONER</h1>
+  </section>
+
+  <div class="rainbow-divider"></div>
+
+  <!-- PROFILE -->
+  <img src="https://raw.githubusercontent.com/robotjellyfish/CatrinaStoner/refs/heads/main/headshot%20(1).png"
+       alt="Profile headshot" style="width: clamp(220px, 35vw, 380px); border-radius:20px; margin:0 auto 3rem; display:block;" loading="lazy">
+
+  <div class="rainbow-divider"></div>
+
+  <!-- TAGLINE -->
+  <div class="tagline">
+    ꔷ ARTIST ꔷ PHOTOGRAPHER ꔷ PHILOSOPHER ꔷ ENTOMOLOGY ENTHUSIAST ꔷ
+  </div>
+
+  <div class="rainbow-divider"></div>
+
+  <!-- WARNING -->
+  <section class="warning-box">
+    <div>
+      <span class="alert">⚠</span>
+      <span class="warning-title">WARNING</span>
+      <span class="alert">⚠</span>
+    </div>
+    <div class="warning-text">
+      DO NOT OVERTHINK THIS OR<br>YOU WILL LOSE YOUR MIND
+    </div>
+  </section>
+
+  <div class="rainbow-divider"></div>
+
+  <!-- MONTAGALOGUE -->
+  <section class="text-block">
+    WELCOME TO MY<br>
+    <strong>MONTAGALOGUE!</strong><br><br>
+    THIS IS A<br>
+    <strong>DIGITALLY</strong><br>
+    <strong>FOSSILIZED</strong><br><br>
+    <strong>ARCHIVE</strong><br>
+    OF MY <strong>MIND</strong>
+  </section>
+
+  <div class="rainbow-divider"></div>
+
+  <!-- QUOTES -->
+  <section>
+    <div class="quote-block quote-left">
+      ❝THIS IS THE DEVIL'S WORK…❞
+    </div>
+    <div class="quote-block quote-right">
+      ❝…ARE YOU NOT ENTERTAINED❞
+    </div>
+  </section>
+
+  <div class="rainbow-divider"></div>
+
+  <!-- PHOTOGRAPHY -->
+  <section>
+    <div style="margin:3rem 0;">
+      <script src="https://elfsightcdn.com/platform.js" async></script>
+      <div class="elfsight-app-78a8a880-e0e6-44de-93f8-a3da8153a05e" data-elfsight-app-lazy></div>
+    </div>
+    <a href="https://photos.app.goo.gl/pp1PdFq5dbE7Q2XaA" target="_blank" rel="noopener" class="btn">SEE MORE PHOTOGRAPHY</a>
+  </section>
+
+  <div class="rainbow-divider"></div>
+
+  <!-- ARTHIVE – no background -->
+  <section style="padding:4.5rem 0;">
+    <div style="margin:3rem 0;">
+      <script src="https://elfsightcdn.com/platform.js" async></script>
+      <div class="elfsight-app-b65e4ec4-6dc9-461d-ac58-723bf83e516f" data-elfsight-app-lazy></div>
+    </div>
+    <a href="https://sites.google.com/view/robot-jellyfish/arthive/" target="_blank" rel="noopener" class="btn">VIEW THE ARTHIVE</a>
+  </section>
+
+  <div class="rainbow-divider"></div>
+
+  <!-- VESPA VEDA – updated title font & color -->
+  <section style="text-align:center; padding:4rem 0;">
+    <h2 style="font-family:'Amarante',cursive; color:#FFCC00; font-size:clamp(2.6rem,6.5vw,4.2rem); margin-bottom:2rem;">THE VESPA VEDA</h2>
+    <iframe width="100%" height="520" style="max-width:960px; border-radius:16px; margin:0 auto 2.5rem; display:block;"
+            src="https://www.youtube.com/embed/Rt63v9CMmpI?rel=0" 
+            title="The Vespa Veda" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen loading="lazy"></iframe>
+    <a href="https://sites.google.com/view/thevespaveda" target="_blank" rel="noopener" class="btn">THE VESPA VEDA</a>
+  </section>
+
+  <div class="rainbow-divider"></div>
+
+  <!-- MIND BLOWN -->
+  <section class="text-block" style="font-size:clamp(1.8rem,4.8vw,2.6rem);">
+    𝗧𝗛𝗢𝗨𝗚𝗛𝗧𝗙𝗨𝗟 RE𝗠𝗜𝗡𝗗ER<br>
+    TO 𝗙𝗘𝗘𝗗 𝗬𝗢𝗨𝗥 𝗠𝗜𝗡𝗗<br>
+    SOME 𝗠𝗜𝗡𝗗𝗙𝗨𝗟 FOOD FOR 𝗧𝗛𝗢𝗨𝗚𝗛𝗧<br>
+    UNTIL YOUR 𝗠𝗜𝗡𝗗 IS 𝗙𝗨𝗟𝗟<br>
+    AND YOUR 𝗠𝗜𝗡𝗗 GETS 𝗕𝗟𝗢𝗪𝗡 TO 𝗣𝗜𝗘𝗖𝗘𝗦<br>
+    BUT YOU FIND SOME 𝗣𝗘𝗔𝗖𝗘 OF 𝗠𝗜𝗡𝗗 IN 𝗠𝗜𝗡𝗗LESSNESS<br><br>
+    <strong>𝗠𝗜𝗡𝗗 𝗕𝗟𝗢𝗪𝗡!</strong>
+  </section>
+
+  <div class="rainbow-divider"></div>
+
+  <!-- THREE BUTTONS -->
+  <section>
+    <div class="three-col" style="display:flex; flex-wrap:wrap; gap:2rem; justify-content:center; margin:3.5rem 0;">
+      <div class="col"><a href="https://catrinastoner.blogspot.com/" target="_blank" rel="noopener" class="btn">READ MY BLOG</a></div>
+      <div class="col"><a href="https://robotjellyfish.jimdofree.com/brainvomit/" target="_blank" rel="noopener" class="btn">SCHIZOPHRENIC<br>BRAIN VOMIT</a></div>
+      <div class="col"><a href="https://robotjellyfish.jimdofree.com/poetry/" target="_blank" rel="noopener" class="btn">POETRY</a></div>
+    </div>
+  </section>
+
+  <div class="rainbow-divider"></div>
+
+  <!-- ROCK + SELFIES -->
+  <section class="rock-overlay">
+    <img src="https://raw.githubusercontent.com/robotjellyfish/CatrinaStoner/refs/heads/main/rock%20layers.jpg"
+         alt="Rock layers" class="bg" loading="lazy">
+    <div class="selfies-overlay">
+      <img src="https://raw.githubusercontent.com/robotjellyfish/CatrinaStoner/refs/heads/main/bottom%20banner%20selfies%20black%20and%20white.jpg"
+           alt="Black & white selfies" loading="lazy">
+    </div>
+  </section>
+
+  <div class="rainbow-divider"></div>
+
+  <!-- TWO IMAGES -->
+  <section>
+    <div class="two-col">
+      <div class="col">
+        <img src="https://raw.githubusercontent.com/robotjellyfish/CatrinaStoner/refs/heads/main/pattern%20icon.png"
+             alt="Pattern" class="small-img" loading="lazy">
+      </div>
+      <div class="col">
+        <img src="https://raw.githubusercontent.com/robotjellyfish/CatrinaStoner/refs/heads/main/baphomet%20pose.png"
+             alt="Baphomet" class="small-img" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <div class="rainbow-divider"></div>
+
+  <!-- NAME -->
+  <section style="text-align:center; padding:4rem 0 7rem;">
+    <img src="https://raw.githubusercontent.com/robotjellyfish/robotjellyfish/refs/heads/main/name.png"
+         alt="Name artwork" style="max-width:90%; margin:0 auto; display:block;" loading="lazy">
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div style="display:flex; flex-wrap:wrap; justify-content:center; align-items:center; gap:5vw; padding:3.5vw 4.5vw; width:100%; box-sizing:border-box; margin:15px 0;">
+      <a href="https://facebook.com/catrinastoner" target="_blank" rel="noopener noreferrer"><img src="https://img.icons8.com/ios-filled/100/ffffff/facebook-new.png" alt="Facebook" style="width:9vw; max-width:48px; height:auto; flex-shrink:0;"></a>
+      <a href="https://www.instagram.com/robot_jellyfish?igsh=MzRlODBiNWFlZA==" target="_blank" rel="noopener noreferrer"><img src="https://img.icons8.com/ios-filled/100/ffffff/instagram-new.png" alt="Instagram" style="width:9vw; max-width:48px; height:auto; flex-shrink:0;"></a>
+      <a href="https://youtube.com/@catrinastoner" target="_blank" rel="noopener noreferrer"><img src="https://img.icons8.com/ios-filled/100/ffffff/youtube-play.png" alt="YouTube" style="width:9vw; max-width:48px; height:auto; flex-shrink:0;"></a>
+      <a href="https://pin.it/6wEfEdAP3" target="_blank" rel="noopener noreferrer"><img src="https://img.icons8.com/ios-filled/100/ffffff/pinterest--v1.png" alt="Pinterest" style="width:9vw; max-width:48px; height:auto; flex-shrink:0;"></a>
+      <a href="https://t.me/robotjellyfish" target="_blank" rel="noopener noreferrer"><img src="https://img.icons8.com/ios-filled/100/ffffff/telegram-app.png" alt="Telegram" style="width:9vw; max-width:48px; height:auto; flex-shrink:0;"></a>
+      <a href="https://reddit.com/user/Carnidendrophiliac" target="_blank" rel="noopener noreferrer"><img src="https://img.icons8.com/ios-filled/100/ffffff/reddit.png" alt="Reddit" style="width:9vw; max-width:48px; height:auto; flex-shrink:0;"></a>
+    </div>
+
+    <div style="display:flex; justify-content:center; align-items:center; width:100%; margin:20px 0;">
+      <img src="https://raw.githubusercontent.com/robotjellyfish/robotjellyfish/refs/heads/main/robotjellyfish%20(1).png" alt="robot jellyfish" loading="lazy"
+           style="max-width:340px; width:80%; height:auto; display:block; border-radius:12px; box-shadow:none;">
+    </div>
+
+    <div style="display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:10px; color:white; font-family:'Fjalla One',Arial,sans-serif; font-size:1.5vw; line-height:1.3; width:100%; max-width:95vw; margin:20px auto; padding:8px 0; box-sizing:border-box; text-align:center;">
+      Copyright © 2026 Catrina Stoner. Some rights reserved. Licensed under
+      <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="noopener noreferrer" style="color:#FFCC00; text-decoration:underline; text-underline-offset:2px;">CC BY-NC-ND 4.0</a>
+    </div>
+
+    <style>
+      @media (max-width:600px) {
+        div[style*="flex-wrap: wrap"] { gap:6vw; padding:5vw 6vw; }
+        div[style*="align-items: center"] { font-size:3.2vw; gap:8px; padding:12px 8px; }
+        img[alt="robot jellyfish"] { max-width:300px; }
+      }
+      @media (max-width:400px) { div[style*="flex-wrap: wrap"] { gap:7vw; } }
+    </style>
+  </footer>
+
+</body>
+</html>
