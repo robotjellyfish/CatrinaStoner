@@ -1,6 +1,6 @@
 # Catrina Stoner
 
-Personal digital montalogue & archive.
+This Montagalogue is a digitally fossilized archive of my Mind! ꔷ•ᐧ𝄵ᵃᵗʳⁱⁿᵃ
 
 **Live site:** https://robotjellyfish.github.io/CatrinaStoner/
 
