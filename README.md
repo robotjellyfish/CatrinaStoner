@@ -1,10 +1,14 @@
 #  CONT∆MIM∆GIИ∆TIOИ𖭅
 
-This Montagalogue is a digitally fossilized archive of my Mind! ꔷ•ᐧ𝄵ᵃᵗʳⁱⁿᵃ
+Thoughtful Reminder:
+Remember to feed your mind 
+some mindful food for thought until your mind is full 
+and your mind gets blown to pieces but you find some peace of mind 
+in mindlessness. 
+
+Mind Blown!
 
 **Live site:** https://robotjellyfish.github.io/CatrinaStoner/
-
-ꔷ Artist • Photographer • Philosopher • Entomology Enthusiast
 
 ![Screenshot of the site](https://raw.githubusercontent.com/robotjellyfish/CatrinaStoner/main/screenshot.png) <!-- upload a screenshot if you want -->
 
