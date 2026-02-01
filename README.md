@@ -1,4 +1,4 @@
-#  𓊈𐃗A🜏R⚕ИA•𖭅•𝗦T☯ИER𓊉
+#  𓊈CONT∆MIM∆GIИ∆TIOИ𖭅𓊉
 
 This Montagalogue is a digitally fossilized archive of my Mind! ꔷ•ᐧ𝄵ᵃᵗʳⁱⁿᵃ
 
