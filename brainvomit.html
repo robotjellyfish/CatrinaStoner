@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>BRAIN VOMIT</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Unica+One&family=Koulen&family=Aboreto&family=Bebas+Neue&family=Road+Rage&family=Alata&family=Amatic+SC&family=Antonio&family=Anton&family=Combo&family=Pompiere&family=Amaranth&family=Crushed&family=Julius+Sans+One&family=Cuprum&family=Syncopate&family=Barrio&family=Epilogue&family=Bahiana&family=Jacques+Francois+Shadow&family=Bungee&family=Lacquer&family=Stick&family=Montserrat&family=Big+Shoulders+Text&family=Eagle+Lake&family=Fredericka+the+Great&family=Nosifer&family=Girassol&family=Sail&family=Cinzel+Display&family=Fjalla+One&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --text-main: #f0f0f5;
+      --heading-green: #CCFE37;
+      --dark-void: #0a0012;
+    }
+
+    * { margin:0; padding:0; box-sizing:border-box; }
+    html, body {
+      min-height:100vh;
+      overflow-x:hidden;
+      background:#000 url('https://raw.githubusercontent.com/robotjellyfish/CatrinaStoner/refs/heads/main/background.jpg') center/cover fixed no-repeat;
+      color:var(--text-main);
+      font-family:'Noto Sans',sans-serif;
+      line-height:1.5;
+      text-align:center;
+    }
+
+    .container { max-width:1180px; margin:0 auto; padding:0 1.6rem; }
+
+  <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/robotjellyfish/CatrinaStoner/refs/heads/main/icon.png"/>
+
+/* NAVIGATION */
+nav {
+  background: #000;                    /* solid black – no transparency */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 1.6rem;
+}
+
+.nav-logo img {
+  height: 48px;
+  width: auto;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;                        /* slightly increased for better spacing */
+  font-family: 'Fjalla One', sans-serif;
+  font-size: 1.05rem;                 /* tiny bump for readability */
+  margin-left: auto;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.25s ease;
+  letter-spacing: 0.5px;
+}
+
+.nav-links a:hover {
+  color: var(--heading-green);        /* #CCFE37 – your neon green */
+}
+
+/* Dropdown */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #000;                   /* solid black match */
+  min-width: 200px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.7);
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid rgba(204, 254, 55, 0.15); /* subtle green tint border */
+  z-index: 1001;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 12px 18px;
+  color: white;
+  text-align: left;
+  font-size: 0.95rem;
+  transition: background 0.2s, color 0.2s;
+}
+
+.dropdown-content a:hover {
+  background: rgba(204, 254, 55, 0.12); /* faint green hover */
+  color: var(--heading-green);
+}
+
+/*---TITLE---*/
+    .title {
+      font-family:'Crushed',cursive;
+      color:#fff;
+      letter-spacing:0.04em;          /* reduced spacing to help fit on one line */
+      margin:2.2rem 0 2.8rem;
+    }
+
+    .title .main {
+      font-size:clamp(5rem, 7vw, 6rem);
+      font-weight:900;
+      display:block;
+      line-height:0.92;               /* tighter line height */
+      white-space: nowrap;            /* force single line */
+    }
+
+    .title .sub {
+      font-size:clamp(1.29rem, 3.66vw, 2.70rem);
+      opacity:0.94;
+      display:block;
+    }
+
+    .glass-container {
+      max-width:980px;
+      margin:1.8rem auto 3.6rem;
+      padding:clamp(2.8rem,6vw,4rem) clamp(1.8rem,5vw,2.8rem);
+      border-radius:24px;
+      box-shadow:0 16px 64px rgba(0,0,0,0.94);
+      font-size:clamp(0.62rem, 1.46vw, 0.73rem);
+      background: rgba(10, 5, 20, 0.78);
+      border: 1px solid rgba(80, 40, 140, 0.35);
+    }
+
+    .rainbow-divider { height: 12px; width: 100%; background: linear-gradient(90deg, #FF00AA, #FF8A3C, #FFF700, #92CC00, #03A6F7, #8702F4, #FF00AA); background-size: 240% 100%; animation: rainbowCycle 6s linear infinite; border: none; margin: 1rem 0; }
+
+    /* Normal left → right flow */
+    .rainbow-divider:nth-child(odd) {
+      animation: rainbowFlowLTR 21s linear infinite;
+    }
+
+    /* Reverse direction right → left on even ones */
+    .rainbow-divider:nth-child(even) {
+      animation: rainbowFlowRTL 30s linear infinite;
+    }
+
+    @keyframes rainbowFlowLTR {
+      0%   { background-position: 0% center; }
+      100% { background-position: 600% center; }
+    }
+
+    @keyframes rainbowFlowRTL {
+      0%   { background-position: 600% center; }
+      100% { background-position: 0% center; }
+    }
+
+
+    .glass-container {
+      max-width:980px;
+      margin:1.8rem auto 3.6rem;
+      padding:clamp(2.8rem,6vw,4rem) clamp(1.8rem,5vw,2.8rem);
+      border-radius:24px;
+      box-shadow:0 16px 64px rgba(0,0,0,0.94);
+      font-size:clamp(0.62rem, 1.46vw, 0.73rem);
+      background: rgba(10, 5, 20, 0.78);
+      border: 1px solid rgba(80, 40, 140, 0.35);
+    }
+
+    .glass-container strong,
+    .glass-container b,
+    .glass-container h1, .glass-container h2, .glass-container h3 {
+      color:var(--heading-green);
+      font-family:'Bebas Neue',sans-serif;
+      letter-spacing:0.08em;
+    }
+
+    .chaotic-symbols {
+      font-size:1.80rem;
+      line-height:1.15;
+      margin:6rem 1.6rem 8rem;
+      padding:4.5rem 3rem;
+      background:rgba(10, 5, 20, 0.82);
+      border-radius:28px;
+      border:1px solid rgba(80, 40, 140, 0.4);
+      box-shadow:inset 0 0 70px rgba(0,0,0,0.8);
+      position:relative;
+      overflow:hidden;
+    }
+
+footer {
+      background: rgba(0,0,0,0.92); 
+      padding: clamp(1rem, 4vw, 3rem) 1rem;
+      border-top: 4px solid rgba(255,255,255,0.1); 
+      text-align: center;
+    }
+
+    .footer-social { 
+      display: flex; flex-wrap: wrap; justify-content: center; 
+      gap: clamp(.5rem, 3vw, 1rem); margin-bottom: 1rem; 
+    }
+
+    .footer-social img { width: clamp(18px, 3vw, 24px); height: auto; }
+
+    .footer-links { 
+      font-family: 'Fjalla One', sans-serif; 
+      font-size: clamp(0.75rem, 1.80vw, 1.05rem); 
+      margin: 0.5rem 0; 
+    }
+
+    .footer-links a { color: #00DDFF; text-decoration: underline; padding: 0 0.8em; }
+
+    .footer-links a:hover { color: #FFD800; }
+
+    .footer-copyright { 
+      font-family: 'Fjalla One', sans-serif; 
+      font-size: clamp(.56rem, 1.75vw, 1rem); 
+      color: white; 
+      padding-top: 1.2rem;
+    }
+
+    .footer-copyright a { color: #FFCC00; text-decoration: underline; }
+
+    .cc-badge { height: 2em; vertical-align: middle; margin-left: 6px; }
+
+@import url(https://themes.googleusercontent.com/fonts/css?kit=INHP7thqW0goq00ZZ_5hQ-l9_HUXpkMAXu471iX0Ho2PhGMd_STuzEEQc9qQNNMUjvE2Q5hW6EPalDitl_LApoY8aY3lIOrS71aFREiWmolPEUCfd4rMkTgcpJmj89QHg1A-tD4JFpbwHqGB4PL5uHVD_1pdGEkbFZfET6QrQIyyPsd16UluRCiB2Vd5x7t3ExXbiURENNeQN_vskdgm8_huYt7EnqF7gl2iKJrLSVKIX4W9s9ZXf1jXWKn5KiAB5FUR3ed2s4to8CIYGy1SgFw6soIgmkmju6UU2bFhqf_N2yTTNH4O5lId8_0k92kmY5s6H1UiClKZ-wuj3IaH0Jg8ISngznAu8vgKGRJJTkHx_U79TQpPCHocmRY_3PVv23xd-kNHe2hfEEIZXPHe2VLmN8ulS8lQXOGB4_AqjKqCAboouhuZI5vUC1HkZn3rdSZO5R9fXzY3VmbI9bVuoWEoHwefqcn6849vGjXMm84MLjiM3W7Hicv6Q9FdS5U3M25_PhzR8KkJ1XpxHbjE-Q9Q4bJHLiKPHeWP2Z-dItRIvmD8qAVupMavZotCEoHJemZ5EefsuI4EEwFHkJLHDFwml5ysoGOp2NBPblD36x6UU6UF0a4F2HmhX57GF8XyVmii0LmT1juL0kAZT8NR1tMX_8-2SUWlEdqlLjL_lBm5HD4kOGHpmqDx9N--c0vA9VTAUOffB9EcEhdoNS4TVKC5jKU2GHo32sL20FzTim7VdxGnDXuBntxn2QasBJtOTHqQb-kSfKx-_OeEpTOFoAarEE4gLjG5oyu7ovKSDcbIfZUxIqq87GPvzFHCJCbnyhkoTWAUnkLWH3NqaPjphEf1DByE4agHKVe8ADI1gVbaQeczQ5IuR1tYnSVIEe8MKa9B7aL-SnZ_Fr4DBfd0D40Ua0moj-a4tJ0udT6lmH-C7i6jneL7-uS1dC6ApcrypW2rbhC1fcwk5WTkx2225kxi8tNdATnxwWmTppLJurSbDJfPpz3i4-cK5YtQUXQeVjfqvXhzzUI0QBj-I9qlzA);
+
+ol {
+margin:0;
+padding:0
+}
+
+table td,table th {
+padding:0
+}
+
+.c30 {
+border-right-style:solid;
+padding:5pt 5pt 5pt 5pt;
+border-bottom-color:#000000;
+border-top-width:1pt;
+border-right-width:1pt;
+border-left-color:#000000;
+vertical-align:top;
+border-right-color:#000000;
+border-left-width:1pt;
+border-top-style:solid;
+border-left-style:solid;
+border-bottom-width:1pt;
+width:468pt;
+border-top-color:#000000;
+border-bottom-style:solid
+}
+
+.c6 {
+color:#f0f0f5;
+font-weight:700;
+text-decoration:none;
+vertical-align:baseline;
+font-size:10.88pt;
+font-family:"Comic Sans MS";
+font-style:normal
+}
+
+.c39 {
+color:#f0f0f5;
+font-weight:700;
+text-decoration:none;
+vertical-align:baseline;
+font-size:10.88pt;
+font-family:"Pompiere";
+font-style:normal
+}
+
+.c18 {
+color:#f0f0f5;
+font-weight:700;
+text-decoration:none;
+vertical-align:baseline;
+font-size:22.50pt;
+font-family:"Comic Sans MS";
+font-style:normal
+}
+.c41{color:#f0f0f5;font-weight:700;text-decoration:none;vertical-align:baseline;font-size:18.00pt;font-family:"Julius Sans One";font-style:italic}
+.c29{color:#f0f0f5;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:18.00pt;font-family:"Lacquer";font-style:normal}
+.c11{color:#f0f0f5;font-weight:700;text-decoration:none;vertical-align:baseline;font-size:13.50pt;font-family:"Syncopate";font-style:normal}
+.c25{color:#f0f0f5;font-weight:700;text-decoration:none;vertical-align:baseline;font-size:10.50pt;font-family:"Comic Sans MS";font-style:normal}
+.c2{color:#f0f0f5;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:18.00pt;font-family:"Arial Narrow";font-style:normal}.c0{padding-top:0pt;padding-bottom:0pt;line-height:1.0;orphans:2;widows:2;text-align:center;height:11pt}
+.c21{color:#f0f0f5;font-weight:700;text-decoration:none;vertical-align:baseline;font-size:36.00pt;font-family:"Comic Sans MS";font-style:normal}
+.c37{color:#f0f0f5;font-weight:700;text-decoration:none;vertical-align:baseline;font-size:13.50pt;font-family:"Barrio";font-style:normal}
+.c38{color:#f0f0f5;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:22.50pt;font-family:"Comic Sans MS";font-style:normal}
+.c7{-webkit-text-decoration-skip:none;color:#f0f0f5;font-weight:400;text-decoration:underline;text-decoration-skip-ink:none;font-size:13.50pt;font-family:"Boldonse"}
+.c12{color:#f0f0f5;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:13.50pt;font-family:"Comic Sans MS";font-style:normal}
+.c8{color:#f0f0f5;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:18.00pt;font-family:"Comic Sans MS";font-style:normal}
+.c31{color:#f0f0f5;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:18.00pt;font-family:"Arial";font-style:normal}
+.c35{color:#f0f0f5;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:18.00pt;font-family:"Fredericka-the-Great";font-style:normal}
+.c10{color:#f0f0f5;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:22.50pt;font-family:"Alata";font-style:normal}
+.c28{color:#f0f0f5;font-weight:700;text-decoration:none;vertical-align:baseline;font-size:18.00pt;font-family:"Epilogue";font-style:normal}
+.c3{color:#f0f0f5;font-weight:700;text-decoration:none;vertical-align:baseline;font-size:36.00pt;font-family:"Arial";font-style:normal}
+.c19{color:#f0f0f5;font-weight:700;text-decoration:none;vertical-align:baseline;font-size:18.00pt;font-family:"Antonio";font-style:normal}
+.c9{color:#f0f0f5;font-weight:700;text-decoration:none;vertical-align:baseline;font-size:18.00pt;font-family:"Sail";font-style:normal}
+.c100{-webkit-text-decoration-skip:none;color:#f0f0f5;text-decoration:underline;text-decoration-skip-ink:none;font-size:13.50pt;font-family:"Boldonse"}
+.c13{padding-top:0pt;padding-bottom:0pt;line-height:1.0;orphans:2;widows:2;text-align:right}
+.c26{padding-top:0pt;padding-bottom:0pt;line-height:1.15;orphans:2;widows:2;text-align:center}
+.c1{padding-top:0pt;padding-bottom:0pt;line-height:1.5;orphans:2;widows:2;text-align:center}
+.c103{-webkit-text-decoration-skip:none;text-decoration:underline;vertical-align:baseline;text-decoration-skip-ink:none;font-family:"Boldonse";font-style:normal}
+.c5{padding-top:0pt;padding-bottom:0pt;line-height:1.15;orphans:2;widows:2;text-align:center}
+.c23{padding-top:0pt;padding-bottom:0pt;line-height:1.0;orphans:2;widows:2;text-align:center}
+.c33{font-size:13.50pt;font-family:"Boldonse";font-style:italic;color:#f0f0f5;font-weight:400}
+.c52{font-size:22.50pt;font-family:"Alata";font-style:italic;color:#f0f0f5;font-weight:700}
+.c32{font-size:18.00pt;font-family:"Alexandria";color:#f0f0f5;font-weight:700}
+.c24{font-size:10.50pt;font-family:"Boldonse";color:#f0f0f5;font-weight:400}
+.c14{font-size:18.00pt;font-family:"Sail";color:#f0f0f5;font-weight:400}
+.c62{color:#f0f0f5;font-weight:400;font-size:22.50pt;font-family:"Crushed"}
+.c72{color:#f0f0f5;font-weight:400;font-size:10.88pt;font-family:"Boldonse"}
+.c40{font-size:45.00pt;font-family:"Antonio";color:#f0f0f5;font-weight:700}
+.c17{font-size:18.00pt;font-family:"Acme";color:#f0f0f5;font-weight:400}
+.c54{color:#f0f0f5;font-weight:700;font-size:22.50pt;font-family:"Alata"}
+.c16{font-size:54.00pt;font-family:"Amatic SC";color:#f0f0f5;font-weight:700}
+.c43{font-size:10.50pt;font-family:"Comic Sans MS";color:#f0f0f5;font-weight:400}
+.c127{margin-left:auto;border-spacing:0;border-collapse:collapse;margin-right:auto}
+.c22{font-size:18.00pt;font-family:"Sail";color:#f0f0f5;font-weight:700}
+.c86{color:#f0f0f5;font-weight:400;font-size:27.00pt;font-family:"Eagle Lake"}
+.c27{font-size:18.00pt;font-family:"Kaushan Script";color:#f0f0f5;font-weight:700}
+.c118{padding-top:0pt;padding-bottom:0pt;line-height:2.0;text-align:center}
+.c50{color:#f0f0f5;font-weight:700;font-size:10.50pt;font-family:"Syncopate"}
+.c67{color:#f0f0f5;font-weight:400;font-size:27.00pt;font-family:"Jacques Francois Shadow"}
+.c34{font-size:45.00pt;font-family:"Amatic SC";color:#f0f0f5;font-weight:700}
+.c84{color:#f0f0f5;font-weight:400;font-size:13.50pt;font-family:"Boldonse"}
+.c51{font-size:27.00pt;font-family:"Nosifer";color:#f0f0f5;font-weight:400}
+.c36{font-size:18.00pt;font-family:"Comic Sans MS";color:#f0f0f5;font-weight:400}
+.c44{padding-top:0pt;padding-bottom:0pt;line-height:1.0;text-align:center}
+.c90{padding-top:0pt;padding-bottom:0pt;line-height:1.5;text-align:center}
+.c45{padding-top:0pt;padding-bottom:0pt;line-height:1.15;text-align:center}
+.c99{padding-top:0pt;padding-bottom:0pt;line-height:2.0;text-align:center}
+.c46{color:#f0f0f5;font-weight:700;font-size:18.00pt;font-family:"Comic Sans MS"}
+.c47{font-size:18.00pt;font-family:"Georgia";color:#f0f0f5;font-weight:700}
+.c4{font-size:36.00pt;font-family:"Road Rage";color:#f0f0f5;font-weight:400}
+.c15{font-size:36.00pt;font-family:"Amatic SC";color:#f0f0f5;font-weight:700}
+.c109{font-size:54.00pt;font-family:"Bahiana";color:#f0f0f5}
+.c42{text-decoration:none;vertical-align:baseline;font-style:normal}
+.c85{text-decoration:none;vertical-align:sub;font-style:normal}
+.c93{color:#f0f0f5;font-size:27.00pt;font-family:"Crushed"}
+.c53{text-decoration:none;vertical-align:super;font-style:normal}
+.c113{-webkit-text-decoration-skip:none;text-decoration:underline;text-decoration-skip-ink:none}
+.c71{font-size:10.50pt;font-family:"Georgia";color:#f0f0f5}
+.c133{color:#f0f0f5;font-size:36.00pt;font-family:"Major Mono Display"}
+.c88{font-size:45.00pt;font-family:"Comic Sans MS";color:#f0f0f5}
+.c75{font-size:13.50pt;font-family:"Syncopate";color:#f0f0f5}
+.c117{vertical-align:baseline;font-family:"Comic Sans MS";font-style:normal}
+.c114{color:#f0f0f5;font-size:54.00pt;font-family:"Crushed"}
+.c61{color:#f0f0f5;font-size:27.00pt;font-family:"Big Shoulders"}
+.c95{color:#f0f0f5;font-size:10.88pt;font-family:"Barrio"}
+.c63{color:#f0f0f5;font-size:22.50pt;font-family:"Nosifer"}
+.c91{color:#f0f0f5;font-size:13.50pt;font-family:"Comic Sans MS"}
+.c69{color:#f0f0f5;font-size:10.88pt;font-family:"Syncopate"}
+.c102{color:#f0f0f5;font-weight:400;font-size:13.50pt}
+.c73{font-size:27.00pt;font-family:"Comic Sans MS";color:#f0f0f5}
+.c89{color:#ffffff;font-size:9.00pt;font-family:"Comic Sans MS"}
+.c119{background-color:#000000;font-size:22.50pt;font-family:"Girassol"}
+.c110{color:#f0f0f5;font-size:27.00pt;font-family:"Pompiere"}
+.c64{font-family:"Alexandria";font-style:italic;font-weight:400}
+.c101{background-color:#000000;max-width:468pt;padding:72pt 72pt 72pt 72pt}
+.c87{font-size:10.88pt;font-family:"Comic Sans MS";color:#f0f0f5}
+.c78{color:#f0f0f5;font-size:27.00pt;font-family:"Antonio"}
+.c58{color:#000000;font-weight:400;font-size:8.25pt}
+.c97{color:#f0f0f5;font-size:10.88pt;font-family:"Crushed"}.c115{color:#f0f0f5;font-size:13.50pt}
+.c55{font-family:"Anton";font-weight:400}
+.c120{color:#f0f0f5;font-size:10.50pt}.c49{font-weight:700;font-family:"Aboreto"}
+.c65{font-family:"Crushed";font-weight:400}
+.c79{font-weight:400;font-family:"Fredericka the Great"}
+.c105{font-weight:400;font-family:"Unica One"}
+.c81{font-family:"Cuprum";font-weight:400}
+.c70{orphans:2;widows:2}
+.c48{color:#f0f0f5;font-size:18.00pt}
+.c76{color:#f0f0f5;font-size:7.50pt}
+.c129{font-size:27.00pt;color:#f0f0f5}
+.c66{font-size:22.50pt;color
+:#f0f0f5}
+.c98{font-family:"Kaushan Script";font-weight:400}
+.c59{font-family:"Antonio";font-weight:400}
+.c123{vertical-align:baseline;font-style:normal}
+.c60{color:#f0f0f5;font-size:9.00pt}
+.c104{font-family:"Boldonse";font-weight:400}
+.c131{font-family:"Phudu"}
+.c122{font-family:"Girassol"}
+.c80{font-family:"Epilogue"}
+.c68{font-family:"Alata"}.c83{font-family:"Stick"}
+.c96{font-family:"Fjalla One"}
+.c130{font-family:"Lacquer"}
+.c134{font-family:"Boldonse"}
+.c94{font-family:"Syncopate"}.c121{font-family:"Bungee"}
+.c136{font-family:"Unica One"}
+.c107{font-weight:400}
+.c74{font-family:"Cinzel Decorative"}
+.c111{font-family:"Jacques Francois Shadow"}
+.c139{vertical-align:sub}
+.c57{font-family:"Arial"}
+.c126{vertical-align:super}
+.c77{font-family:"Montserrat"}
+.c116{font-family:"Combo"}
+.c92{font-family:"Julius Sans One"}
+.c125{font-family:"Algerian"}
+.c137{font-family:"Comic Sans MS"}
+.c124{font-family:"Road Rage"}
+.c106{font-family:"Amatic SC"}
+.c112{font-family:"Bebas Neue"}
+.c56{font-weight:700}
+.c140{font-family:"Amaranth"}
+.c20{height:11pt}.c128{color:#000000}
+.c138{height:0pt}
+.c108{font-family:"Koulen"}.c82{font-family:"Antonio"}
+.c135{font-family:"Anton"}.c132{font-family:"Aguafina Script"}
+.c109{font-size:54.00pt;font-family:"Lacquer";color:#ff0000} /* Changed from Bahiana to Lacquer and color to red */
+.c114{color:#FFD700;font-size:54.00pt;font-family:"Nosifer"} /* Changed from Crushed to Nosifer and color to School Bus Yellow */
+
+li{color:#000000;font-size:8.25pt;font-family:"Arial"}p{margin:0;color:#000000;font-size:8.25pt;font-family:"Arial"
+}h1{padding-top:20pt;color:#000000;font-size:15.00pt;padding-bottom:6pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left
+}h2{padding-top:18pt;color:#000000;font-size:12.00pt;padding-bottom:6pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left
+}h3{padding-top:16pt;color:#434343;font-size:10.50pt;padding-bottom:4pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left
+}h4{padding-top:14pt;color:#666666;font-size:9.00pt;padding-bottom:4pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left
+}h5{padding-top:12pt;color:#666666;font-size:8.25pt;padding-bottom:4pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left
+}h6{padding-top:12pt;color:#666666;font-size:8.25pt;padding-bottom:4pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;font-style:italic;orphans:2;widows:2;text-align:left
+}
+  
+    .flicker-container {
+        border: 5px solid white;
+        padding: 20px;
+        margin: 20px auto;
+        max-width: 90%;
+        background: rgba(0,0,0,0.5);
+        animation: flicker 2s infinite;
+        box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff;
+    }
+    @keyframes flicker {
+        0%, 18%, 22%, 25%, 53%, 57%, 100% {
+            opacity: 1;
+            box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff;
+        }
+        20%, 24%, 55% {
+            opacity: 0.3;
+            box-shadow: none;
+        }
+    }
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik+Vinyl&family=Fredericka+the+Great&family=Comforter+Brush&family=Londrina+Shadow&display=swap">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f0f0f0;
+        }
+        .styled-text {
+            font-size: 3em; /* Adjust size as needed */
+            line-height: 1.2;
+            margin: 50px 0;
+        }
+        .fredricka-the-great {
+            font-family: 'Fredericka the Great', cursive;
+            color: #CCFE37;"
+        }
+        .rubik-vinyl {
+            font-family: 'Rubik Vinyl', cursive;
+            color: #4ecdc4; /* Optional: Add color for emphasis */
+        }
+        .comforter-brush {
+            font-family: 'Comforter Brush', cursive;
+            color: #45b7d1; /* Optional: Add color for emphasis */
+        }
+        .londrina-shadow {
+            font-family: 'Londrina Shadow', cursive;
+            color: #96ceb4; /* Optional: Add color for emphasis */
+        }
+</style>
+</style>
+</head>
+
+
+<body>
+
+<nav>
+  <div class="container nav-inner">
+    <div class="nav-logo">
+      <img src="https://raw.githubusercontent.com/robotjellyfish/CatrinaStoner/refs/heads/main/icon.png" alt="Icon" height="54">
+    </div>
+    <div class="nav-links">
+      <a href="https://robotjellyfish.github.io/CatrinaStoner/">HOME</a>
+      <div class="dropdown"><a href="#">GALLERIES</a><div class="dropdown-content">
+        <a href="https://photos.app.goo.gl/pp1PdFq5dbE7Q2XaA">PHOTOGRAPHY</a>
+        <a href="https://sites.google.com/view/robot-jellyfish/arthive/">THE ARTHIVE</a>
+      </div></div>
+      <div class="dropdown"><a href="#">JOURNALS</a><div class="dropdown-content">
+        <a href="https://sites.google.com/view/thevespaveda">THE VESPA VEDA</a>
+        <a href="https://robotjellyfish.jimdofree.com/brainvomit/">BRAIN VOMIT</a>
+        <a href="https://catrinastoner.blogspot.com/">BLOG</a>
+        <a href="https://robotjellyfish.jimdofree.com/poetry/">POEMS</a>
+      </div></div>
+      <a href="https://robotjellyfish.github.io/CatrinaStoner/about">ABOUT</a>
+    </div>
+  </div>
+</nav>
+
+<div class="rainbow-divider"></div>
+<div class="rainbow-divider"></div>
+<div class="title"><span class="sub">[schiz꩜phrenic]</span>
+  <span class="main" data-text="BRAIN VOMIT">Brain Vomit</span></div>
+<div class="rainbow-divider"></div>
+<div class="rainbow-divider"></div>
+
+  <div class="glass-container">
+<div class="container">
+
+<p style="padding:0;margin:0;color:#000000;font-size:11pt;font-family:&quot;Arial&quot;;line-height:1.0;orphans:2;widows:2;text-align:center">
+<span style="font-size:30pt;font-family:&quot;Aboreto&quot;;color:#ffffff;font-weight:400"><strong>∞</strong><br><br>ɪs</span>
+<span style="font-size:8pt;font-family:&quot;Aboreto&quot;;color:#ffffff;font-weight:400">&nbsp;</span>
+<span style="font-size:30pt;font-family:&quot;Anton&quot;;color:#ffffff;font-weight:400">EXIT</span>
+<span style="font-size:15pt;font-family:&quot;Antonio&quot;;color:#ffffff;font-weight:400">ing Existing</span>
+<span style="font-size:20pt;font-family:&quot;Comic Sans MS&quot;;color:#ffffff;font-weight:400">?</span></p>
+<span style="font-size:20pt;">
+𝓡𝗲𝐢𝐧𝒄𝗮𝒓𝒏𝗮𝒕𝗶𝗼𝙣 is 𝓡𝗲𝐢𝐧𝒄𝗮𝒓𝒄𝗲𝐫𝗮𝐭𝒊𝒐𝒏</span>
+<span style="font-size:14pt;">ᴡʜᴇɴ ᴛʜɪs 𝙋𝙍𝙄𝙎𝙈 ɪs ᴀ 𝙋𝙍𝙄𝙎𝙊𝙉 <br>𝓞𝒃𝒍𝒊𝒗𝒊𝒐𝒏 𝒊𝒔 𝓑𝒍𝒊𝒔𝒔 <br>𝕎𝔼 𝔸ℝ𝔼 B𝗼𝗿𝗻 D𝘆𝗶𝗻𝗴<br></span>
+<p style="padding:0;margin:0;color:#000000;font-size:11pt;font-family:&quot;Arial&quot;;line-height:1.0;orphans:2;widows:2;text-align:center">
+<span style="color:#ffffff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:20pt;font-family:&quot;Bebas Neue&quot;;font-style:normal">Trapped in a vessel
+<br>Running in FEAR from FREEDOM
+<br> 𝐅𝐥𝐨𝐚𝐭𝐢𝐧𝐠 𝐚𝐫𝐨𝐮𝐧𝐝 𝐚𝐜𝐜𝐢𝐝𝐞𝐧𝐭𝐚𝐥𝐥𝐲 𝐢𝐧 𝐋𝐢𝐦𝐛𝐨 <br>
+ᴘʟᴀᴛᴇᴀᴜᴇᴅ ɪɴ ɪɴғɪɴɪᴛᴇ ᴛᴀɴɢᴇɴᴛ ⓒⓘⓡⓒⓛⓔⓢ<br>
+Everything feels the same<br><i>...it is...</i><br>Figments of imagination in a nonexistent mind<br>NEVER REALLY DEAD OR BORN</span></p>
+<br><br>
+<p style="padding:0;margin:0;color:#000000;font-size:11pt;font-family:&quot;Arial&quot;;line-height:1.0;orphans:2;widows:2;text-align:center">
+<span style="color:#B3FF00;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:20pt;font-family:&quot;Girassol&quot;;font-style:normal">ᐧ•WE DO NOT EXIST•ᐧ</span></p>
+
+<div class="rainbow-divider"></div>
+
+<p class="c5 c20"><span class="c6"></span></p>
+<p class="c5 c20"><span class="c6"></span></p>
+<p class="c5"><span class="c42 c66 c136 c56">Life is a</span></p>
+<p class="c5"><span class="c42 c66 c56 c136">&#120290;&#120289;&#120280; &#120298;&#120276;&#120300;</span></p>
+<p class="c23"><span class="c113 c66 c107 c108">DEAD END</span><span class="c66 c107 c108">&nbsp;</span>
+<span class="c42 c66 c105">street</span></p>
+<p class="c5"><span class="c42 c49 c66">and we are merely</span></p>
+<p class="c5"><span class="c66 c107 c112">drivers </span>
+<span class="c49 c66">in a</span><span class="c42 c66 c107 c112">&nbsp;traffic jam</span></p>
+<p class="c5"><span class="c42 c66 c107 c131">waiting in line</span></p>
+<p class="c5"><span class="c4">and rushing to pass</span><span class="c42 c66 c107 c124">.</span></p><div class="rainbow-divider"></div>
+<p class="c5 c20"><span class="c42 c66 c107 c124"></span></p>
+<p class="c5"><span class="c54 c42">There is a reason</span></p>
+<p class="c5"><span class="c54 c42">&#127291;&#127288;&#127298;&#127299;&#127284;&#127293;<br>&amp;<br>&#127298;&#127288;&#127291;&#127284;&#127293;&#127299;</span></p>
+<p class="c5"><span class="c54 c42">are spelled with the same letters.</span></p>
+<div class="rainbow-divider"></div>
+<p class="c5 c20"><span class="c25"></span></p>
+<p class="c23"><span class="c66 c56 c106">I would rather be a puzzle piece than part of a puzzle</span><span class="c42 c115 c106 c56">.</span></p>
+
+<p class="c0"><span class="c42 c115 c106 c56"></span></p><p class="c5"><span class="c19">My mind is like a boomerang&hellip;</span></p>
+<p class="c5"><span class="c42 c48 c107 c116">A karmatosed lingering mind shadow</span></p>
+<p class="c5"><span class="c48 c56">Like a spider stuck to it&#39;s own web.</span></p>
+<p class="c5 c20"><span class="c38"></span></p>
+<p class="c5"><span class="c48 c56 c82">I think I&#39;m just thinking too much about what I should think of what I should think to say.</span></p>
+<p class="c5 c20"><span class="c35"></span></p>
+<p class="c5"><span class="c46 c42">&#120168;&#120150; &#120146;&#120157;&#120157; &#120155;&#120166;&#120164;&#120165; &#120168;&#120146;&#120159;&#120165; &#120165;&#120160; &#120157;&#120160;&#120164;&#120150; &#120160;&#120166;&#120163; &#120158;&#120154;&#120159;&#120149;&#120164;</span></p>
+<div class="rainbow-divider"></div><p class="c5 c20"><span class="c6"></span></p>
+<p class="c5 c20"><span class="c39"></span></p>
+<br><p class="c5"><span class="c42 c56 c110">Indisposed in a disposable world.</span></p>
+<p class="c5 c20"><span class="c39"></span></p>
+<p class="c5"><span class="c32">You may not be able to </span><span class="c48 c64">polish</span><span class="c32 c42">&nbsp;a turd</span></p>
+<p class="c5"><span class="c66 c68 c107">but you </span><span class="c52">can</span><span class="c10">&nbsp;fertilize a garden.</span></p>
+<p class="c5"><span class="c66 c56 c140">Even flowers still grow from shit</span><span class="c54 c42">.</span></p>
+<p class="c26 c20"><span class="c42 c54"></span></p>
+<p class="c5 c20"><span class="c42 c60 c56 c68"></span></p>
+<p class="c23"><span class="c15">The </span><span class="c15">Funk</span><span class="c15 c42">&nbsp;Floats </span></p>
+<p class="c23"><span class="c15 c42">where the Flux Flows</span></p><p class="c0"><span class="c15 c42"></span></p><p class="c5 c20"><span class="c42 c106 c56 c115"></span></p>
+<p class="c5"><span class="c42 c56 c93">Every drain is a faucet</span></p>
+<p class="c5 c20"><span class="c42 c56 c97"></span></p>
+<p class="c26 c20"><span class="c6"></span></p><table class="c127"><tr class="c138"><td class="c30" colspan="1" rowspan="1">
+
+<div class="rainbow-divider"></div>
+<span class="c15">
+ᐧ•METHAMBITIONS•ᐧ</span>
+<p class="c44"><span class="c56 c71">&bull; </span><span class="c48 c56 c135">&#120280;&#120299;&#120284;&#120295;</span><span class="c47">&nbsp;and </span><span class="c42 c48 c49">Begin</span></p><p class="c44"><span class="c47">&bull; </span><span class="c48 c56">Leave the Parasite </span><span class="c48 c96 c56">ALONE</span><span class="c48 c56">&nbsp;to </span><span class="c42 c48 c56 c96">DIE</span></p><p class="c44"><span class="c71 c56">&bull; </span><span class="c47">Get to the </span><span class="c41">UNOBTAINIUM</span></p></td></tr></table><p class="c5 c20"><span class="c6"></span></p><p class="c5 c20"><span class="c6"></span></p></div>
+<div class="rainbow-divider"></div><p class="c1 c20"><span class="c42 c55 c66"></span></p><p class="c1"><span class="c55 c66">Chro&#8469;&#120160;&#120313;&#120316;&#120308;&#120310;&#120304;</span><span class="c87 c56">&nbsp;</span><span class="c66 c56 c82">Circumventures</span><span class="c6">.</span></p><p class="c1 c20"><span class="c6"></span></p><p class="c23"><span class="c73 c56">&#120294;&#120287;&#120276;&#120277; &#120278;&#120284;&#120295;&#120300;</span><span class="c6">&nbsp;</span></p><p class="c23"><span class="c54">is Trail Mix</span><span class="c6">:</span></p><p class="c23"><span class="c48 c81">as it is </span><span class="c42 c81 c48">centered between </span></p><p class="c23"><span class="c48 c104">chocolate </span><span class="c24">&amp;</span><span class="c42 c48 c104">&nbsp;salt</span></p><p class="c5"><span class="c66 c56 c134">and full of </span><span class="c66 c56 c103">NUTS</span></p><p class="c5 c20"><span class="c103 c66 c56"></span></p><p class="c5 c20"><span class="c50 c42"></span></p><p class="c5 c20"><span class="c50 c42"></span></p><p class="c5 c20"><span class="c50 c42"></span></p><p class="c5 c20"><span class="c50 c42"></span></p><p class="c5"><span class="c50 c42">You gotta let it BE </span></p><p class="c5"><span class="c56 c75">before you can SEE</span><span class="c42 c50">&nbsp;</span></p><p class="c5"><span class="c42 c48 c56 c94">the WHOLE SEA of HOLES </span></p><p class="c5"><span class="c11">at the bottom of the HOLY SEA.</span></p><p class="c5 c20"><span class="c11"></span></p><div class="rainbow-divider"></div><p class="c5" style="padding: 20px 0;"><span class="c42 c56 c91">&#120281;&#120276;&#120295;&#120280; &#120293;&#120276;&#120289;&#120279;&#120290;&#120288;&#120287;&#120300; &#120294;&#120300;&#120289;&#120278;&#120283;&#120293;&#120290;&#120289;&#120284;&#120301;&#120280;&#120294; &#120278;&#120283;&#120276;&#120290;&#120294;.</span><br><span class="c12">&#7470;&#7489;&#7488; &#7490;&#7473; &#7481;&#7468;&#7479;&#7473; &#7484;&#7489;&#7487; &#7484;&#7490;&#7482; DESTINY.</span></p><div class="rainbow-divider"></div><p class="c5 c20"><span class="c6"></span></p><p class="c5 c20"><span class="c6"></span></p><p class="c5"><span class="c37">The world is a golfish bowl</span></p><p class="c5"><span class="c37">and we are all goldfish&hellip;</span></p><p class="c5"><span class="c37">&hellip;cheesy baked crackers</span></p><p class="c5"><span class="c37">with the same face but different names</span></p><p class="c20 c26"><span class="c37"></span></p><div class="rainbow-divider"></div><p class="c5 c20"><span class="c42 c56 c95"></span></p><p class="c5 c20"><span class="c42 c95 c56"></span></p><p class="c5 c20"><span class="c100 c56 c123"></span></p><p class="c5"><span class="c56 c100">All</span><span class="c7">&nbsp;things</span><span class="c84">&nbsp;</span><span class="c33">are </span><span class="c84 c42">Matter</span></p><p class="c1"><span class="c84">but </span><span class="c100 c56">No</span><span class="c7">&nbsp;things</span><span class="c84">&nbsp;</span><span class="c33">do </span><span class="c42 c84">&nbsp;Matter</span></p><p class="c0"><span class="c42 c72"></span></p><p class="c0"><span class="c8"></span></p><p class="c0"><span class="c8"></span></p><p class="c23"><span class="c8">&#127355;&#127348;&#127363; &#127286;&#127294;</span></p><p class="c23"><span class="c43">&nbsp;</span><span class="c36">of </span><span class="c48 c59">matter</span><span class="c36">&nbsp;</span><span class="c42 c55 c48">mattering</span></p><p class="c23"><span class="c48">for you&#39;re </span><span class="c48 c59">merely</span><span class="c48">&nbsp;</span><span class="c55 c48">mirroring</span><span class="c31">&nbsp;</span></p><p class="c5"><span class="c48">your own </span><span class="c48 c59">mirror</span><span class="c48">&nbsp;</span><span class="c48 c55">shattering</span><span class="c42 c57 c56 c60">.</span></p><p class="c90 c70 c20"><span class="c43 c42"></span></p><div class="rainbow-divider"></div><p class="c70 c20 c90"><span class="c21"></span></p><p class="c23"><span class="c66 c137 c56">&#78231;</span><span class="c6">&nbsp;</span></p><p class="c23"><span class="c42 c48 c107 c92">Stop looking &amp; start</span></p><p class="c23"><span class="c48 c56 c92">HEARING with your FEELERS</span></p><div class="rainbow-divider"></div><p class="c0"><span class="c21"></span></p><p class="c5"><span class="c48 c65">In </span><span class="c62">hindsight</span><span class="c42 c65 c48">,</span></p><p class="c5"><span class="c42 c65 c48">you should&#39;ve </span></p><p class="c5"><span class="c62">watched</span><span class="c65 c48">&nbsp;your </span><span class="c42 c62">back</span></p><div class="rainbow-divider"></div><p class="c5 c20"><span class="c62 c42"></span></p><p class="c5 c20"><span class="c62 c42"></span></p><p class="c1"><span class="c28">B&infin;finity &amp; BEY&#9854;ND</span></p><p class="c5"><span class="c28">Boof your own time capsule</span></p><p class="c5"><span class="c48 c56 c80">for a </span><span class="c113 c48 c80 c56">FREE</span><span class="c28">&nbsp;time lapse</span></p><p class="c5 c20"><span class="c28"></span></p><div class="rainbow-divider"></div><p class="c5 c20"><span class="c28"></span></p><p class="c5 c20"><span class="c28"></span></p><p class="c5 c20"><span class="c28"></span></p><p class="c5"><span class="c49 c48">d</span><span class="c49 c48">own</span><span class="c46">&nbsp;the </span><span class="c42 c55 c48">RABBIT HOLE</span></p><p class="c5"><span class="c48 c107 c125">Pulled</span><span class="c36">&nbsp;</span><span class="c49 c48">out</span><span class="c36">&nbsp;</span><span class="c17">from a</span><span class="c36">&nbsp;</span><span class="c42 c55 c48">MAGIC SHOW HAT </span></p><p class="c5 c20"><span class="c42 c55 c48"></span></p><div class="rainbow-divider"></div><p class="c5 c20"><span class="c42 c55 c48"></span></p>
+
+
+<p style="padding:0;margin:0;color:#000000;font-size:41pt;font-family:&quot;Arial&quot;;line-height:1.0;orphans:2;widows:2;text-align:center">
+<span style="font-size:50pt;font-family:Lacquer;color:#ffffff;font-weight:400;">MILK</span>
+<span style="font-size:30pt;font-family:Lacquer;color:#FF007D;font-weight:400;">BLOOD</span>
+<span class="c56 c88">&amp;</span>
+<span style="font-size:25pt;font-family:'Nosifer';color:#FFC400;font-weight:400;">HONEY</span>
+
+
+<p class="c5"><span class="c8">viscous coagulation of translucid fluid</span></p><div class="rainbow-divider"></div><p class="c5 c20"><span class="c8"></span></p><p class="c5 c20"><span class="c8"></span></p><p class="c23"><span class="c46 c42">&#9836;&#9835;&#9834;&#9833; </span></p><p class="c23"><span class="c12">&#119811;&#119848;&#119856;&#119847; &#119842;&#119847; &#119853;&#119841;&#119838; &#119845;&#119834;&#119851;&#119858;&#119847;&#119857; &#119852;&#119853;&#119851;&#119854;&#119846;&#119846;&#119842;&#119847;&#119840; &#119835;&#119851;&#119848;&#119844;&#119838;&#119847; &#119852;&#119853;&#119851;&#119842;&#119847;&#119840;&#119852;</span></p><p class="c23"><span class="c12">&#119842;&#119852; &#119853;&#119841;&#119838; &#119845;&#119848;&#119847;&#119838;&#119852;&#119848;&#119846;&#119838; &#119855;&#119848;&#119842;&#119836;&#119838; &#119835;&#119848;&#119857; &#119835;&#119854;&#119840;</span></p><p class="c1"><span class="c42 c57 c102">&#119841;&#119854;&#119846;&#119846;&#119842;&#119847;&#119840; &#119834;&#119852; &#119841;&#119838; &#119852;&#119856;&#119842;&#119847;&#119840;&#119852;.</span></p><p class="c23"><span class="c42 c48 c57 c56">&nbsp;&#78247;</span></p><p class="c0"><span class="c42 c48 c56 c57"></span></p><div class="rainbow-divider"></div><p class="c118 c70 c20"><span class="c42 c48 c57 c56"></span></p><p class="c70 c20 c118"><span class="c42 c48 c57 c56"></span></p><p class="c23"><span class="c42 c67">CALIFORNIA</span></p><p class="c5"><span class="c42 c102 c121">where palm trees and pine trees collide</span></p><p class="c5 c20"><span class="c29"></span></p><p class="c5"><span class="c42 c48 c56 c130">TREES DIVE IN AND OUT OF THE GROUND IN GOLDEN GATE PARK</span></p><p class="c5"><span class="c29">LIKE SERPENT DRAGONS WITH SCALES MADE OF BARK</span></p><p class="c5 c20"><span class="c29"></span></p><p class="c5"><span class="c42 c48 c56 c83">Vines like veins - both stretching the length of limbs.</span></p><p class="c26 c20"><span class="c42 c48 c83 c56"></span></p><p class="c26 c20"><span class="c42 c48 c83 c56"></span></p><p class="c1"><span class="c43">
+<div class="rainbow-divider"></div>
+<p class="c44 c70"><span class="c42 c66 c77 c56">&ldquo;WHY DO MOTHS EAT CLOTHES?&rdquo;</span></p><p class="c44 c70 c20"><span class="c42 c66 c56 c77"></span></p><p class="c13"><span class="c42 c61 c56">&quot;Because there isn&#39;t much else to eat inside of a closet.&quot;</span></p><p class="c13 c20"><span class="c42 c56 c61"></span></p><p class="c44 c70"><span class="c66 c77 c56">&ldquo;THEN WHY DO MOTHS EVEN LIVE INSIDE CLOSETS</span><span class="c18">?&rdquo;</span></p><p class="c44 c70 c20"><span class="c18"></span></p><p class="c13"><span class="c77 c56 c129">&quot;</span><span class="c42 c61 c56">Because that&#39;s where people tend to leave the lights on.&quot;</span></p><p class="c5 c20"><span class="c42 c120 c107 c57"></span></p><p class="c5"><span class="c42 c107 c57 c120">
+<div class="rainbow-divider"></div>
+<p class="c26 c20"><span class="c6"></span></p><p class="c0"><span class="c18"></span></p><p class="c23"><span class="c18">Two half brains </span></p><p class="c23"><span class="c18">DO NOT make </span></p><p class="c23"><span class="c18">a whole brain.</span></p><p class="c23"><span class="c38">They only make a </span></p><p class="c23"><span class="c38">quarter of brain </span></p><p class="c23"><span class="c38">because</span></p><p class="c23"><span class="c3">&frac12; &times; &frac12; = &frac14;</span></p><p class="c0"><span class="c3"></span></p><p class="c5"><span class="c18">&#119815;&#119838;&#119851;&#119838; &#119836;&#119848;&#119846;&#119838;&#119852; &#119853;&#119841;&#119838; &#119825;&#119848;&#119848;&#119852;&#119853;&#119838;&#119851;</span></p><p class="c5"><span class="c38">&#119825;&#119854;&#119852;&#119853;&#119838;&#119837; &#119839;&#119851;&#119848;&#119846; &#119853;&#119841;&#119838; &#119825;&#119834;&#119842;&#119847;</span></p><div class="rainbow-divider"></div><p class="c44 c70 c20"><span class="c15 c85"></span></p><p class="c23"><span class="c15 c139">You cant spell</span><span class="c34 c42">&nbsp;</span></p><p class="c23"><span class="c40 c42">SLUMBER</span></p><p class="c23"><span class="c34">&nbsp;</span><span class="c15 c126">without</span><span class="c34">&nbsp;</span><span class="c40">LUMBER</span><span class="c34 c42">&nbsp;</span></p><p class="c23"><span class="c78 c107">SO </span><span class="c78 c56 c113">SLEEP LIKE A LOG</span><span class="c42 c78 c56">.</span></p><p class="c0"><span class="c42 c78 c56"></span></p><div class="rainbow-divider"></div><p class="c0"><span class="c42 c78 c56"></span></p><p class="c0"><span class="c42 c78 c56"></span></p><p class="c44 c70 c20"><span class="c42 c56 c78"></span></p><p class="c23"><span class="c42 c86">LETHAL LETHARGY<br> </span></p><p class="c23"><span class="c73 c56">Be a homie, not a housie<br></span><span class="c87 c56">.</span></p><p class="c5"><span class="c42 c56 c133">0&#8315;&sup1;</span></p><p class="c5"><span class="c42 c79 c66">KOOL-AID Man is GOD<br></span></p><p class="c0"><span class="c42 c66 c79"></span></p><p class="c23"><span class="c66 c56 c137">&#119882;&#119886;&#119897;&#119889;&#119900;</span></p>
+    
+<div class="rainbow-divider"></div><p class="c0"><span class="c6"></span></p><p class="c0"><span class="c6"></span></p>
+<p style="padding:0;margin:0;color:#000000;font-size:11pt;font-family:&quot;Arial&quot;;line-height:1.0;orphans:2;widows:2;text-align:center"><span style="color:#ffffff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:30pt;font-family:&quot;Girassol&quot;;font-style:normal">You are a</span></p>
+<p class="c23"><span class="c63 c56">&nbsp;</span><span class="c51">butterfly</span><span class="c42 c56 c63">&nbsp;</span></p><p class="c23"><span class="c42 c66 c56 c122">and I am a</span></p><p class="c23"><span class="c63 c56">&nbsp;</span><span class="c51">spider</span><span class="c42 c63 c56">.</span></p><p class="c23"><span class="c42 c66 c122 c107">Take that how you will</span></p><div class="rainbow-divider"></div><p class="c0"><span class="c14 c53"></span></p><p class="c0"><span class="c14 c42"></span></p><p class="c23"><span class="c14">The </span><span class="c22">Sands of Time</span><span class="c14 c42">&nbsp;</span></p><p class="c1"><span class="c22">Spill Silver</span><span class="c14">&nbsp;</span><span class="c22">Dust</span><span class="c14">&nbsp;into </span><span class="c9">Dreams.</span></p><p class="c23"><span class="c14">The </span><span class="c22">DreamWeaver</span><span class="c14">&nbsp;</span><span class="c22">Spins</span><span class="c14">&nbsp;a </span><span class="c9">Web</span></p><p class="c1"><span class="c14">&nbsp;</span><span class="c22">Dripping</span><span class="c14">&nbsp;from the </span><span class="c9">Seams.</span></p><p class="c23"><span class="c22">Strands</span><span class="c14">&nbsp;of </span><span class="c22">Liquid Silk Pour</span><span class="c14 c42">&nbsp;from the</span></p><p class="c1"><span class="c22">MilkyWay </span><span class="c14">in</span><span class="c9">&nbsp;Streams.</span></p><p class="c23"><span class="c22">Stars Trail</span><span class="c14">&nbsp;across </span><span class="c22">Skies</span><span class="c14 c42">&nbsp;</span></p><p class="c5"><span class="c22">Keeping</span><span class="c14">&nbsp;</span><span class="c22">Time</span><span class="c14">&nbsp;in </span><span class="c9">Celestial Cream<br><br></span></p><p class="c26 c20"><span class="c9"></span></p><p class="c23"><span class="c48 c98">And </span><span class="c27">sew</span><span class="c48 c98">&nbsp;it </span><span class="c27">seems</span><span class="c42 c48 c98">&nbsp;</span></p><p class="c70 c99"><span class="c27">weave</span><span class="c48 c98">&nbsp;become part of the </span><span class="c27">seam</span><span class="c42 c48 c98">.</span></p><p class="c23"><span class="c42 c48 c74 c56">The seams seem to be leading through timE</span></p><p class="c1"><span class="c42 c48 c56 c74">&hellip; from star to star &hellip;</span></p><p class="c23"><span class="c42 c48 c74 c56">in your dreams.</span></p><p class="c0"><span class="c42 c48 c74 c56"></span></p><p class="c23"><span class="c42 c48 c107 c111">You know, the kind of DREAMS </span></p><p class="c23"><span class="c42 c48 c107 c111">only your DREAMS&rsquo; DREAMS could ever DREAM of DREAMING?</span></p><p class="c0"><span class="c42 c66 c107 c111"></span></p><p class="c23"><span class="c18">&#120295;&#120276;&#120286;&#120280; &#120288;&#120280; &#120295;&#120290; &#120300;&#120290;&#120296;&#120293; &#120279;&#120293;&#120280;&#120276;&#120288;&#120280;&#120293;</span></p><p class="c0"><span class="c18"></span></p><p class="c5"><span class="c12">&#128770;&#128771;&#128769;&#128772;&#128770;&#128771;&#128769;&#128772;&#128770;&#128771;&#128769;&#128772;&#128770;&#128771;&#128769;&#128772;&#128770;&#128771;&#128769;</span></p><p class="c5 c20"><span class="c12"></span></p><div class="rainbow-divider"></div><p class="c5 c20"><span class="c12"></span></p><p class="c5 c20"><span class="c12"></span></p><p class="c1"><span class="c2">Why is Everything &#127345;&#127358;&#127367;&#127348;&#127362;?</span></p><p class="c5"><span class="c2">Born from your moms &#127281;&#127294;&#127303;.</span></p><p class="c5"><span class="c2">In debt paying for a &#127281;&#127294;&#127303; to live in.</span></p><p class="c5"><span class="c2">Bainwashed by a &#127281;&#127294;&#127303; </span></p><p class="c5"><span class="c2">to buy things that come in &#127281;&#127294;&#127303;&#127284;&#127298;</span></p><p class="c5"><span class="c2">with funds locked away in a &#127281;&#127294;&#127303;.</span></p><p class="c5"><span class="c2">&nbsp;Eventually you die in your &#127281;&#127294;&#127303; </span></p><p class="c5"><span class="c2">and pay twice as much</span></p><p class="c5"><span class="c2">&nbsp;for another &#127281;&#127294;&#127303; only a fraction of the size.</span></p><p class="c5 c20"><span class="c2"></span></p><p class="c23"><span class="c36">&#127285;&#127297;&#127294;&#127292; &#127299;&#127287;&#127284;</span><span class="c42 c46">&nbsp;&#127366;&#127358;&#127356;&#127345; </span></p><p class="c1"><span class="c36">&#127299;&#127294; &#127299;&#127287;&#127284;</span><span class="c46 c42">&nbsp;&#127363;&#127358;&#127356;&#127345;,</span></p><p class="c23"><span class="c36">&#127291;&#127288;&#127285;&#127284; &#127288;&#127298; &#127289;&#127300;&#127298;&#127299; &#127280; </span><span class="c46">&#127302;&#127280;&#127288;&#127299;&#127288;&#127293;&#127286;&#127361;&#127358;&#127358;&#127356;</span><span class="c8">.</span></p><p class="c0"><span class="c8"></span></p><p class="c5"><span class="c18">&#120139;&#120163;&#120146;&#120161;&#120161;&#120150;&#120149; &#120154;&#120159; &#120146; &#120139;&#8477;&#120120;&#8473;&#120124;&#8484;&#120134;&#120128;&#120123;</span></p><p class="c5"><span class="c42 c73 c56">&#127281;&#127294;&#127303;&#127288;&#127293;&#127286; &#9415;&#9406;&#9411;&#9404;&#9416;</span></p><p class="c5"><span class="c56 c87">Box Box Box Box Box.</span></p><div><p class="c26 c20"><span class="c42 c58 c57"></span></p>
+
+<div class="rainbow-divider"></div>
+<p style="padding:0;margin:0;color:#000000;font-size:21pt;font-family:&quot;Arial&quot;;line-height:1.15;orphans:2;widows:2;text-align:center"><span style="font-size:10pt;font-family:&quot;Cabin Sketch&quot;;color:#ffffff;font-weight:400">𝐓𝐇𝐄 </span>
+<span style="color:#e06666;">𝗖</span>
+<span style="color:#ff9900;">𝗢</span>
+<span style="color:#ffff00;">𝗟</span>
+<span style="color:#00ff00;">𝗢</span>
+<span style="color:#00ffff;">𝗨</span>
+<span style="color:#4a86e8;">𝗥</span>
+<span style="color:#8e7cc3;">𝗦</span>
+<span style="color:#ffffff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:14pt;font-family:&quot;Cabin Sketch&quot;;font-style:normal">&nbsp;𝐓𝐇𝐀𝐓 𝐃𝐎𝐍𝐓 𝐌𝐈𝐗</span></p><p style="padding:0;margin:0;color:#000000;font-size:11pt;font-family:&quot;Arial&quot;;line-height:1.15;orphans:2;widows:2;text-align:center"><span style="color:#ffffff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:14pt;font-family:&quot;Cabin Sketch&quot;;font-style:normal">𝐘𝐄𝐓 𝐒𝐄𝐄𝐌 𝐓𝐎 𝐅𝐋𝐎𝐖 𝐓𝐎𝐆𝐄𝐓𝐇𝐄𝐑</span></p><p style="padding:0;margin:0;color:#000000;font-size:11pt;font-family:&quot;Arial&quot;;line-height:1.0;orphans:2;widows:2;text-align:center"><span style="font-size:14pt;font-family:&quot;Cabin Sketch&quot;;color:#ffffff;font-weight:400">𝘓𝘐𝘒𝘌</span><span style="font-size:14pt;font-family:&quot;Denk One&quot;;color:#ffffff;font-weight:400">𝗛𝗘𝗔𝗩𝗬</span><span style="font-size:14pt;font-family:&quot;Cabin Sketch&quot;;color:#ffffff;font-weight:400">&nbsp;</span><span style="font-size:14pt;font-family:&quot;Lacquer&quot;;color:#ffffff;font-weight:400">LIQUID</span><span style="font-size:20pt;font-family:&quot;Cabin Sketch&quot;;color:#ffffff;font-weight:400">&nbsp;</span><span style="color:#ffffff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:14pt;font-family:&quot;Nosifer&quot;;font-style:normal">DRIPS</span></p><p style="padding:0;margin:0;color:#000000;font-size:21pt;font-family:&quot;Arial&quot;;line-height:1.15;orphans:2;widows:2;text-align:center"><span style="font-size:20pt;font-family:&quot;Cabin Sketch&quot;;color:#ffffff;font-weight:400">&nbsp;</span><span style="font-size:20pt;font-family:&quot;Aboreto&quot;;color:#ffffff;font-weight:400">LIGHTLY</span><span style="font-size:20pt;font-family:&quot;Cabin Sketch&quot;;color:#ffffff;font-weight:400">&nbsp;</span><span style="font-size:20pt;font-family:&quot;Fredericka the Great&quot;;color:#ffffff;font-weight:400">DUSTED</span><span style="color:#ffffff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:20pt;font-family:&quot;Cabin Sketch&quot;;font-style:normal">&nbsp;from a </span></p><span style="color:#ffffff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:20pt;font-family:&quot;Fleur-De-Leah&quot;;font-style:normal">ℱ𝑒𝑎𝑡ℎ𝑒𝑟</span>
+</p>
+<p style="text-align: left;font-size: 14pt;">
+      <span style="color: #8181ef;">⸨̹̜̹̜̹̜̥̥̊͜͡⸨̬̬̬̬̥̬̬̥̥̊͜͜͡͡⸩̬̬̬̥̬̬̥̥̬̬̥̈͜͡͡⸩̜̹̜̹̜̹̥̊ </span> &nbsp; &nbsp; &nbsp;° 𔒥
+    </p>
+
+    <p style="text-align: center;font-size:20pt;">
+      <span style="color: #e88de8;">⸨͜⸨̰̬̬̥͜⸨̹̜̹̜̹̜̥̥̊͜͡⸨̬̬̬̬̥̬̬̥̥̊͜͜͡͡⸩̬̬̬̥̬̬̥̥̬̬̥̈͜͡͡⸩̰̬̬̥͜⸩ </span> &nbsp; &nbsp; &nbsp; ⬤° <span style="color: #ffff00;">𔒥</span>
+    </p>
+
+    <p style="text-align: center;">
+      ° •° 𔒥
+    </p>
+
+    <p style="text-align: left;">
+      &nbsp; &nbsp;⬤° <span style="color: #ff9900;">𔒥</span>
+    </p>
+
+    <p style="text-align: left;font-size: 20pt;">
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #a77cc5;">&nbsp; &nbsp;<span style="color: #bbc5e8;">⸨͜⸨̰̬̬̥̹̹̟̹̟̹̟̹̩̥̥̥͜⸨̹̜̹̜̹̜̥̥̬̥̬̥̥̟̥̬̊͜͡ˌ⸨̬̬̬̬̥̬̬̥̥̥̥̥̥̥̬̬̥̬̥̬̊͜͜͡͡⸩̬̬̬̥̬̬̥̥̬̬̥̈͜͡͡⸩̰̬̬̥̥̥̥̬̥̟̹̟̹̟͜⸩</span></span>
+      ཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾ&nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;⸨̹̜̹̜̹̜̥̥̊͜͡⸨̬̬̬̬̥̬̬̥̥̊͜͜͡͡⸩̬̬̬̥̬̬̥̥̬̬̥̈͜͡͡⸩̜̹̜̹̜̹̥̊ &nbsp; &nbsp; &nbsp;&nbsp;
+    </p>
+
+    <p style="text-align: right;font-size: 20pt;">
+      <span style="color: #8181ef;">⸨̹̜̹̜̹̜̥̥̊͜͡⸨̬̬̬̬̥̬̬̥̥̊͜͜͡͡⸩̬̬̬̥̬̬̥̥̬̬̥̈͜͡͡⸩̜̹̜̹̜̹̥̊</span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+    </p>
+
+    <p style="text-align: right;font-size: 20pt;">
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;°&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: #93c57c;">𔒥&nbsp;</span> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: #00ffff;">&nbsp;⸨͜⸨̰̬̬̥͜⸨̹̜̹̜̹̜̥̥̊͜͡⸨̬̬̬̬̥̬̬̥̥̊͜͜͡͡⸩̬̬̬̥̬̬̥̥̬̬̥̈͜͡͡⸩̰̬̬̥͜⸩</span>
+    </p>
+
+    <p style="text-align: center;font-size: 20pt;">
+      ⸨̹̜̹̜̹̜̥̥̊͜͡⸨̬̬̬̬̥̬̬̥̥̊͜͜͡͡⸩̬̬̬̥̬̬̥̥̬̬̥̈͜͡͡⸩̜̹̜̹̜̹̥̊ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+    </p>
+
+    <p style="text-align: center;font-size: 20pt;">
+      <span style="color: #c381df;">⸨͜⸨̰̬̬̥̹̹̟̹̟̹̟̹̩̥̥̥͜⸨̹̜̹̜̹̜̥̥̬̥̬̥̥̟̥̬̊͜͡ˌ⸨̬̬̬̬̥̬̬̥̥̥̥̥̥̥̬̬̥̬̥̬̊͜͜͡͡⸩̬̬̬̥̬̬̥̥̬̬̥̈͜͡͡⸩̰̬̬̥̥̥̥̬̥̟̹̟̹̟͜⸩</span> <span style="color: #00ffff;">ཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾ</span>𔒥&nbsp;
+    </p>
+
+    <p style="text-align: right;">
+      ⬤°•<span style="color: #e36664;">𔒥&nbsp;</span> &nbsp;
+    </p>
+  </div>
+</div>
+<br>
+<br>
+<div class="rainbow-divider"></div>
+<div class="rainbow-divider"></div>
+
+<!----FOOTER---->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-social">
+      <a href="https://facebook.com/catrinastoner" target="_blank" rel="noopener noreferrer"><img src="https://img.icons8.com/ios-filled/100/ffffff/facebook-new.png" alt="Facebook"></a>
+      <a href="https://www.instagram.com/robot_jellyfish?igsh=MzRlODBiNWFlZA==" target="_blank" rel="noopener noreferrer"><img src="https://img.icons8.com/ios-filled/100/ffffff/instagram-new.png" alt="Instagram"></a>
+      <a href="https://youtube.com/@catrinastoner" target="_blank" rel="noopener noreferrer"><img src="https://img.icons8.com/ios-filled/100/ffffff/youtube-play.png" alt="YouTube"></a>
+      <a href="https://pin.it/6wEfEdAP3" target="_blank" rel="noopener noreferrer"><img src="https://img.icons8.com/ios-filled/100/ffffff/pinterest--v1.png" alt="Pinterest"></a>
+      <a href="https://t.me/robotjellyfish" target="_blank" rel="noopener noreferrer"><img src="https://img.icons8.com/ios-filled/100/ffffff/telegram-app.png" alt="Telegram"></a>
+      <a href="https://reddit.com/user/Carnidendrophiliac" target="_blank" rel="noopener noreferrer"><img src="https://img.icons8.com/ios-filled/100/ffffff/reddit.png" alt="Reddit"></a>
+    </div>
+
+    <div class="footer-links">
+      <a href="https://robotjellyfish.github.io/CatrinaStoner/about/" target="_blank" rel="noopener noreferrer">ABOUT</a> / 
+      <a href="https://gravatar.com/catrinastoner" target="_blank" rel="noopener noreferrer">CONTACT</a>
+    </div>
+
+    <div class="footer-copyright">
+      COPYRIGHT © 2026 CATRINA STONER. SOME RIGHTS RESERVED.<br>
+      LICENSED UNDER <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="noopener noreferrer">CC BY-NC-ND 4.0</a>
+      <img src="https://licensebuttons.net/l/by-nc-nd/4.0/88x31.png" alt="CC BY-NC-ND 4.0" class="cc-badge">
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
+
+
+
