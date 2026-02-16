@@ -1,8 +1,8 @@
 #  WHAT?... All that for NØTHING
 
-𝗖𝗔𝗧𝗥𝗜𝗡𝗔‘𝗦 𝗖𝗢𝗡𝗧𝗔𝗠𝗜𝗠𝗔𝗚𝗜𝗡𝗔𝗧𝗜𝗢𝗡
+#### 𝗖𝗔𝗧𝗥𝗜𝗡𝗔‘𝗦 𝗖𝗢𝗡𝗧𝗔𝗠𝗜𝗠𝗔𝗚𝗜𝗡𝗔𝗧𝗜𝗢𝗡
 
-#### Live Site https://robotjellyfish.github.io/CatrinaStoner/
+ https://robotjellyfish.github.io/CatrinaStoner/
 
 ![Screenshot of the site](https://raw.githubusercontent.com/robotjellyfish/CatrinaStoner/main/header.png) <!-- upload a screenshot if you want -->
 
