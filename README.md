@@ -1,10 +1,10 @@
 #  WHAT?... All that for NØTHING
 
-**Live site:** https://robotjellyfish.github.io/CatrinaStoner/
+☪𝛂🜏℞⚕𝛈𝛂༅𝖘 𝕮𝐨𝛈𝘁𝛂𝔪𝕚𝖒𝛂𝐠༏𝛈𝛂𝘁༏φ𝛈 https://robotjellyfish.github.io/CatrinaStoner/
 
 ![Screenshot of the site](https://raw.githubusercontent.com/robotjellyfish/CatrinaStoner/main/header.png) <!-- upload a screenshot if you want -->
 
-## License
+
 Copyright © 2026 Catrina Stoner. Some rights reserved. 
 Licensed under the CC BY-NC-ND 4.0.
 
