@@ -1,12 +1,9 @@
 # 𝕎ℍ𝔸𝕋?... 𝓐𝓵𝓵 𝐭𝐡𝐚𝐭 𝖋𝖔𝖗 N⊘THING
-
+𓊈ᖇ𝗢ᗷ𝗢Ԏ•𝗝ᗴᒪᒪ𝗬ᖴ𝗜Տᕼ𓊉
 CONTAM𝗜𝗠𝗔𝗚𝗜𝗡𝗔𝗧𝗜𝗢𝗡
-
 ![Screenshot of the site](https://raw.githubusercontent.com/robotjellyfish/CatrinaStoner/main/header.png) <!-- upload a screenshot if you want -->
- 𓊈ᖇ𝗢ᗷ𝗢Ԏ•𝗝ᗴᒪᒪ𝗬ᖴ𝗜Տᕼ𓊉
+#### Live site
 https://robotjellyfish.github.io/CatrinaStoner/
-
-
 
 Copyright © 2026 Catrina Stoner. Some rights reserved. 
 Licensed under the CC BY-NC-ND 4.0.
