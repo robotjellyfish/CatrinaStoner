@@ -3,6 +3,7 @@
 CONTAM𝗜𝗠𝗔𝗚𝗜𝗡𝗔𝗧𝗜𝗢𝗡
 
 ![Screenshot of the site](https://raw.githubusercontent.com/robotjellyfish/CatrinaStoner/main/header.png) <!-- upload a screenshot if you want -->
+ 𓊈ᖇ𝗢ᗷ𝗢Ԏ•𝗝ᗴᒪᒪ𝗬ᖴ𝗜Տᕼ𓊉
 https://robotjellyfish.github.io/CatrinaStoner/
 
 
