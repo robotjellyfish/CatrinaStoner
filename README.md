@@ -1,6 +1,11 @@
-# 𝕎ℍ𝔸𝕋?... 𝓐𝓵𝓵 𝐭𝐡𝐚𝐭 𝖋𝖔𝖗 N⊘THING
-𓊈ᖇ𝗢ᗷ𝗢Ԏ•𝗝ᗴᒪᒪ𝗬ᖴ𝗜Տᕼ𓊉
-CONTAM𝗜𝗠𝗔𝗚𝗜𝗡𝗔𝗧𝗜𝗢𝗡
+# What?... all that for N⊘THING
+
+Enigma Sigma 
+Autoscopic Autopsy
+This is an archive of thoughts, art, photos, and contamimaginated brain debris by Catrina Stoner.
+
+[ROBOT•JELLYFISH]
+
 ![Screenshot of the site](https://raw.githubusercontent.com/robotjellyfish/CatrinaStoner/main/header.png) <!-- upload a screenshot if you want -->
 #### Live site
 https://robotjellyfish.github.io/CatrinaStoner/
