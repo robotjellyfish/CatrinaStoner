@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>CATRINA STONER</title>
+
+  <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/robotjellyfish/CatrinaStoner/refs/heads/main/icon.png"/>
+  <link href="https://fonts.googleapis.com/css2?family=Unica+One&family=Koulen&family=Aboreto&family=Bebas+Neue&family=Road+Rage&family=Alata&family=Amatic+SC&family=Antonio&family=Anton&family=Combo&family=Pompiere&family=Amaranth&family=Crushed&family=Julius+Sans+One&family=Cuprum&family=Syncopate&family=Barrio&family=Epilogue&family=Bahiana&family=Jacques+Francois+Shadow&family=Fredericka+the+Great&family=Lacquer&family=Stick&family=Montserrat&family=Big+Shoulders+Text&family=Eagle+Lake&family=Nosifer&family=Girassol&family=Sail&family=Cinzel+Display&family=Fjalla+One&family=Flavors&family=Cabin+Sketch&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --text-main: #f0f0f5;
+      --yellow-alert: #fff700;
+      --school-bus-yellow: #FFCC00;
+      --electric-blue: #00DDFF;
+      --hot-pink: #FF00AA;
+      --heading-green: #CCFE37;
+      --light-purple: #C8A2C8;
+      --glass-bg: rgba(8, 4, 22, 0.88); /* darker semi-transparent glass */
+      --glass-border: rgba(255, 204, 0, 0.35);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body {
+      min-height: 100vh;
+      overflow-x: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    body {
+      background: #000 url('https://raw.githubusercontent.com/robotjellyfish/CatrinaStoner/refs/heads/main/background.jpg') center/cover fixed no-repeat;
+      color: var(--text-main);
+      line-height: 1.25;
+      text-align: center;
+      flex: 1;
+    }
+
+    .container { max-width: 1000px; margin: 0 auto; padding: 0 1rem; }
+
+    .visceral-title {
+      font-family: 'Fjalla One', sans-serif;
+      font-size: clamp(2rem, 6vw, 5rem);
+      color: #fff;
+    }
+
+    .glass-container {
+      max-width: 920px;
+      margin: 1.8rem auto 2.5rem;
+      padding: clamp(2rem, 5vw, 3.5rem) clamp(1rem, 4vw, 2.5rem);
+      background: var(--glass-bg);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1.5px solid var(--glass-border);
+      border-radius: 18px;
+      text-align: center;
+      font-size: clamp(1.1rem, 3.5vw, 1.35rem);
+      line-height: 1.2;
+      word-break: break-word;
+      overflow-wrap: break-word;
+    }
+
+    .poem-title {
+      font-size: clamp(2rem, 6vw, 3rem);
+      margin: 1.2rem 0 1rem;
+      font-weight: normal;
+    }
+
+    .poem1-title { font-family: 'Crushed', sans-serif; color: #FFD700; text-align: right; }
+    .poem2-title { font-family: 'Anton', sans-serif; color: #00FFFF; } /* cyan */
+    .poem3-title { font-family: 'Flavors', cursive; color: var(--heading-green); font-size: clamp(1.8rem, 5vw, 2.4rem); }
+    .poem4-title { font-family: 'Cabin Sketch', cursive; color: var(--electric-blue); }
+
+    .poem-subtitle {
+      font-family: 'Crushed', cursive;
+      font-size: clamp(1.6rem, 5vw, 2.4rem);
+      color: var(--hot-pink);
+      font-weight: normal;
+    }
+
+    .poem-body {
+      margin: 1rem 0;
+      font-weight: normal;
+    }
+
+    .poem1 { font-family: 'Fjalla One', sans-serif; text-align: right;}
+    .poem2 { font-family: 'Antonio', sans-serif; }
+    .poem3 { font-family: 'Antonio', sans-serif; }
+    .poem4 { font-family: 'Antonio', sans-serif; }
+
+    .last-word {
+      font-family: 'Anton', sans-serif;
+      font-weight: normal;
+      font-size: 1.2em;
+      color: white;
+    }
+
+    .poem3-line:nth-child(odd) { text-align: left; }
+    .poem3-line:nth-child(even) { text-align: right; }
+
+    .symbol-orange {
+      color: #f1c232;
+      font-size: 2rem;
+      letter-spacing: 6px;
+      margin: 1rem 0;
+    }
+
+    .rainbow-divider {
+      height: 20px; /* 3× thicker */
+      background: linear-gradient(90deg, #FF00AA, #FF8A3C, #FFF500, #92CC00, #129AFE, #460071, #FF00AA);
+      background-size: 300% 100%;
+      animation: rainbowFlow 3s linear infinite;
+    }
+
+    @keyframes rainbowFlow {
+      0%   { background-position: 0% center; }
+      100% { background-position: 300% center; }
+    }
+
+    /* Mobile optimizations */
+    @media (max-width: 768px) {
+      .glass-container { font-size: clamp(1rem, 4vw, 1.2rem); }
+      .poem-title { font-size: clamp(1.5rem, 5vw, 2rem); }
+      .visceral-title { font-size: clamp(2rem, 8vw, 3rem); }
+      .nav-links { gap: 1rem; font-size: 1rem; flex-wrap: wrap; justify-content: center; }
+      .dropdown-content { min-width: 160px; left: -20px; }
+      .poem-subtitle { font-size: clamp(1.4rem, 4.5vw, 2rem); }
+    }
+
+    @media (max-width: 480px) {
+      body { font-size: 1rem; line-height: 1.55; }
+      .glass-container { padding: 1.5rem 1rem; margin: 1rem auto; border-radius: 14px; }
+      .rainbow-divider { height: 20px; }
+      .poem-body br { display: block; margin: 0.4rem 0; }
+      .symbol-orange { font-size: 1.6rem; letter-spacing: 4px; }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(0,0,0,0.92);
+      backdrop-filter: blur(14px);
+      padding: 0.8rem 0;
+      border-bottom: 1px solid rgba(255,204,0,0.18);
+    }
+
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; max-width: 1200px; margin: 0 auto; padding: 0 1rem; flex-wrap: wrap; }
+    .nav-logo img { height: 50px; }
+    .nav-links { display: flex; gap: 1.2rem; font-family: 'Fjalla One', sans-serif; font-size: 1rem; margin-left: auto; flex-wrap: wrap; justify-content: center; }
+    .nav-links a { color: white; text-decoration: none; transition: color 0.3s; }
+    .nav-links a:hover { color: var(--yellow-alert); }
+    .dropdown { position: relative; }
+    .dropdown-content { display: none; position: absolute; background: rgba(0,0,0,0.96); min-width: 180px; box-shadow: 0 12px 24px rgba(0,0,0,0.8); border-radius: 10px; top: 100%; left: 0; }
+    .dropdown:hover .dropdown-content { display: block; }
+    .dropdown-content a { padding: 12px 18px; display: block; color: white; }
+    .dropdown-content a:hover { background: rgba(255,255,255,0.15); }
+
+    .footer {
+      width: 100vw; /* full screen width */
+      background: rgba(0,0,0,0.92);
+      padding: clamp(2rem, 5vw, 3.5rem) 0; /* no side padding */
+      border-top: 4px solid rgba(255,255,255,0.1);
+      margin-top: auto;
+      box-sizing: border-box;
+    }
+
+    .footer-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+
+    .footer-social {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: clamp(1rem, 4vw, 2.2rem);
+      margin-bottom: 1.2rem;
+    }
+
+    .footer-social img { width: clamp(28px, 6vw, 42px); height: auto; }
+
+    .footer-links {
+      text-align: center;
+      margin: 0.8rem 0;
+      font-family: 'Fjalla One', sans-serif;
+      font-size: clamp(0.95rem, 2.2vw, 1.2rem);
+      line-height: 1.8;
+    }
+
+    .footer-links a {
+      color: var(--electric-blue);
+      text-decoration: underline;
+      padding: 0 0.6em;
+      transition: 0.3s;
+    }
+
+    .footer-links a:hover { color: #FFD800; }
+    .footer-links a:visited { color: var(--hot-pink); }
+
+    .footer-copyright {
+      text-align: center;
+      font-family: 'Fjalla One', sans-serif;
+      font-size: clamp(0.85rem, 1.3vw, 1.05rem);
+      line-height: 1.6;
+      color: white;
+      padding-top: 2.5rem;
+    }
+
+    .footer-copyright a { color: var(--school-bus-yellow); text-decoration: underline; }
+
+    .cc-badge {
+      height: 1.5em;
+      vertical-align: middle;
+      margin-left: 6px;
+    }
+  </style>
+</head>
+
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <div class="nav-logo">
+      <img src="https://raw.githubusercontent.com/robotjellyfish/CatrinaStoner/refs/heads/main/icon.png" alt="Icon">
+    </div>
+    <div class="nav-links">
+      <a href="https://robotjellyfish.github.io/CatrinaStoner/">HOME</a>
+      <div class="dropdown">
+        <a href="#">GALLERIES</a>
+        <div class="dropdown-content">
+          <a href="https://photos.app.goo.gl/pp1PdFq5dbE7Q2XaA">PHOTOGRAPHY</a>
+          <a href="https://robotjellyfish.github.io/CatrinaStoner/arthive.html">THE ARTHIVE</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <a href="#">JOURNALS</a>
+        <div class="dropdown-content">
+          <a href="https://sites.google.com/view/thevespaveda">THE VESPA VEDA</a>
+          <a href="https://robotjellyfish.github.io/CatrinaStoner/brainvomit.html">BRAIN VOMIT</a>
+          <a href="https://catrinastoner.blogspot.com/">BLOG</a>
+          <a href="visceral-verses.html">POEMS</a>
+        </div>
+      </div>
+      <a href="https://robotjellyfish.github.io/CatrinaStoner/about.html">ABOUT</a>
+    </div>
+  </div>
+</nav>
+
+<div class="rainbow-divider"></div>
+<div class="container">
+  <h1 class="visceral-title">ꔷＰＯＥＴＲＹꔷ</h1>
+</div>
+<div class="rainbow-divider"></div>
+<div class="container">
+  <div class="glass-container">
+    <div class="poem-title poem1-title">𝗔 𝗟𝗜𝗡𝗚𝗨𝗜𝗦𝗧𝗜𝗖 𝗔𝗧𝗧𝗘𝗠𝗣𝗧 𝗧𝗢 𝗗𝗘𝗦𝗖𝗥𝗜𝗕𝗘 𝗠𝗬 𝗖𝗢𝗚𝗡𝗜𝗧𝗜𝗩𝗘 [𝗦𝗘𝗟𝗙] 𝗥𝗘𝗙𝗟𝗘𝗖𝗧𝗜𝗢𝗡</div>
+    <div class="poem-body poem1">
+      My mind is a metastasizing work of… …art or obsession perhaps; in infinite <span class="last-word">metamorphosis</span>.<br>
+      A ceaseless project with no known <span class="last-word">visionary</span>.<br>
+      A personified confusion, indecision, or Svengali <span class="last-word">design</span>.<br>
+      A subconscious contradictory or maniacal scrambling that unintentionally serves an unknown imperceivable <span class="last-word">"motive"</span>.<br>
+      Can ANYTHING in this existence contend to the utmost <span class="last-word">satisfactory</span>?<br>
+      Feigning time and feinding terror, it will never be <span class="last-word">complete…</span><br><br>
+      <span class="last-word"><strong>NOTHING EVER IS...</strong></span>
+    </div>
+  </div>
+</div>
+<div class="rainbow-divider"></div>
+<div class="container">
+  <div class="glass-container">
+    <div class="poem-title poem2-title">ꔷ•TRAIL MIX VENOM•ꔷ</div>
+    <div class="poem-subtitle">FREEING A SOUL FROM CHOCOLATE & SALT</div>
+    <div class="poem-body poem2">
+      The beginning of the end paradox vortexed in Earth's <span class="last-word">cervix</span>.<br>
+      Karmatosed, chronologic circumventures where reality does not <span class="last-word">exist</span>.<br><br>
+      Spiritual enlightenment Synchronizing beauty with macabre <span class="last-word">psychosis</span>.<br>
+      Expired sofas beneath extinct isopods guiding a toxic <span class="last-word">hypnosis</span>.<br><br>
+      Epiphany conglomerates ambivalence in narcissistic <span class="last-word">masochism</span>.<br>
+      Where ApacoLimbo then copulates into self-succubus <span class="last-word">cannibalism</span>.<br><br>
+      Beauty rots to repulsion from Indulgence in <span class="last-word">admiration</span>.<br>
+      Swallowing rusted gutter shrubs feinding for mutual <span class="last-word">masturbation</span>.<br>
+      Milk, blood, and honey drip feathers and liquid silk <span class="last-word">together</span>.<br>
+      Cockroaches never die and jellyfishes are <span class="last-word">forever</span>.<br><br>
+      I've walked this Earth a thousand times <span class="last-word">before</span>.<br>
+      Enjoy the ride a thousand times <span class="last-word">more</span>.<br><br>
+      Sit back, relax, and watch your <span class="last-word">Show</span>.<br>
+      Death lures me to cosmic crystal <span class="last-word">cocoa</span>.<br><br>
+      Shelled on Plateau Sigma, whales stomping on <span class="last-word">Lego</span>.<br>
+      Conscience shadows eating myself until kill my <span class="last-word">ego</span>.<br><br>
+      Most would concur crossing the bombing range is <span class="last-word">crazy</span>.<br>
+      Faith in chaos, I must see what golden chocolate destiny awaits <span class="last-word">me</span>.<br><br>
+      Diamond scaled rattles with fang needled syringes poison my <span class="last-word">vein</span>.<br>
+      Viscous coagulation and burning blood but after death will be no <span class="last-word">pain</span>.<br><br>
+      Touché sacred serpent, for I saw you in a <span class="last-word">dream</span>.<br>
+      Satisfaction killed the cat, and your bite is justified it <span class="last-word">seems</span>.<br><br>
+      Destination: death, this final experience will be <span class="last-word">embraced</span>.<br>
+      I only hope my carbon footprint left on earth will be <span class="last-word">erased</span>.<br><br>
+      Forbidden knowledge holding spirit made of scales, this is the <span class="last-word">end</span>.<br>
+      Thank you for this toxic freedom. I will journey well my <span class="last-word">friend</span>.
+    </div>
+  </div>
+</div>
+<div class="rainbow-divider"></div>
+<div class="container">
+  <div class="glass-container">
+    <div class="symbol-orange">..•𓍊𔗻𓍊•..</div>
+    <div class="poem-title poem3-title">ᵀᴴᴱʄ̊ᥩ𑫍Ɡᥩ𐔣<br> ᗋᗰ0𑫍Ɡ ᥩ𐔣</div>
+    <div class="poem-body poem3">
+      <p class="poem3-line">Celestial, universal, intergalactic <span class="last-word">fungus</span>.</p>
+      <p class="poem3-line">Divinely spreading life through space and time amongst <span class="last-word">us</span>.</p><br>
+      <p class="poem3-line">Kingdom of gods including mushrooms, molds, and <span class="last-word">yeasts</span>.</p>
+      <p class="poem3-line">Driving half of Earth's decomposition by breaking down what is <span class="last-word">deceased</span>.</p><br>
+      <p class="poem3-line">When dead organisms decay and rot, the molecules are <span class="last-word">scattered</span>.</p>
+      <p class="poem3-line">To then become the pieces of new recomposing <span class="last-word">matter</span>.</p><br>
+      <p class="poem3-line">Their life begins in clusters of microscopic <span class="last-word">spores</span>.</p>
+      <p class="poem3-line">They all begin dormant until they settle on moist dark <span class="last-word">floors</span>.</p><br>
+      <p class="poem3-line">Water wakes them up so they can communicate and join <span class="last-word">together</span>.</p>
+      <p class="poem3-line">Forming pathways like brain neurons the mycelium exists <span class="last-word">forever</span>.</p><br>
+      <p class="poem3-line">Fungal DNA will never die as they exist to learn new <span class="last-word">traits</span>.</p>
+      <p class="poem3-line">And until new genes are found, the mycelium just refuses to <span class="last-word">mate</span>.</p><br>
+      <p class="poem3-line">Unlike most organisms that are concerned only to pass on their <span class="last-word">genes</span>.</p>
+      <p class="poem3-line">Fungi only live to gain new traits to create new species never before <span class="last-word">seen</span>.</p><br>
+      <p class="poem3-line">When mycelium sense new genes they reach out grasping <span class="last-word">hands</span>.</p>
+      <p class="poem3-line">Exchanging DNA in a brain like knot of hyphael <span class="last-word">strands</span>.</p><br>
+      <p class="poem3-line">This hyphael knot is new genetic species that will fruit a spore bearing <span class="last-word">flower</span>.</p>
+      <p class="poem3-line">The mushrooms color, shape, and size controlled by some sentient conscious <span class="last-word">power</span>.</p><br>
+      <p class="poem3-line">After caps bloom and they build pressure, thousands of spores are projected <span class="last-word">around</span>.</p>
+      <p class="poem3-line">So, there are new genetic fungi species of every mushroom <span class="last-word">found</span>.</p><br>
+      <p class="poem3-line">Evolving and lying dormant so that their legacy never <span class="last-word">dies</span>.</p>
+      <p class="poem3-line">Across space through radiation, fungal spores are found to <span class="last-word">survive</span>.</p><br>
+      <p class="poem3-line">They hold evolution's entire record through out all of space and <span class="last-word">time</span>.</p>
+      <p class="poem3-line">The fungi communicate knowledge remaining consciously <span class="last-word">sublime</span>.</p><br>
+      <div class="symbol-orange">..𓍊𓍊𔗻𓍊𓍊𔗻𓍊𓍊𔗻𓍊𓍊..</div>
+    </div>
+  </div>
+</div>
+<div class="rainbow-divider"></div>
+<div class="container">
+  <div class="glass-container">
+    <div class="poem-title poem4-title">RIDING IN CARS WITH STRANGERS</div>
+    <div class="poem-body poem4">
+      So many different cities but they all feel the <span class="last-word">same</span>.<br>
+      Even all the streets and avenues share one monotonous <span class="last-word">name</span>.<br><br>
+      Constant cycled repetition again in new <span class="last-word">places</span>.<br>
+      The scene will never change, only the people and their <span class="last-word">faces</span>.<br><br>
+      Seeing it all, over and over in opposite <span class="last-word">directions</span>.<br>
+      Lost recollection of yourself; without mirrors there aren't <span class="last-word">reflections</span>.<br><br>
+      Plateaued, moving forward, yet still not getting <span class="last-word">anywhere</span>.<br>
+      Encountering extremities that cause a reaction are now <span class="last-word">rare</span>.<br><br>
+      Dull and bored from overdone experience making me numb to <span class="last-word">life</span>.<br>
+      Slicing flesh to watch it bleed I'm now longing for pain and <span class="last-word">strife</span>.<br><br>
+      Wishing for the usual inherent struggle and fight to <span class="last-word">survive</span>.<br>
+      The closer one comes to death, the more one feels <span class="last-word">alive</span>.<br><br>
+      So I walk the Earth with my thumb held <span class="last-word">high</span>.<br>
+      Waiting for the impossible to potentially blow my <span class="last-word">mind</span>.<br><br>
+      Intransigent lifestyle of riding in cars with <span class="last-word">strangers</span>.<br>
+      No more purpose in my existence outside facing fear and <span class="last-word">danger</span>.<br><br>
+      To be the criminal or the victim we attempt to make a <span class="last-word">choice</span>.<br>
+      Living beings of expression with no say yet having a <span class="last-word">voice</span>.<br><br>
+      Be a part of a puzzle just like other bricks in the <span class="last-word">wall</span>.<br>
+      Or be a puzzle piece by itself and lost from <span class="last-word">all</span>.<br><br>
+      Lonely is unlike anything and holds a certain <span class="last-word">bliss</span>.<br>
+      Solitary phobia is fearing oneself and I think its mankinds <span class="last-word">weakness</span>.<br><br>
+      Wandering the universe down highways and back <span class="last-word">roads</span>.<br>
+      The redundancy of each trip has me also becoming <span class="last-word">plateaued</span>.<br><br>
+      Like a vagabond tramping on a Spiritual <span class="last-word">endeavor</span>.<br>
+      If asked where I'm headed, I simply answer with <span class="last-word">"wherever"</span>.<br><br>
+      Everyone questions my notion that I've not a thing I need to <span class="last-word">do</span>.<br>
+      Since riding in cars with strangers is putting soul in my <span class="last-word">shoe</span>.
+    </div>
+  </div>
+</div>
+<div class="rainbow-divider"></div>
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-social">
+      <a href="https://facebook.com/catrinastoner" target="_blank" rel="noopener noreferrer">
+        <img src="https://img.icons8.com/ios-filled/100/ffffff/facebook-new.png" alt="Facebook">
+      </a>
+      <a href="https://www.instagram.com/robot_jellyfish?igsh=MzRlODBiNWFlZA==" target="_blank" rel="noopener noreferrer">
+        <img src="https://img.icons8.com/ios-filled/100/ffffff/instagram-new.png" alt="Instagram">
+      </a>
+      <a href="https://youtube.com/@catrinastoner" target="_blank" rel="noopener noreferrer">
+        <img src="https://img.icons8.com/ios-filled/100/ffffff/youtube-play.png" alt="YouTube">
+      </a>
+      <a href="https://pin.it/6wEfEdAP3" target="_blank" rel="noopener noreferrer">
+        <img src="https://img.icons8.com/ios-filled/100/ffffff/pinterest--v1.png" alt="Pinterest">
+      </a>
+      <a href="https://t.me/robotjellyfish" target="_blank" rel="noopener noreferrer">
+        <img src="https://img.icons8.com/ios-filled/100/ffffff/telegram-app.png" alt="Telegram">
+      </a>
+      <a href="https://reddit.com/user/Carnidendrophiliac" target="_blank" rel="noopener noreferrer">
+        <img src="https://img.icons8.com/ios-filled/100/ffffff/reddit.png" alt="Reddit">
+      </a>
+    </div>
+
+    <div class="footer-links">
+      <a href="https://robotjellyfish.github.io/CatrinaStoner/about/" target="_blank" rel="noopener noreferrer">ABOUT</a>
+      <span>/</span>
+      <a href="https://gravatar.com/catrinastoner" target="_blank" rel="noopener noreferrer">CONTACT</a>
+    </div>
+
+    <div class="footer-copyright">
+      COPYRIGHT © 2026 CATRINA STONER. SOME RIGHTS RESERVED. LICENSED UNDER 
+      <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="noopener noreferrer">CC BY-NC-ND 4.0</a>
+      <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="noopener noreferrer">
+        <img src="https://licensebuttons.net/l/by-nc-nd/4.0/88x31.png" alt="CC BY-NC-ND 4.0" class="cc-badge">
+      </a>.
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
