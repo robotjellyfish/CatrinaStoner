@@ -1,4 +1,4 @@
-# What?... all that for N⊘THING
+# 𝕮𝙰✞ℛ𝕚𝑁𝙰°𝑠 𝕮𝐨𝛈𝘁𝛂𝔪𝕚𝖒𝛂𝐠༏𝛈𝛂𝘁༏φ𝛈
 This is an archive of thoughts, art, photos, and contamimaginated brain debris by Catrina Stoner.
 #### Live site
 https://robotjellyfish.github.io/CatrinaStoner/
