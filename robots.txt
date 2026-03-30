@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://robotjellyfish.github.io/sitemap.xml
