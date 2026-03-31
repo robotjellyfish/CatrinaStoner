@@ -1,12 +1,11 @@
 ![Screenshot of the site](https://raw.githubusercontent.com/robotjellyfish/CatrinaStoner/main/header.png) <!-- upload a screenshot if you want -->
-# CATRINA STONER
-### 𝆡༅Artist 𝆡༅Photographer 𝆡༅Philosopher 𝆡༅Entomology Enthusiast 
-⚠ WARNING ⚠ DO NOT OVERTHINK THIS OR YOU WILL LOSE YOUR MIND 
-### THIS MONTAGALOGUE IS AN ARCHIVE OF DIGITALLY FOSSILIZED CONTAMIMAGINATION
+# 𝗖𝗔𝗧𝗥𝗜𝗡𝗔 𝗦𝗧𝗢𝗡𝗘𝗥
+•𝐀𝐑𝐓𝐈𝐒𝐓 •𝐏𝐇𝐎𝐓𝐎𝐆𝐑𝐀𝐏𝐇𝐄𝐑 •𝐏𝐇𝐈𝐋𝐎𝐒𝐎𝐏𝐇𝐄𝐑 •𝐄𝐍𝐓𝐎𝐌𝐎𝐋𝐎𝐆𝐘 𝐄𝐍𝐓𝐇𝐔𝐒𝐈𝐀𝐒𝐓 
 
+### ⚠ 𝗪𝗔𝗥𝗡𝗜𝗡𝗚! DO NOT OVERTHINK THIS OR YOU WILL LOSE YOUR MIND ⚠
 
-THOUGHTFUL REMINDER: DON'T FORGET TO FEED YOUR MIND SOME MINDFUL FOOD FOR THOUGHT UNTIL YOUR MIND GETS SO FULL THAT YOUR MIND IS BLOWN TO PIECES & YOU FIND SOME PEACE OF MIND IN MINDLESSNESS... MIND BLOWN!
-![Screenshot of the site](https://raw.githubusercontent.com/robotjellyfish/CatrinaStoner/main/robotjellyfish.png) <!-- upload a screenshot if you want -->
+THIS ARCHIVE IS MY DIGITALLY FOSSILIZED CONTAMIMAGINATION MONTAGALOGUE
+
 #### 𝗥𝗢𝗕𝗢𝗧•𝗝𝗘𝗟𝗟𝗬𝗙𝗜𝗦𝗛 https://robotjellyfish.github.io/CatrinaStoner/
 #### 𝗣𝗛𝗢𝗧𝗢𝗚𝗥𝗔𝗣𝗛𝗬 https://photos.app.goo.gl/pp1PdFq5dbE7Q2XaA
 #### 𝗔𝗥𝗧𝗛𝗜𝗩𝗘 https://robotjellyfish.github.io/CatrinaStoner/arthive.html
@@ -15,10 +14,11 @@ THOUGHTFUL REMINDER: DON'T FORGET TO FEED YOUR MIND SOME MINDFUL FOOD FOR THOUGH
 #### 𝗕𝗟𝗢𝗚 https://catrinastoner.blogspot.com/
 #### 𝗣𝗢𝗘𝗧𝗥𝗬 https://robotjellyfish.github.io/CatrinaStoner/poems.html
 
+THOUGHTFUL REMINDER: DON'T FORGET TO FEED YOUR MIND SOME MINDFUL FOOD FOR THOUGHT UNTIL YOUR MIND GETS SO FULL THAT YOUR MIND IS BLOWN TO PIECES & YOU FIND SOME PEACE OF MIND IN MINDLESSNESS... MIND BLOWN!
+![Screenshot of the site](https://github.com/robotjellyfish/CatrinaStoner/blob/main/robotjellyfish%20(1).png) <!-- upload a screenshot if you want -->
 
 "...this is the devil's work..."
 "...are you not entertained?..."
-
 
 #### License
 Copyright © 2026 Catrina Stoner. Some rights reserved. 
