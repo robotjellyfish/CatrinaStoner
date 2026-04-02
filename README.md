@@ -1,7 +1,7 @@
 ## ⚠𝗪𝗔𝗥𝗡𝗜𝗡𝗚⚠: DO NOT OVERTHINK THIS OR YOU WILL LOSE YOUR MIND
 ![Screenshot of the site](https://raw.githubusercontent.com/robotjellyfish/CatrinaStoner/main/header.png) <!-- upload a screenshot if you want -->
 # 𝗖𝗔𝗧𝗥𝗜𝗡𝗔 𝗦𝗧𝗢𝗡𝗘𝗥
-## CONTAMINAGINATION MONTAGALOGUE
+## CONTAMIMAGINATION MONTAGALOGUE
 ### The Digitally Fossilized Archive of My Mind
 #### 𝗠𝗔𝗜𝗡: https://robotjellyfish.github.io/CatrinaStoner/
 #### 𝗣𝗛𝗢𝗧𝗢𝗚𝗥𝗔𝗣𝗛𝗬: https://photos.app.goo.gl/pp1PdFq5dbE7Q2XaA
