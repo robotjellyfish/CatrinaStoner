@@ -1,4 +1,4 @@
-## ⚠𝗪𝗔𝗥𝗡𝗜𝗡𝗚⚠: DO NOT OVERTHINK THIS OR YOU WILL LOSE YOUR MIND
+## ⚠️𝗪𝗔𝗥𝗡𝗜𝗡𝗚⚠️: DO NOT OVERTHINK THIS OR YOU WILL LOSE YOUR MIND
 ![Screenshot of the site](https://raw.githubusercontent.com/robotjellyfish/CatrinaStoner/main/header.png) <!-- upload a screenshot if you want -->
 # 𝗖𝗔𝗧𝗥𝗜𝗡𝗔 𝗦𝗧𝗢𝗡𝗘𝗥
 ## CONTAMIMAGINATION MONTAGALOGUE
