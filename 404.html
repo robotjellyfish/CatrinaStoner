@@ -2,14 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Redirecting...</title>
-    <meta http-equiv="refresh" content="0; url=https://robotjellyfish.github.io/CatrinaStoner/">
+    <title>Redirecting to Catrina Stoner</title>
+    
+    <!-- Instant redirect -->
+    <meta http-equiv="refresh" content="0; url=https://robotjellyfish.github.io/CatrinaStoner">
+    
     <script>
-        // Instant redirect for better UX
-        window.location.replace("https://robotjellyfish.github.io/CatrinaStoner");
+        // Force redirect from lowercase to correct capitalized URL
+        const currentUrl = window.location.href;
+        const correctUrl = "https://robotjellyfish.github.io/CatrinaStoner";
+        
+        if (currentUrl.toLowerCase().includes("/catrinastoner")) {
+            window.location.replace(correctUrl);
+        } else {
+            window.location.replace(correctUrl);
+        }
     </script>
 </head>
-<body>
-    <p>If you are not redirected automatically, <a href="https://robotjellyfish.github.io/CatrinaStoner/">click here</a>.</p>
+<body style="background:#000; color:#fff; text-align:center; padding:50px; font-family:sans-serif;">
+    <h2>Redirecting...</h2>
+    <p>If you are not redirected automatically, please <a href="https://robotjellyfish.github.io/CatrinaStoner" style="color:#00CCFF;">click here</a>.</p>
 </body>
 </html>
