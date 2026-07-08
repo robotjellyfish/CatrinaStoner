@@ -1,6 +1,6 @@
 ![Screenshot of the site](https://github.com/robotjellyfish/CatrinaStoner/blob/main/robotjellyfish%20(1).png) <!-- upload a screenshot if you want -->
-# CatrinaStoner | ![Screenshot of the site](https://github.com/robotjellyfish/CatrinaStoner/blob/main/favicon.png) <!-- upload a screenshot if you want -->
 
+# CatrinaStoner |
 ⚠ WARNING ⚠
  DO NOT OVERTHINK THIS 
  OR YOU WILL LOSE YOUR MIND
@@ -21,7 +21,7 @@ For a complete recursive breakdown of all nodes and adjacent pages within the ar
 ---
 *“Don't forget to feed your mind some mindful food for thought until your mind gets so full that your mind is blown to pieces and you find some peace of mind in mindlessness. ”*
 
-
+![Screenshot of the site](https://github.com/robotjellyfish/CatrinaStoner/blob/main/black%20icon.png) <!-- upload a screenshot if you want -->
 ## License
 © 2026 Catrina Stoner. 
 Licensed under [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/). 
