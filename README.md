@@ -1,5 +1,5 @@
 ![Screenshot of the site](https://github.com/robotjellyfish/CatrinaStoner/blob/main/robotjellyfish%20(1).png) <!-- upload a screenshot if you want -->
-# CatrinaStoner |
+# CatrinaStoner | ![Screenshot of the site](https://github.com/robotjellyfish/CatrinaStoner/blob/main/favicon.png) <!-- upload a screenshot if you want -->
 
 ⚠ WARNING ⚠
  DO NOT OVERTHINK THIS 
