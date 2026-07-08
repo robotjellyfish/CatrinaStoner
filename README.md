@@ -19,7 +19,6 @@ For a complete recursive breakdown of all nodes and adjacent pages within the ar
 [Sitemap.html](./sitemap.html)
 
 ---
-"This is the devil's work..." "...Are you not entertained?"
 *“Don't forget to feed your mind some mindful food for thought until your mind gets so full that your mind is blown to pieces and you find some peace of mind in mindlessness. ”*
 
 
@@ -28,3 +27,4 @@ For a complete recursive breakdown of all nodes and adjacent pages within the ar
 Licensed under [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/). 
 *Observe the boundaries. Do not repurpose without intent.*
 
+"This is the devil's work..." "...Are you not entertained?"
