@@ -8,75 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Aboreto&family=Alata&family=Alkatra&family=Amaranth&family=Amatic+SC&family=Anton&family=Antonio&family=Bahiana&family=Barrio&family=Barriecito&family=Bebas+Neue&family=Big+Shoulders+Text&family=Bungee&family=Cabin+Sketch&family=Chewy&family=Cinzel+Display&family=Combo&family=Comforter+Brush&family=Crushed&family=Cuprum&family=Denk+One&family=Eagle+Lake&family=Epilogue&family=Fjalla+One&family=Fleur+De+Leah&family=Fredericka+the+Great&family=Girassol&family=Julius+Sans+One&family=Kirang+Haerang&family=Koulen&family=Lacquer&family=Londrina+Shadow&family=Montserrat&family=Nosifer&family=Pompiere&family=Princess+Sofia&family=Road+Rage&family=Rubik+Vinyl&family=Sail&family=Stick&family=Syncopate&family=Tapestry&family=Unica+One&family=Vina+Sans&display=swap" rel="stylesheet">
-<!-- 1. The fundamental viewport declaration -->
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-/* 2. Universal Box Model Reset */
-/* Compels all elements to calculate width inclusively, neutralizing spontaneous overflow */
-*, *::before, *::after {
-  box-sizing: border-box;
-}
-
-/* 3. The Horizontal Failsafe */
-/* Restricts the document root and ruthlessly clips any rogue elements that attempt to escape */
-html, body {
-  max-width: 100vw;
-  overflow-x: hidden; 
-  margin: 0;
-  padding: 0;
-}
-
-/* 4. Typographical Containment & Aggressive Word Breaking */
-/* Targets the dense poetry strings and symbols, forcing them to fracture instead of overhanging */
-p, div, span, h1, h2, h3, h4, h5, h6, a {
-  overflow-wrap: break-word;
-  word-wrap: break-word;
-  word-break: break-word;
-  white-space: normal;
-  max-width: 100%;
-}
-
-/* 5. Structural Liquidity for Media and Tables */
-/* Ensures imagery scales down proportionately */
-img, video, iframe {
-  max-width: 100%;
-  height: auto;
-}
-
-/* Forces table rows and cells to behave as block elements, stacking rather than stretching */
-table, tr, td {
-  display: block;
-  width: 100%;
-}
-
-/* 6. The Mobile Architecture (Media Query) */
-/* Executes conditionally when the viewport shrinks below 768 pixels */
-@media screen and (max-width: 768px) {
-  
-  /* Reconfigures the navigation bar into a vertical, centralized column */
-  nav > div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    padding: 10px;
-  }
-  
-  /* Centers and spaces the nested links for touch-screen accessibility */
-  nav > div > div {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    gap: 12px; 
-    padding-top: 10px;
-  }
-
-  body {
-    padding: 15px; /* Condenses outer margins to reclaim screen real estate for text */
-  }
-}
-</style>
 
 
   <style>
