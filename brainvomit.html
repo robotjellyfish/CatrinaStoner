@@ -9,7 +9,63 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Aboreto&family=Alata&family=Alkatra&family=Amaranth&family=Amatic+SC&family=Anton&family=Antonio&family=Bahiana&family=Barrio&family=Barriecito&family=Bebas+Neue&family=Big+Shoulders+Text&family=Bungee&family=Cabin+Sketch&family=Chewy&family=Cinzel+Display&family=Combo&family=Comforter+Brush&family=Crushed&family=Cuprum&family=Denk+One&family=Eagle+Lake&family=Epilogue&family=Fjalla+One&family=Fleur+De+Leah&family=Fredericka+the+Great&family=Girassol&family=Julius+Sans+One&family=Kirang+Haerang&family=Koulen&family=Lacquer&family=Londrina+Shadow&family=Montserrat&family=Nosifer&family=Pompiere&family=Princess+Sofia&family=Road+Rage&family=Rubik+Vinyl&family=Sail&family=Stick&family=Syncopate&family=Tapestry&family=Unica+One&family=Vina+Sans&display=swap" rel="stylesheet">
 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<style>
+  /* 1. Global Box-Sizing & Viewport Protection */
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  html, body {
+    max-width: 100vw;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+
+  /* 2. Fluid Scaling for Everything */
+  /* This shrinks the base font size dynamically based on screen width, 
+     ensuring long lines scale down instead of wrapping or overflowing. */
+  body {
+    font-size: clamp(0.5rem, 2.5vw, 1rem);
+  }
+
+  /* 3. Force All Text Elements to Scale and Prevent Overflows */
+  p, div, span, h1, h2, h3, h4, h5, h6, a {
+    max-width: 100%;
+    /* Prevents hyphenation and forces continuous scaling */
+    hyphens: manual;
+    -webkit-hyphens: manual;
+    white-space: normal;
+  }
+
+  /* 4. Structural Liquidity (Tables and Navigation) */
+  table, tr, td {
+    display: block;
+    width: 100% !important;
+    max-width: 100%;
+  }
+
+  img, video, iframe {
+    max-width: 100% !important;
+    height: auto;
+  }
+
+  /* 5. Extreme Small-Screen Shrink-to-Fit Override */
+  @media screen and (max-width: 480px) {
+    body {
+      font-size: clamp(0.4rem, 3vw, 0.8rem);
+      padding: 5px;
+    }
+    
+    nav div {
+      font-size: 0.7rem;
+    }
+  }
+</style>
+  
 
   <style>
     :root {
