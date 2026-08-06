@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport"/>
+<title>BRAIN VOMIT</title>
+
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+
+<link href="https://fonts.googleapis.com/css2?family=Aboreto&amp;family=Alata&amp;family=Alkatra&amp;family=Amaranth&amp;family=Amatic+SC&amp;family=Anton&amp;family=Antonio&amp;family=Bahiana&amp;family=Barrio&amp;family=Barriecito&amp;family=Bebas+Neue&amp;family=Big+Shoulders+Text&amp;family=Bungee&amp;family=Cabin+Sketch&amp;family=Chewy&amp;family=Cinzel+Display&amp;family=Combo&amp;family=Comforter+Brush&amp;family=Crushed&amp;family=Cuprum&amp;family=Denk+One&amp;family=Eagle+Lake&amp;family=Epilogue&amp;family=Fjalla+One&amp;family=Fleur+De+Leah&amp;family=Fredericka+the+Great&amp;family=Girassol&amp;family=Julius+Sans+One&amp;family=Kirang+Haerang&amp;family=Koulen&amp;family=Lacquer&amp;family=Londrina+Shadow&amp;family=Montserrat&amp;family=Nosifer&amp;family=Pompiere&amp;family=Princess+Sofia&amp;family=Road+Rage&amp;family=Rubik+Vinyl&amp;family=Sail&amp;family=Stick&amp;family=Syncopate&amp;family=Tapestry&amp;family=Unica+One&amp;family=Vina+Sans&amp;display=swap" rel="stylesheet"/>
+
+<link rel="icon" type="image/png" href="https://raw.githubusercontent.com/robotjellyfish/CatrinaStoner/refs/heads/main/icon.png"/>
+
+<style>
+  /* 1. Global Box-Sizing & Viewport Protection */
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  html, body {
+    max-width: 100vw;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+
+  /* 2. Fluid Scaling for Everything */
+  body {
+    font-size: clamp(0.5rem, 2.5vw, 1rem);
+  }
+
+  /* 3. Force All Text Elements to Scale and Prevent Overflows */
+  p, div, span, h1, h2, h3, h4, h5, h6, a {
+    max-width: 100%;
+    hyphens: manual;
+    -webkit-hyphens: manual;
+    white-space: normal;
+  }
+
+  /* 4. Structural Liquidity (Tables and Navigation) */
+  table, tr, td {
+    display: block;
+    width: 100% !important;
+    max-width: 100%;
+  }
+
+  img, video, iframe {
+    max-width: 100% !important;
+    height: auto;
+  }
+
+  /* 5. Extreme Small-Screen Shrink-to-Fit Override (Removed body padding to eliminate gaps) */
+  @media screen and (max-width: 480px) {
+    body {
+      font-size: clamp(0.4rem, 3vw, 0.8rem);
+    }
+    
+    .nav-links, .nav-links a, .dropdown-content a {
+      font-size: 0.9rem;
+    }
+  }
+</style>
+
+<style>
+    :root {
+      --text-main: #f0f0f5;
+      --heading-green: #CCFE37;
+      --dark-void: #0a0012;
+    }
+
+    * { margin:0; padding:0; box-sizing:border-box; }
+    
+    html, body {
+      min-height: 100vh;
+      overflow-x: hidden;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      background: #000 url('https://raw.githubusercontent.com/robotjellyfish/CatrinaStoner/refs/heads/main/background.jpg') center/cover fixed no-repeat;
+      color: var(--text-main);
+      font-family: 'Noto Sans', sans-serif;
+      line-height: 1.5;
+      text-align: center;
+    }
+
+    .container { max-width: 1180px; margin: 0 auto; padding: 0 1.6rem; }
+
+    /* NAVIGATION */
+    nav {
+      position: sticky;
+      top: 0;
+      margin: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(0,0,0,0.9);
+      backdrop-filter: blur(10px);
+      padding: 0;
+      border-bottom: 1px solid rgba(255,255,255,0.12);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 0 1.6rem;
+    }
+
+    .nav-logo img { height: 48px; width: auto; }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1.8rem;
+      font-family: 'Fjalla One', sans-serif;
+      font-size: 1.1rem;
+      margin-left: auto;
+    }
+
+    .nav-links a { color: white; text-decoration: none; transition: color 0.3s; }
+    .nav-links a:hover { color: var(--yellow-alert); }
+
+    .dropdown { position: relative; }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background: rgba(0,0,0,0.92);
+      min-width: 180px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.6);
+      z-index: 1;
+      border-radius: 8px;
+      overflow: hidden;
+      top: 100%;
+      left: 0;
+    }
+    .dropdown:hover .dropdown-content { display: block; }
+    .dropdown-content a {
+      padding: 12px 16px;
+      display: block;
+      color: white;
+    }
+    .dropdown-content a:hover { background: rgba(255,255,255,0.08); }
+
+    /*---TITLE---*/
+    .title {
+      font-family: 'Crushed', cursive;
+      color: #fff;
+      letter-spacing: 0.04em;
+      margin: 2.2rem 0 2.8rem;
+    }
+
+    .title .main {
+      font-size: clamp(5rem, 7vw, 6rem);
+      font-weight: 900;
+      display: block;
+      line-height: 0.92;
+      white-space: nowrap;
+    }
+
+    .title .sub {
+      font-size: clamp(1.29rem, 3.66vw, 2.70rem);
+      opacity: 0.94;
+      display: block;
+    }
+
+    .glass-container {
+      max-width: 980px;
+      margin: 1.8rem auto 3.6rem;
+      padding: clamp(2.8rem, 6vw, 4rem) clamp(1.8rem, 5vw, 2.8rem);
+      border-radius: 24px;
+      box-shadow: 0 16px 64px rgba(0,0,0,0.94);
+      font-size: clamp(0.62rem, 1.46vw, 0.73rem);
+      background: rgba(10, 5, 20, 0.78);
+      border: 1px solid rgba(80, 40, 140, 0.35);
+    }
+
+    .rainbow-divider { 
+      height: 12px; 
+      width: 100%; 
+      background: linear-gradient(90deg, #FF00AA, #FF8A3C, #FFF700, #92CC00, #03A6F7, #8702F4, #FF00AA); 
+      background-size: 240% 100%; 
+      border: none; 
+      margin: 1rem 0; 
+    }
+
+    .rainbow-divider:nth-child(odd) {
+      animation: rainbowFlowLTR 21s linear infinite;
+    }
+
+    .rainbow-divider:nth-child(even) {
+      animation: rainbowFlowRTL 30s linear infinite;
+    }
+
+    @keyframes rainbowFlowLTR {
+      0%   { background-position: 0% center; }
+      100% { background-position: 600% center; }
+    }
+
+    @keyframes rainbowFlowRTL {
+      0%   { background-position: 600% center; }
+      100% { background-position: 0% center; }
+    }
+
+    .glass-container strong,
+    .glass-container b,
+    .glass-container h1, .glass-container h2, .glass-container h3 {
+      color: var(--heading-green);
+      font-family: 'Bebas Neue', sans-serif;
+      letter-spacing: 0.08em;
+    }
+
+    /* FOOTER – zero margins/gaps at bottom, full width 100% */
+    .footer {
+      width: 100%;
+      margin: 0;
+      background: rgba(0,0,0,0.9);
+      padding: clamp(2.5rem, 6vw, 4rem) 1rem;
+      border-top: 4px solid rgba(255,255,255,0.08);
+    }
+
+    .footer-inner {
+      max-width: 100%;
+      margin: 0 auto;
+    }
+
+    .footer-social {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: clamp(1.2rem, 4vw, 2.5rem);
+      margin-bottom: 1.5rem;
+    }
+
+    .footer-social img {
+      width: clamp(28px, 6vw, 45px);
+      height: auto;
+    }
+
+    .footer-links {
+      text-align: center;
+      margin: 1.0rem 0;
+      font-family: 'Fjalla One', sans-serif;
+      font-size: clamp(0.95rem, 2.2vw, 1.3rem);
+      line-height: 1.8;
+    }
+
+    .footer-links a {
+      color: #00CCFF;
+      text-decoration: underline;
+      transition: 0.3s;
+      padding: 0 0.6em;
+    }
+
+    .footer-links a:hover { color: #FFD800; }
+    .footer-links a:visited { color: #FF1493; }
+
+    .footer-copyright {
+      text-align: center;
+      font-family: 'Fjalla One', sans-serif;
+      font-size: clamp(0.85rem, 1.3vw, 1.1rem);
+      line-height: 1.6;
+      color: white;
+      padding-top: 3rem;
+    }
+
+    .footer-copyright a {
+      color: #FFCC00;
+      text-decoration: underline;
+    }
+
+    .cc-badge {
+      height: 2em;
+      vertical-align: middle;
+      margin-left: 6px;
+      display: inline-block;
+    }
+
+    ol { margin: 0; padding: 0; }
+    table td, table th { padding: 0; }
+
+    .c30 { border-right-style:solid; padding:5pt; border-bottom-color:#000000; border-top-width:1pt; border-right-width:1pt; border-left-color:#000000; vertical-align:top; border-right-color:#000000; border-left-width:1pt; border-top-style:solid; border-left-style:solid; border-bottom-width:1pt; width:468pt; border-top-color:#000000; border-bottom-style:solid }
+    .c6 { color:#f0f0f5; font-weight:700; text-decoration:none; vertical-align:baseline; font-size:10.88pt; font-family:"Comic Sans MS"; font-style:normal }
+    .c39 { color:#f0f0f5; font-weight:700; text-decoration:none; vertical-align:baseline; font-size:10.88pt; font-family:"Pompiere"; font-style:normal }
+    .c18 { color:#f0f0f5; font-weight:700; text-decoration:none; vertical-align:baseline; font-size:22.50pt; font-family:"Comic Sans MS"; font-style:normal }
+    .c41 { color:#f0f0f5; font-weight:700; text-decoration:none; vertical-align:baseline; font-size:18.00pt; font-family:"Julius Sans One"; font-style:italic }
+    .c29 { color:#f0f0f5; font-weight:400; text-decoration:none; vertical-align:baseline; font-size:18.00pt; font-family:"Lacquer"; font-style:normal }
+    .c11 { color:#f0f0f5; font-weight:700; text-decoration:none; vertical-align:baseline; font-size:13.50pt; font-family:"Syncopate"; font-style:normal }
+    .c25 { color:#f0f0f5; font-weight:700; text-decoration:none; vertical-align:baseline; font-size:10.50pt; font-family:"Comic Sans MS"; font-style:normal }
+    .c2 { color:#f0f0f5; font-weight:400; text-decoration:none; vertical-align:baseline; font-size:18.00pt; font-family:"Arial Narrow"; font-style:normal }
+    .c0 { padding-top:0pt; padding-bottom:0pt; line-height:1.0; orphans:2; widows:2; text-align:center; height:11pt }
+    .c21 { color:#f0f0f5; font-weight:700; text-decoration:none; vertical-align:baseline; font-size:36.00pt; font-family:"Comic Sans MS"; font-style:normal }
+    .c37 { color:#f0f0f5; font-weight:700; text-decoration:none; vertical-align:baseline; font-size:13.50pt; font-family:"Barrio"; font-style:normal }
+    .c38 { color:#f0f0f5; font-weight:400; text-decoration:none; vertical-align:baseline; font-size:22.50pt; font-family:"Comic Sans MS"; font-style:normal }
+    .c7 { -webkit-text-decoration-skip:none; color:#f0f0f5; font-weight:400; text-decoration:underline; text-decoration-skip-ink:none; font-size:13.50pt; font-family:"Boldonse" }
+    .c12 { color:#f0f0f5; font-weight:400; text-decoration:none; vertical-align:baseline; font-size:13.50pt; font-family:"Comic Sans MS"; font-style:normal }
+    .c8 { color:#f0f0f5; font-weight:400; text-decoration:none; vertical-align:baseline; font-size:18.00pt; font-family:"Comic Sans MS"; font-style:normal }
+    .c31 { color:#f0f0f5; font-weight:400; text-decoration:none; vertical-align:baseline; font-size:18.00pt; font-family:"Arial"; font-style:normal }
+    .c35 { color:#f0f0f5; font-weight:400; text-decoration:none; vertical-align:baseline; font-size:18.00pt; font-family:"Fredericka-the-Great"; font-style:normal }
+    .c10 { color:#f0f0f5; font-weight:400; text-decoration:none; vertical-align:baseline; font-size:22.50pt; font-family:"Alata"; font-style:normal }
+    .c28 { color:#f0f0f5; font-weight:700; text-decoration:none; vertical-align:baseline; font-size:18.00pt; font-family:"Epilogue"; font-style:normal }
+    .c3 { color:#f0f0f5; font-weight:700; text-decoration:none; vertical-align:baseline; font-size:36.00pt; font-family:"Arial"; font-style:normal }
+    .c19 { color:#f0f0f5; font-weight:700; text-decoration:none; vertical-align:baseline; font-size:18.00pt; font-family:"Antonio"; font-style:normal }
+    .c9 { color:#f0f0f5; font-weight:700; text-decoration:none; vertical-align:baseline; font-size:18.00pt; font-family:"Sail"; font-style:normal }
+    .c100 { -webkit-text-decoration-skip:none; color:#f0f0f5; text-decoration:underline; text-decoration-skip-ink:none; font-size:13.50pt; font-family:"Boldonse" }
+    .c13 { padding-top:0pt; padding-bottom:0pt; line-height:1.0; orphans:2; widows:2; text-align:center }
+    .c26 { padding-top:0pt; padding-bottom:0pt; line-height:1.15; orphans:2; widows:2; text-align:center }
+    .c1 { padding-top:0pt; padding-bottom:0pt; line-height:1.5; orphans:2; widows:2; text-align:center }
+    .c5 { padding-top:0pt; padding-bottom:0pt; line-height:1.15; orphans:2; widows:2; text-align:center }
+    .c23 { padding-top:0pt; padding-bottom:0pt; line-height:1.0; orphans:2; widows:2; text-align:center }
+    .c33 { font-size:13.50pt; font-family:"Boldonse"; font-style:italic; color:#f0f0f5; font-weight:400 }
+    .c52 { font-size:22.50pt; font-family:"Alata"; font-style:italic; color:#f0f0f5; font-weight:700 }
+    .c32 { font-size:18.00pt; font-family:"Alexandria"; color:#f0f0f5; font-weight:700 }
+    .c24 { font-size:10.50pt; font-family:"Boldonse"; color:#f0f0f5; font-weight:400 }
+    .c14 { font-size:18.00pt; font-family:"Sail"; color:#f0f0f5; font-weight:400 }
+    .c62 { color:#f0f0f5; font-weight:400; font-size:22.50pt; font-family:"Crushed" }
+    .c72 { color:#f0f0f5; font-weight:400; font-size:10.88pt; font-family:"Boldonse" }
+    .c40 { font-size:45.00pt; font-family:"Antonio"; color:#f0f0f5; font-weight:700 }
+    .c17 { font-size:18.00pt; font-family:"Acme"; color:#f0f0f5; font-weight:400 }
+    .c54 { color:#f0f0f5; font-weight:700; font-size:22.50pt; font-family:"Alata" }
+    .c16 { font-size:54.00pt; font-family:"Amatic SC"; color:#f0f0f5; font-weight:700 }
+    .c43 { font-size:10.50pt; font-family:"Comic Sans MS"; color:#f0f0f5; font-weight:400 }
+    .c22 { font-size:18.00pt; font-family:"Sail"; color:#f0f0f5; font-weight:700 }
+    .c86 { color:#f0f0f5; font-weight:400; font-size:27.00pt; font-family:"Eagle Lake" }
+    .c27 { font-size:18.00pt; font-family:"Kaushan Script"; color:#f0f0f5; font-weight:700 }
+    .c118 { padding-top:0pt; padding-bottom:0pt; line-height:2.0; text-align:center }
+    .c50 { color:#f0f0f5; font-weight:700; font-size:10.50pt; font-family:"Syncopate" }
+    .c67 { color:#f0f0f5; font-weight:400; font-size:27.00pt; font-family:"Jacques Francois Shadow" }
+    .c34 { font-size:45.00pt; font-family:"Amatic SC"; color:#f0f0f5; font-weight:700 }
+    .c84 { color:#f0f0f5; font-weight:400; font-size:13.50pt; font-family:"Boldonse" }
+    .c51 { font-size:27.00pt; font-family:"Nosifer"; color:#f0f0f5; font-weight:400 }
+    .c36 { font-size:18.00pt; font-family:"Comic Sans MS"; color:#f0f0f5; font-weight:400 }
+    .c44 { padding-top:0pt; padding-bottom:0pt; line-height:1.0; text-align:center }
+    .c90 { padding-top:0pt; padding-bottom:0pt; line-height:1.5; text-align:center }
+    .c45 { padding-top:0pt; padding-bottom:0pt; line-height:1.15; text-align:center }
+    .c99 { padding-top:0pt; padding-bottom:0pt; line-height:2.0; text-align:center }
+    .c46 { color:#f0f0f5; font-weight:700; font-size:18.00pt; font-family:"Comic Sans MS" }
+    .c47 { font-size:18.00pt; font-family:"Georgia"; color:#f0f0f5; font-weight:700 }
+    .c4 { font-size:36.00pt; font-family:"Road Rage"; color:#f0f0f5; font-weight:400 }
+    .c15 { font-size:36.00pt; font-family:"Amatic SC"; color:#f0f0f5; font-weight:700 }
+    .c42 { text-decoration:none; vertical-align:baseline; font-style:normal }
+    .c85 { text-decoration:none; vertical-align:sub; font-style:normal }
+    .c53 { text-decoration:none; vertical-align:super; font-style:normal }
+    .c113 { -webkit-text-decoration-skip:none; text-decoration:underline; text-decoration-skip-ink:none }
+    .c71 { font-size:10.50pt; font-family:"Georgia"; color:#f0f0f5 }
+    .c129 { color:#f0f0f5; font-size:36.00pt; font-family:"Major Mono Display" }
+    .c88 { font-size:45.00pt; font-family:"Comic Sans MS"; color:#f0f0f5 }
+    .c75 { font-size:13.50pt; font-family:"Syncopate"; color:#f0f0f5 }
+    .c114 { color:#FFD700; font-size:54.00pt; font-family:"Nosifer" }
+    .c61 { color:#f0f0f5; font-size:27.00pt; font-family:"Big Shoulders" }
+    .c63 { color:#f0f0f5; font-size:22.50pt; font-family:"Nosifer" }
+    .c95 { color:#f0f0f5; font-size:10.88pt; font-family:"Barrio" }
+    .c69 { color:#f0f0f5; font-size:10.88pt; font-family:"Syncopate" }
+    .c102 { color:#f0f0f5; font-weight:400; font-size:13.50pt }
+    .c73 { font-size:27.00pt; font-family:"Comic Sans MS"; color:#f0f0f5 }
+    .c87 { color:#f0f0f5; font-size:10.88pt; font-family:"Comic Sans MS" }
+    .c97 { color:#f0f0f5; font-size:10.88pt; font-family:"Crushed" }
+    .c115 { color:#f0f0f5; font-size:13.50pt }
+    .c55 { font-family:"Anton"; font-weight:400 }
+    .c120 { color:#f0f0f5; font-size:10.50pt }
+    .c49 { font-weight:700; font-family:"Aboreto" }
+    .c65 { font-family:"Crushed"; font-weight:400 }
+    .c79 { font-weight:400; font-family:"Fredericka the Great" }
+    .c105 { font-weight:400; font-family:"Unica One" }
+    .c81 { font-family:"Cuprum"; font-weight:400 }
+    .c70 { orphans:2; widows:2; }
+    .c48 { color:#f0f0f5; font-size:18.00pt; }
+    .c76 { color:#f0f0f5; font-size:7.50pt; }
+    .c66 { color:#f0f0f5; font-size:22.50pt; }
+    .c98 { font-family:"Kaushan Script"; font-weight:400; }
+    .c59 { font-family:"Antonio"; font-weight:400; }
+    .c60 { color:#f0f0f5; font-size:9.00pt; }
+    .c104 { font-family:"Boldonse"; font-weight:400; }
+    .c131 { font-family:"Phudu"; }
+    .c122 { font-family:"Girassol"; }
+    .c80 { font-family:"Epilogue"; }
+    .c68 { font-family:"Alata"; }
+    .c83 { font-family:"Stick"; }
+    .c96 { font-family:"Fjalla One"; }
+    .c121 { font-family:"Bungee"; }
+    .c136 { font-family:"Unica One"; }
+    .c107 { font-weight:400; }
+    .c74 { font-family:"Cinzel Decorative"; }
+    .c111 { font-family:"Jacques Francois Shadow"; }
+    .c139 { vertical-align:sub; }
+    .c57 { font-family:"Arial"; }
+    .c126 { vertical-align:super; }
+    .c77 { font-family:"Montserrat"; }
+    .c116 { font-family:"Combo"; }
+    .c92 { font-family:"Julius Sans One"; }
+    .c137 { font-family:"Comic Sans MS"; }
+    .c124 { font-family:"Road Rage"; }
+    .c106 { font-family:"Amatic SC"; }
+    .c112 { font-family:"Bebas Neue"; }
+    .c56 { font-weight:700; }
+    .c140 { font-family:"Amaranth"; }
+    .c20 { height:11pt; }
+    .c108 { font-family:"Koulen"; }
+
+    li { color:#000000; font-size:8.25pt; font-family:"Arial"; }
+    p { margin:0; color:#000000; font-size:8.25pt; font-family:"Arial"; }
+    h1 { padding-top:20pt; color:#000000; font-size:15.00pt; padding-bottom:6pt; font-family:"Arial"; line-height:1.15; page-break-after:avoid; orphans:2; widows:2; text-align:center; }
+    h2 { padding-top:18pt; color:#000000; font-size:12.00pt; padding-bottom:6pt; font-family:"Arial"; line-height:1.15; page-break-after:avoid; orphans:2; widows:2; text-align:center; }
+    h3 { padding-top:16pt; color:#434343; font-size:10.50pt; padding-bottom:4pt; font-family:"Arial"; line-height:1.15; page-break-after:avoid; orphans:2; widows:2; text-align:center; }
+
+    .flicker-container {
+        border: 5px solid white;
+        padding: 20px;
+        margin: 20px auto;
+        max-width: 90%;
+        background: rgba(0,0,0,0.5);
+        animation: flicker 2s infinite;
+        box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff;
+    }
+    @keyframes flicker {
+        0%, 18%, 22%, 25%, 53%, 57%, 100% {
+            opacity: 1;
+            box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff;
+        }
+        20%, 24%, 55% {
+            opacity: 0.3;
+            box-shadow: none;
+        }
+    }
+
+    @media (max-width: 768px) {
+      .container { padding: 0 0.6rem; }
+      h1 { font-size: clamp(3.5rem, 12vw, 6rem); }
+      .title-section { padding: 0 1rem 2rem; }
+      .btn { min-width: auto; font-size: 1.8rem; padding: 0.6rem 1.2rem; }
+      .two-col { flex-wrap: nowrap; gap: 1rem; }
+      .rainbow-divider { width: 100%; }
+      .small-img { width: 100%; }
+      .nav-links { gap: 1rem; font-size: 1rem; flex-wrap: wrap; justify-content: center; }
+      .nav-inner { flex-wrap: wrap; justify-content: center; }
+      .footer-social img { width: 38px; }
+    }
+ 
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border-width: 0;
+    }
+</style>
+
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-66F3QLKXBY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-66F3QLKXBY');
+</script>
+</head>
+
+<body>
+<nav>
+<div class="container nav-inner">
+    <div class="nav-logo">
+      <img src="https://raw.githubusercontent.com/robotjellyfish/CatrinaStoner/refs/heads/main/icon.png" alt="Icon" height="54">
+    </div>
+    <div class="nav-links">
+      <a href="https://robotjellyfish.github.io/CatrinaStoner/">HOME</a>
+      <div class="dropdown">
+        <a href="#">GALLERIES</a>
+        <div class="dropdown-content">
+          <a href="https://photos.app.goo.gl/pp1PdFq5dbE7Q2XaA">PHOTOGRAPHY</a>
+          <a href="https://robotjellyfish.github.io/CatrinaStoner/arthive.html">THE ARTHIVE</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <a href="#">JOURNALS</a>
+        <div class="dropdown-content">
+          <a href="https://sites.google.com/view/thevespaveda">THE VESPA VEDA</a>
+          <a href="https://robotjellyfish.github.io/CatrinaStoner/brainvomit.html">BRAIN VOMIT</a>
+          <a href="https://catrinastoner.blogspot.com/">BLOG</a>
+          <a href="https://robotjellyfish.github.io/CatrinaStoner/poems.html">POEMS</a>
+        </div>
+      </div>
+      <a href="https://robotjellyfish.github.io/CatrinaStoner/about.html">ABOUT</a>
+    </div>
+  </div>
+</nav>
+
+<div class="rainbow-divider"></div>
+<div class="rainbow-divider"></div>
+
+<div class="title"><span class="sub"><span class="sr-only">[schizophrenic]</span><span aria-hidden="true">[schiz꩜phrenic]</span></span>
+<span class="main" data-text="BRAIN VOMIT">Brain Vomit</span></div>
+
+<div class="rainbow-divider"></div>
+<div class="rainbow-divider"></div>
+
+<div class="glass-container">
+<div class="container">
+<p style='padding:0;margin:0;color:#000000;font-size:11pt;font-family:"Arial";line-height:1.0;orphans:2;widows:2;text-align:center'>
+<span style='font-size:30pt;font-family:"Aboreto";color:#ffffff;font-weight:400'><strong><span class="sr-only">Infinity</span><span aria-hidden="true">∞</span></strong><br/><br/>ɪs</span>
+<span style='font-size:8pt;font-family:"Aboreto";color:#ffffff;font-weight:400'> </span>
+<span style='font-size:30pt;font-family:"Anton";color:#ffffff;font-weight:400'>EXIT</span>
+<span style='font-size:15pt;font-family:"Antonio";color:#ffffff;font-weight:400'>ing Existing</span>
+<span style='font-size:20pt;font-family:"Comic Sans MS";color:#ffffff;font-weight:400'>?</span></p>
+<span style="font-size:20pt;"><span class="sr-only">Reincarnation is Reincarceration</span><span aria-hidden="true">
+𝓡𝗲𝐢𝐧𝒄𝒂𝒓𝒏𝒂𝒕𝒊𝗼𝙣 is 𝓡𝗲𝐢𝐧𝒄𝒂𝒓𝒄𝗲𝐫𝗮𝐭𝒊𝒐𝒏</span></span>
+<span style="font-size:14pt;"><span class="sr-only">ᴡʜᴇɴ ᴛʜɪs PRISM ɪs ᴀ PRISON</span><span aria-hidden="true">ᴡʜᴇɴ ᴛʜɪs 𝙋𝙍𝙄𝙎𝙈 ɪs ᴀ 𝙋𝙍𝙄𝙎𝙊𝙉 </span><br/><span class="sr-only">Oblivion is Bliss</span><span aria-hidden="true">𝓞𝒃𝒍𝒊𝒗𝒊𝒐𝒏 𝒊𝒔 𝓑𝒍𝒊𝒔𝒔 </span><br/><span class="sr-only">WE ARE Born Dying</span><span aria-hidden="true">𝕎𝔼 𝔸ℝ𝔼 B𝗼𝗿𝗻 D𝘆𝗶𝗻𝗴</span><br/></span>
+<p style='padding:0;margin:0;color:#000000;font-size:11pt;font-family:"Arial";line-height:1.0;orphans:2;widows:2;text-align:center'>
+<span style='color:#ffffff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:20pt;font-family:"Bebas Neue";font-style:normal'>Trapped in a vessel
+<br/>Running in FEAR from FREEDOM
+<br/><span class="sr-only">Floating around accidentally in Limbo</span><span aria-hidden="true"> 𝐅𝐥𝐨𝐚𝐭𝐢𝐧𝐠 𝐚𝐫𝐨𝐮𝐧𝐝 𝐚𝐜𝐜𝐢𝐝𝐞𝐧𝐭𝐚𝐥𝐥𝐲 𝐢𝐧 𝐋𝐢𝐦𝐛𝐨 </span><br/><span class="sr-only">ᴘʟᴀᴛᴇᴀᴜᴇᴅ ɪɴ ɪɴғɪɴɪᴛᴇ ᴛᴀɴɢᴇɴᴛ circles</span><span aria-hidden="true">
+ᴘʟᴀᴛᴇᴀᴜᴇᴅ ɪɴ ɪɴғɪɴɪᴛᴇ ᴛᴀɴɢᴇɴᴛ ⓒⓘⓡⓒⓛⓔⓢ</span><br/>
+Everything feels the same<br/><i>...it is...</i><br/>Figments of imagination in a nonexistent mind<br/>NEVER REALLY DEAD OR BORN</span></p>
+<br/><br/>
+<p style='padding:0;margin:0;color:#000000;font-size:11pt;font-family:"Arial";line-height:1.0;orphans:2;widows:2;text-align:center'>
+<span style='color:#B3FF00;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:20pt;font-family:"Girassol";font-style:normal'>ᐧ•WE DO NOT EXIST•ᐧ</span></p>
+
+<div class="rainbow-divider"></div>
+
+<p class="c5 c20"><span class="c6"></span></p>
+<p class="c5 c20"><span class="c6"></span></p>
+<p class="c5"><span class="c42 c66 c136 c56">Life is a</span></p>
+<p class="c5"><span class="c42 c66 c56 c136"><span class="sr-only">ONE WAY</span><span aria-hidden="true">𝗢𝗡𝗘 𝗪𝗔𝗬</span></span></p>
+<p class="c23"><span class="c113 c66 c107 c108">DEAD END</span><span class="c66 c107 c108"> </span>
+<span class="c42 c66 c105">street</span></p>
+<p class="c5"><span class="c42 c49 c66">and we are merely</span></p>
+<p class="c5"><span class="c66 c107 c112">drivers </span>
+<span class="c49 c66">in a</span><span class="c42 c66 c107 c112"> traffic jam</span></p>
+<p class="c5"><span class="c42 c66 c107 c131">waiting in line</span></p>
+<p class="c5"><span class="c4">and rushing to pass</span><span class="c42 c66 c107 c124">.</span></p>
+
+<div class="rainbow-divider"></div>
+
+<p class="c5 c20"><span class="c42 c66 c107 c124"></span></p>
+<p class="c5"><span class="c54 c42">There is a reason</span></p>
+<p class="c5"><span class="c54 c42"><span class="sr-only">LISTEN</span><span aria-hidden="true">🄻🄸🅂🅃🄴🄽</span><br/>&amp;<br/><span class="sr-only">SILENT</span><span aria-hidden="true">🅂🄸🄻🄴🄽🅃</span></span></p>
+<p class="c5"><span class="c54 c42">are spelled with the same letters.</span></p>
+
+<div class="rainbow-divider"></div>
+
+<p class="c5 c20"><span class="c25"></span></p>
+<p class="c23"><span class="c66 c56 c106">I would rather be a puzzle piece than part of a puzzle</span><span class="c42 c115 c106 c56">.</span></p>
+<p class="c0"><span class="c42 c115 c106 c56"></span></p><p class="c5"><span class="c19">My mind is like a boomerang…</span></p>
+<p class="c5"><span class="c42 c48 c107 c116">A karmatosed lingering mind shadow</span></p>
+<p class="c5"><span class="c48 c56">Like a spider stuck to it's own web.</span></p>
+<p class="c5 c20"><span class="c38"></span></p>
+<p class="c5"><span class="c48 c56 c82">I think I'm just thinking too much about what I should think of what I should think to say.</span></p>
+<p class="c5 c20"><span class="c35"></span></p>
+<p class="c5"><span class="c46 c42"><span class="sr-only">we all just want to lose our minds</span><span aria-hidden="true">𝕨𝕖 𝕒𝕝𝕝 𝕛𝕦𝕤𝕥 𝕨𝕒𝕟𝕥 𝕥𝕠 𝕝𝕠𝕤𝕖 𝕠𝕦𝕣 𝕞𝕚𝕟𝕕𝕤</span></span></p>
+<div class="rainbow-divider"></div><p class="c5 c20"><span class="c6"></span></p>
+<p class="c5 c20"><span class="c39"></span></p>
+<br/><p class="c5"><span class="c42 c56 c110">Indisposed in a disposable world.</span></p>
+<p class="c5 c20"><span class="c39"></span></p>
+<p class="c5"><span class="c32">You may not be able to </span><span class="c48 c64">polish</span><span class="c32 c42"> a turd</span></p>
+<p class="c5"><span class="c66 c68 c107">but you </span><span class="c52">can</span><span class="c10"> fertilize a garden.</span></p>
+<p class="c5"><span class="c66 c56 c140">Even flowers still grow from shit</span><span class="c54 c42">.</span></p>
+<p class="c26 c20"><span class="c42 c54"></span></p>
+<p class="c5 c20"><span class="c42 c60 c56 c68"></span></p>
+<p class="c23"><span class="c15">The </span><span class="c15">Funk</span><span class="c15 c42"> Floats </span></p>
+<p class="c23"><span class="c15 c42">where the Flux Flows</span></p><p class="c0"><span class="c15 c42"></span></p><p class="c5 c20"><span class="c42 c106 c56 c115"></span></p>
+<p class="c5"><span class="c42 c56 c93">Every drain is a faucet</span></p>
+<p class="c5 c20"><span class="c42 c56 c97"></span></p>
+<p class="c26 c20"><span class="c6"></span></p>
+
+<div class="rainbow-divider"></div>
+
+<span class="c15">ᐧ•METHAMBITIONS•ᐧ</span>
+<p class="c44"><span class="c56 c71">• </span><span class="c48 c56 c135"><span class="sr-only">EXIT</span><span aria-hidden="true">𝗘𝗫𝗜𝗧</span></span><span class="c47"> and </span><span class="c42 c48 c49">Begin</span></p><p class="c44"><span class="c47">• </span><span class="c48 c56">Leave the Parasite </span><span class="c48 c96 c56">ALONE</span><span class="c48 c56"> to </span><span class="c42 c48 c56 c96">DIE</span></p><p class="c44"><span class="c71 c56">• </span><span class="c47">Get to the </span><span class="c41">UNOBTAINIUM</span></p>
+<p class="c5 c20"><span class="c6"></span></p><p class="c5 c20"><span class="c6"></span></p></div>
+<div class="rainbow-divider"></div><p class="c1 c20"><span class="c42 c55 c66"></span></p><p class="c1"><span class="c55 c66"><span class="sr-only">ChroNologic</span><span aria-hidden="true">Chroℕ𝕠𝗹𝗼𝗴𝗶𝗰</span></span><span class="c87 c56"> </span><br><span class="c66 c56 c82">Circumventures</span><span class="c6">.</span></p><p class="c1 c20"><span class="c6"></span></p><p class="c23"><span class="c73 c56"><span class="sr-only">SLAB CITY</span><span aria-hidden="true">𝗦𝗟𝗔𝗕 𝗖𝗜𝗧𝗬</span></span><span class="c6"> </span></p><p class="c23"><span class="c54">is Trail Mix</span><span class="c6">:</span></p><p class="c23"><span class="c48 c81">as it is </span><span class="c42 c81 c48">centered between </span></p><p class="c23"><span class="c48 c104">chocolate </span><span class="c24">&amp;</span><span class="c42 c48 c104"> salt</span></p><p class="c5"><span class="c66 c56 c134">and full of </span><span class="c66 c56 c103">NUTS</span></p><p class="c5 c20"><span class="c103 c66 c56"></span></p><p class="c5 c20"><span class="c50 c42"></span></p><p class="c5 c20"><span class="c50 c42"></span></p><p class="c5 c20"><span class="c50 c42"></span></p><p class="c5 c20"><span class="c50 c42"></span></p><p class="c5"><span class="c50 c42">You gotta let it BE </span></p><p class="c5"><span class="c56 c75">before you can SEE</span><span class="c42 c50"> </span></p><p class="c5"><span class="c42 c48 c56 c94">the WHOLE SEA of HOLES </span></p><p class="c5"><span class="c11">at the bottom of the HOLY SEA.</span></p><p class="c5 c20"><span class="c11"></span></p><div class="rainbow-divider"></div><p class="c5" style="padding: 20px 0;"><span class="c42 c56 c91"><span class="sr-only">FATE RANDOMLY SYNCHRONIZES CHAOS.</span><span aria-hidden="true">𝗙𝗔𝗧𝗘 𝗥𝗔𝗡𝗗𝗢𝗠𝗟𝗬 𝗦𝗬𝗡𝗖𝗛𝗥𝗢𝗡𝗜𝗭𝗘𝗦 𝗖𝗛𝗔𝗢𝗦.</span></span><br/><span class="c12">ᴮᵁᵀ ᵂᴱ ᴹᴬᴷᴱ ᴼᵁᴿ ᴼᵂᴺ DESTINY.</span></p><div class="rainbow-divider"></div><p class="c5 c20"><span class="c6"></span></p><p class="c5 c20"><span class="c6"></span></p><p class="c5"><span class="c37">The world is a golfish bowl</span></p><p class="c5"><span class="c37">and we are all goldfish…</span></p><p class="c5"><span class="c37">…cheesy baked crackers</span></p><p class="c5"><span class="c37">with the same face but different names</span></p><p class="c20 c26"><span class="c37"></span></p><div class="rainbow-divider"></div><p class="c5 c20"><span class="c42 c56 c95"></span></p><p class="c5 c20"><span class="c42 c95 c56"></span></p><p class="c5 c20"><span class="c100 c56 c123"></span></p><p class="c5"><span class="c56 c100">All</span><span class="c7"> things</span><span class="c84"> </span><span class="c33">are </span><span class="c84 c42">Matter</span></p><p class="c1"><span class="c84">but </span><span class="c100 c56">No</span><span class="c7"> things</span><span class="c84"> </span><span class="c33">do </span><span class="c42 c84"> Matter</span></p><p class="c0"><span class="c42 c72"></span></p><p class="c0"><span class="c8"></span></p><p class="c0"><span class="c8"></span></p><p class="c23"><span class="c8"><span class="sr-only">🅻🅴🆃 GO</span><span aria-hidden="true">🅻🅴🆃 🄶🄾</span></span></p><p class="c23"><span class="c43"> </span><span class="c36">of </span><span class="c48 c59">matter</span><span class="c36"> </span><span class="c42 c55 c48">mattering</span></p><p class="c23"><span class="c48">for you're </span><span class="c48 c59">merely</span><span class="c48"> </span><span class="c55 c48">mirroring</span><span class="c31"> </span></p><p class="c5"><span class="c48">your own </span><span class="c48 c59">mirror</span><span class="c48"> </span><span class="c48 c55">shattering</span><span class="c42 c57 c56 c60">.</span></p><p class="c90 c70 c20"><span class="c43 c42"></span></p><div class="rainbow-divider"></div><p class="c70 c20 c90"><span class="c21"></span></p><p class="c23"><span class="c66 c137 c56">𓆗</span><span class="c6"> </span></p><p class="c23"><span class="c42 c48 c107 c92">Stop looking &amp; start</span></p><p class="c23"><span class="c48 c56 c92">HEARING with your FEELERS</span></p><div class="rainbow-divider"></div><p class="c0"><span class="c21"></span></p><p class="c5"><span class="c48 c65">In </span><span class="c62">hindsight</span><span class="c42 c65 c48">,</span></p><p class="c5"><span class="c42 c65 c48">you should've </span></p><p class="c5"><span class="c62">watched</span><span class="c65 c48"> your </span><span class="c42 c62">back</span></p><div class="rainbow-divider"></div><p class="c5 c20"><span class="c62 c42"></span></p><p class="c5 c20"><span class="c62 c42"></span></p><p class="c1"><span class="c28"><span class="sr-only">Binfinity &amp; BEYOND</span><span aria-hidden="true">B∞finity &amp; BEY♾ND</span></span></p><p class="c5"><span class="c28">Boof your own time capsule</span></p><p class="c5"><span class="c48 c56 c80">for a </span><span class="c113 c48 c80 c56">FREE</span><span class="c28"> time lapse</span></p><p class="c5 c20"><span class="c28"></span></p><div class="rainbow-divider"></div><p class="c5 c20"><span class="c28"></span></p><p class="c5 c20"><span class="c28"></span></p><p class="c5 c20"><span class="c28"></span></p><p class="c5"><span class="c49 c48">d</span><span class="c49 c48">own</span><span class="c46"> the </span><span class="c42 c55 c48">RABBIT HOLE</span></p><p class="c5"><span class="c48 c107 c125">Pulled</span><span class="c36"> </span><span class="c49 c48">out</span><span class="c36"> </span><span class="c17">from a</span><span class="c36"> </span><span class="c42 c55 c48">MAGIC SHOW HAT </span></p><p class="c5 c20"><span class="c42 c55 c48"></span></p><div class="rainbow-divider"></div><p class="c5 c20"><span class="c42 c55 c48"></span></p>
+<p style='padding:0;margin:0;color:#000000;font-size:41pt;font-family:"Arial";line-height:1.0;orphans:2;widows:2;text-align:center'>
+<span style="font-size:50pt;font-family:Lacquer;color:#ffffff;font-weight:400;">MILK</span>
+<span style="font-size:30pt;font-family:Lacquer;color:#FF007D;font-weight:400;">BLOOD</span>
+<span class="c56 c88">&amp;</span>
+<span style="font-size:25pt;font-family:'Nosifer';color:#FFC400;font-weight:400;">HONEY</span>
+<p class="c5"><span class="c8">viscous coagulation of translucid fluid</span></p><div class="rainbow-divider"></div><p class="c5 c20"><span class="c8"></span></p><p class="c5 c20"><span class="c8"></span></p><p class="c23"><span class="c46 c42">♬♫♪♩ </span></p><p class="c23"><span class="c12"><span class="sr-only">Down in the larynx strumming broken strings</span><span aria-hidden="true">𝐃𝐨𝐰𝐧 𝐢𝐧 𝐭𝐡𝐞 𝐥𝐚𝐫𝐲𝐧𝐱 𝐬𝐭𝐫𝐮𝐦𝐦𝐢𝐧𝐠 𝐛𝐫𝐨𝐤𝐞𝐧 𝐬𝐭𝐫𝐢𝐧𝐠𝐬</span></span></p><p class="c23"><span class="c12"><span class="sr-only">is the lonesome voice box bug</span><span aria-hidden="true">𝐢𝐬 𝐭𝐡𝐞 𝐥𝐨𝐧𝐞𝐬𝐨𝐦𝐞 𝐯𝐨𝐢𝐜𝐞 𝐛𝐨𝐱 𝐛𝐮𝐠</span></span></p><p class="c1"><span class="c42 c57 c102"><span class="sr-only">humming as he swings.</span><span aria-hidden="true">𝐡𝐮𝐦𝐦𝐢𝐧𝐠 𝐚𝐬 𝐡𝐞 𝐬𝐰𝐢𝐧𝐠𝐬.</span></span></p><p class="c23"><span class="c42 c48 c57 c56"> 𓆧</span></p><p class="c0"><span class="c42 c48 c56 c57"></span></p><div class="rainbow-divider"></div><p class="c118 c70 c20"><span class="c42 c48 c57 c56"></span></p><p class="c70 c20 c118"><span class="c42 c48 c57 c56"></span></p><p class="c23"><span class="c42 c67">CALIFORNIA</span></p><p class="c5"><span class="c42 c102 c121">where palm trees and pine trees collide</span></p><p class="c5 c20"><span class="c29"></span></p><p class="c5"><span class="c42 c48 c56 c130">TREES DIVE IN AND OUT OF THE GROUND IN GOLDEN GATE PARK</span></p><p class="c5"><span class="c29">LIKE SERPENT DRAGONS WITH SCALES MADE OF BARK</span></p><p class="c5 c20"><span class="c29"></span></p><p class="c5"><span class="c42 c48 c56 c83">Vines like veins - both stretching the length of limbs.</span></p><p class="c26 c20"><span class="c42 c48 c83 c56"></span></p><p class="c26 c20"><span class="c42 c48 c83 c56"></span></p><p class="c1"><span class="c43">
+<div class="rainbow-divider"></div>
+<p class="c44 c70"><span class="c42 c66 c77 c56">“WHY DO MOTHS EAT CLOTHES?”</span></p><p class="c44 c70 c20"><span class="c42 c66 c56 c77"></span></p><p class="c13"><span class="c42 c61 c56">"Because there isn't much else to eat inside of a closet."</span></p><p class="c13 c20"><span class="c42 c56 c61"></span></p><p class="c44 c70"><span class="c66 c77 c56">“THEN WHY DO MOTHS EVEN LIVE INSIDE CLOSETS</span><span class="c18">?”</span></p><p class="c44 c70 c20"><span class="c18"></span></p><p class="c13"><span class="c77 c56 c129">"</span><span class="c42 c61 c56">Because that's where people tend to leave the lights on."</span></p><p class="c5 c20"><span class="c42 c120 c107 c57"></span></p><p class="c5"><span class="c42 c107 c57 c120">
+<div class="rainbow-divider"></div>
+<p class="c26 c20"><span class="c6"></span></p><p class="c0"><span class="c18"></span></p><p class="c23"><span class="c18">Two half brains </span></p><p class="c23"><span class="c18">DO NOT make </span></p><p class="c23"><span class="c18">a whole brain.</span></p><p class="c23"><span class="c38">They only make a </span></p><p class="c23"><span class="c38">quarter of brain </span></p><p class="c23"><span class="c38">because</span></p><p class="c23"><span class="c3">½ × ½ = ¼</span></p><p class="c0"><span class="c3"></span></p><p class="c5"><span class="c18"><span class="sr-only">Here comes the Rooster</span><span aria-hidden="true">𝐇𝐞𝐫𝐞 𝐜𝐨𝐦𝐞𝐬 𝐭𝐡𝐞 𝐑𝐨𝐨𝐬𝐭𝐞𝐫</span></span></p><p class="c5"><span class="c38"><span class="sr-only">Rusted from the Rain</span><span aria-hidden="true">𝐑𝐮𝐬𝐭𝐞𝐝 𝐟𝐫𝐨𝐦 𝐭𝐡𝐞 𝐑𝐚𝐢𝐧</span></span></p><div class="rainbow-divider"></div><p class="c44 c70 c20"><span class="c15 c85"></span></p><p class="c23"><span class="c15 c139">You cant spell</span><span class="c34 c42"> </span></p><p class="c23"><span class="c40 c42">SLUMBER</span></p><p class="c23"><span class="c34"> </span><span class="c15 c126">without</span><span class="c34"> </span><span class="c40">LUMBER</span><span class="c34 c42"> </span></p><p class="c23"><span class="c78 c107">SO </span><span class="c78 c56 c113">SLEEP LIKE A LOG</span><span class="c42 c78 c56">.</span></p><p class="c0"><span class="c42 c78 c56"></span></p><div class="rainbow-divider"></div><p class="c0"><span class="c42 c78 c56"></span></p><p class="c0"><span class="c42 c78 c56"></span></p><p class="c44 c70 c20"><span class="c42 c56 c78"></span></p><p class="c23"><span class="c42 c86">LETHAL LETHARGY<br/> </span></p><p class="c23"><span class="c73 c56">Be a homie, not a housie<br/></span><span class="c87 c56">.</span></p><p class="c5"><span class="c42 c56 c133">0⁻¹</span></p><p class="c5"><span class="c42 c79 c66">KOOL-AID Man is GOD<br/></span></p><p class="c0"><span class="c42 c66 c79"></span></p><p class="c23"><span class="c66 c56 c137"><span class="sr-only">Waldo</span><span aria-hidden="true">𝑊𝑎𝑙𝑑𝑜</span></span></p>
+<div class="rainbow-divider"></div><p class="c0"><span class="c6"></span></p><p class="c0"><span class="c6"></span></p>
+<p style='padding:0;margin:0;color:#000000;font-size:11pt;font-family:"Arial";line-height:1.0;orphans:2;widows:2;text-align:center'><span style='color:#ffffff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:30pt;font-family:"Girassol";font-style:normal'>You are a</span></p>
+<p class="c23"><span class="c63 c56"> </span><span class="c51">butterfly</span><span class="c42 c56 c63"> </span></p><p class="c23"><span class="c42 c66 c56 c122">and I am a</span></p><p class="c23"><span class="c63 c56"> </span><span class="c51">spider</span><span class="c42 c63 c56">.</span></p><p class="c23"><span class="c42 c66 c122 c107">Take that how you will</span></p><div class="rainbow-divider"></div><p class="c0"><span class="c14 c53"></span></p><p class="c0"><span class="c14 c42"></span></p><p class="c23"><span class="c14">The </span><span class="c22">Sands of Time</span><span class="c14 c42"> </span></p><p class="c1"><span class="c22">Spill Silver</span><span class="c14"> </span><span class="c22">Dust</span><span class="c14"> into </span><span class="c9">Dreams.</span></p><p class="c23"><span class="c14">The </span><span class="c22">DreamWeaver</span><span class="c14"> </span><span class="c22">Spins</span><span class="c14"> a </span><span class="c9">Web</span></p><p class="c1"><span class="c14"> </span><span class="c22">Dripping</span><span class="c14"> from the </span><span class="c9">Seams.</span></p><p class="c23"><span class="c22">Strands</span><span class="c14"> of </span><span class="c22">Liquid Silk Pour</span><span class="c14 c42"> from the</span></p><p class="c1"><span class="c22">MilkyWay </span><span class="c14">in</span><span class="c9"> Streams.</span></p><p class="c23"><span class="c22">Stars Trail</span><span class="c14"> across </span><span class="c22">Skies</span><span class="c14 c42"> </span></p><p class="c5"><span class="c22">Keeping</span><span class="c14"> </span><span class="c22">Time</span><span class="c14"> in </span><span class="c9">Celestial Cream<br/><br/></span></p><p class="c26 c20"><span class="c9"></span></p><p class="c23"><span class="c48 c98">And </span><span class="c27">sew</span><span class="c48 c98"> it </span><span class="c27">seems</span><span class="c42 c48 c98"> </span></p><p class="c70 c99"><span class="c27">weave</span><span class="c48 c98"> become part of the </span><span class="c27">seam</span><span class="c42 c48 c98">.</span></p><p class="c23"><span class="c42 c48 c74 c56">The seams seem to be leading through timE</span></p><p class="c1"><span class="c42 c48 c56 c74">… from star to star …</span></p><p class="c23"><span class="c42 c48 c74 c56">in your dreams.</span></p><p class="c0"><span class="c42 c48 c74 c56"></span></p><p class="c23"><span class="c42 c48 c107 c111">You know, the kind of DREAMS </span></p><p class="c23"><span class="c42 c48 c107 c111">only your DREAMS’ DREAMS could ever DREAM of DREAMING?</span></p><p class="c0"><span class="c42 c66 c107 c111"></span></p><p class="c23"><span class="c18"><span class="sr-only">TAKE ME TO YOUR DREAMER</span><span aria-hidden="true">𝗧𝗔𝗞𝗘 𝗠𝗘 𝗧𝗢 𝗬𝗢𝗨𝗥 𝗗𝗥𝗘𝗔𝗠𝗘𝗥</span></span></p><p class="c0"><span class="c18"></span></p><p class="c5"><span class="c12">🜂🜃🜁🜄🜂🜃🜁🜄🜂🜃🜁🜄🜂🜃🜁🜂🜃🜁</span></p><p class="c5 c20"><span class="c12"></span></p><div class="rainbow-divider"></div><p class="c5 c20"><span class="c12"></span></p><p class="c5 c20"><span class="c12"></span></p><p class="c1"><span class="c2">Why is Everything 🅱🅾🆇🅴🆂?</span></p><p class="c5"><span class="c2"><span class="sr-only">Born from your moms BOX.</span><span aria-hidden="true">Born from your moms 🄱🄾🅇.</span></span></p><p class="c5"><span class="c2"><span class="sr-only">In debt paying for a BOX to live in.</span><span aria-hidden="true">In debt paying for a 🄱🄾🅇 to live in.</span></span></p><p class="c5"><span class="c2"><span class="sr-only">Bainwashed by a BOX</span><span aria-hidden="true">Bainwashed by a 🄱🄾🅇 </span></span></p><p class="c5"><span class="c2"><span class="sr-only">to buy things that come in BOXES</span><span aria-hidden="true">to buy things that come in 🄱🄾🅇🄴🅂</span></span></p><p class="c5"><span class="c2"><span class="sr-only">with funds locked away in a BOX.</span><span aria-hidden="true">with funds locked away in a 🄱🄾🅇.</span></span></p><p class="c5"><span class="c2"><span class="sr-only">Eventually you die in your BOX</span><span aria-hidden="true"> Eventually you die in your 🄱🄾🅇 </span></span></p><p class="c5"><span class="c2">and pay twice as much</span></p><p class="c5"><span class="c2"><span class="sr-only">for another BOX only a fraction of the size.</span><span aria-hidden="true"> for another 🄱🄾🅇 only a fraction of the size.</span></span></p><p class="c5 c20"><span class="c2"></span></p><p class="c23"><span class="c36"><span class="sr-only">FROM THE</span><span aria-hidden="true">🄵🅁🄾🄼 🅃🄷🄴</span></span><span class="c42 c46"><span class="sr-only">🆆🅾🅼🅱</span><span aria-hidden="true"> 🆆🅾🅼🅱 </span></span></p><p class="c1"><span class="c36"><span class="sr-only">TO THE</span><span aria-hidden="true">🅃🄾 🅃🄷🄴</span></span><span class="c46 c42"><span class="sr-only">🆃🅾🅼🅱,</span><span aria-hidden="true"> 🆃🅾🅼🅱,</span></span></p><p class="c23"><span class="c36"><span class="sr-only">LIFE IS JUST A</span><span aria-hidden="true">🄻🄸🄵🄴 🄸🅂 🄹🅄🅂🅃 🄰 </span></span><span class="c46"><span class="sr-only">WAITING🆁🅾🅾🅼</span><span aria-hidden="true">🅆🄰🄸🅃🄸🄽🄶🆁🅾🅾🅼</span></span><span class="c8">.</span></p><p class="c0"><span class="c8"></span></p><p class="c5"><span class="c18"><span class="sr-only">Trapped in a TRAPEZOID</span><span aria-hidden="true">𝕋𝕣𝕒𝕡𝕡𝕖𝕕 𝕚𝕟 𝕒 𝕋ℝ𝔸ℙ𝔼ℤ𝕆𝕀𝔻</span></span></p><p class="c5"><span class="c42 c73 c56"><span class="sr-only">BOXING RINGS</span><span aria-hidden="true">🄱🄾🅇🄸🄽🄶 ⓇⒾⓃⒼⓈ</span></span></p><p class="c5"><span class="c56 c87">Box Box Box Box Box.</span></p><div><p class="c26 c20"><span class="c42 c58 c57"></span></p>
+<div class="rainbow-divider"></div>
+<p style='padding:0;margin:0;color:#000000;font-size:21pt;font-family:"Arial";line-height:1.15;orphans:2;widows:2;text-align:center'><span style='font-size:10pt;font-family:"Cabin Sketch";color:#ffffff;font-weight:400'><span class="sr-only">THE</span><span aria-hidden="true">𝐓𝐇𝐄 </span></span>
+<span style="color:#e06666;"><span class="sr-only">C</span><span aria-hidden="true">𝗖</span></span>
+<span style="color:#ff9900;"><span class="sr-only">O</span><span aria-hidden="true">𝗢</span></span>
+<span style="color:#ffff00;"><span class="sr-only">L</span><span aria-hidden="true">𝗟</span></span>
+<span style="color:#00ff00;"><span class="sr-only">O</span><span aria-hidden="true">𝗢</span></span>
+<span style="color:#00ffff;"><span class="sr-only">U</span><span aria-hidden="true">𝗨</span></span>
+<span style="color:#4a86e8;"><span class="sr-only">R</span><span aria-hidden="true">𝗥</span></span>
+<span style="color:#8e7cc3;"><span class="sr-only">S</span><span aria-hidden="true">𝗦</span></span>
+<span style='color:#ffffff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:14pt;font-family:"Cabin Sketch";font-style:normal'><span class="sr-only">THAT DONT MIX</span><span aria-hidden="true"> 𝐓𝐇𝐀𝐓 𝐃𝐎𝐍𝐓 𝐌𝐈𝐗</span></span></p><p style='padding:0;margin:0;color:#000000;font-size:11pt;font-family:"Arial";line-height:1.15;orphans:2;widows:2;text-align:center'><span style='color:#ffffff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:14pt;font-family:"Cabin Sketch";font-style:normal'><span class="sr-only">YET SEEM TO FLOW TOGETHER</span><span aria-hidden="true">𝐘𝐄𝐓 𝐒𝐄𝐄𝐌 𝐓𝐎 𝐅𝐋𝐎𝐖 𝐓𝐎𝐆𝐄𝐓𝐇𝐄𝐑</span></span></p><p style='padding:0;margin:0;color:#000000;font-size:11pt;font-family:"Arial";line-height:1.0;orphans:2;widows:2;text-align:center'><span style='font-size:14pt;font-family:"Cabin Sketch";color:#ffffff;font-weight:400'><span class="sr-only">LIKE</span><span aria-hidden="true">𝘓𝘐𝘒𝘌</span></span><span style='font-size:14pt;font-family:"Denk One";color:#ffffff;font-weight:400'><span class="sr-only">HEAVY</span><span aria-hidden="true">𝗛𝗘𝗔𝗩𝗬</span></span><span style='font-size:14pt;font-family:"Cabin Sketch";color:#ffffff;font-weight:400'> </span><span style='font-size:14pt;font-family:"Lacquer";color:#ffffff;font-weight:400'>LIQUID</span><span style='font-size:20pt;font-family:"Cabin Sketch";color:#ffffff;font-weight:400'> </span><span style='color:#ffffff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:14pt;font-family:"Nosifer";font-style:normal'>DRIPS</span></p><p style='padding:0;margin:0;color:#000000;font-size:21pt;font-family:"Arial";line-height:1.15;orphans:2;widows:2;text-align:center'><span style='font-size:20pt;font-family:"Cabin Sketch";color:#ffffff;font-weight:400'> </span><span style='font-size:20pt;font-family:"Aboreto";color:#ffffff;font-weight:400'>LIGHTLY</span><span style='font-size:20pt;font-family:"Cabin Sketch";color:#ffffff;font-weight:400'> </span><span style='font-size:20pt;font-family:"Fredericka the Great";color:#ffffff;font-weight:400'>DUSTED</span><span style='color:#ffffff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:20pt;font-family:"Cabin Sketch";font-style:normal'> from a </span></p><span style='color:#ffffff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:20pt;font-family:"Fleur-De-Leah";font-style:normal'><span class="sr-only">Feather</span><span aria-hidden="true">ℱ𝑒𝑎𝑡ℎ𝑒𝑟</span></span>
+</div></span></p>
+<!-- NEW INTEGRATED ENTRIES FROM DOCUMENT 2.HTML -->
+<div class="rainbow-divider"></div>
+<p style='padding:0;margin:0;color:#000000;font-size:18pt;font-family:"Arial";line-height:1.15;orphans:2;widows:2;text-align:center'><span style='color:#cccccc;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:18pt;font-family:"Barriecito";font-style:normal'>And the</span></p><p style='padding:0;margin:0;color:#000000;font-size:18pt;font-family:"Arial";line-height:1.15;orphans:2;widows:2;text-align:center'><span style='font-size:18pt;font-family:"Barriecito";color:#cccccc;font-weight:400'> </span><span style='font-size:18pt;font-family:"Road-Rage";color:#ffffff;font-weight:700'>MORAL LESSON</span><span style='color:#ffffff;font-weight:700;text-decoration:none;vertical-align:baseline;font-size:18pt;font-family:"Barriecito";font-style:normal'> </span></p><p style='padding:0;margin:0;color:#000000;font-size:18pt;font-family:"Arial";line-height:1.15;orphans:2;widows:2;text-align:center'><span style='font-size:18pt;font-family:"Barriecito";color:#cccccc;font-weight:400'>of the story is that</span><span style='color:#ffffff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:18pt;font-family:"Barriecito";font-style:normal'> </span></p><p style='padding:0;margin:0;color:#000000;font-size:18pt;font-family:"Arial";line-height:1.15;orphans:2;widows:2;text-align:center'><span style='font-size:18pt;font-family:"Road-Rage";color:#ffffff;font-weight:700'>LESS is MORE</span></p><p style='padding:0;margin:0;color:#000000;font-size:18pt;font-family:"Arial";line-height:1.15;orphans:2;widows:2;text-align:center'><span style='color:#ffffff;font-weight:700;text-decoration:none;vertical-align:baseline;font-size:18pt;font-family:"Road-Rage";font-style:normal'>MORE or LESS</span></p>
+<div class="rainbow-divider"></div>
+<hr/>
+<p style='padding:0;margin:0;color:#000000;font-size:18pt;font-family:"Arial";line-height:1.0;orphans:2;widows:2;height:11pt;text-align:center'><span style='color:#ffffff;font-weight:400;text-decoration:none;vertical-align:sub;font-size:24pt;font-family:"Aboreto";font-style:normal'></span></p>
+<p style='padding:0;margin:0;color:#000000;font-size:18pt;font-family:"Arial";line-height:1.0;orphans:2;widows:2;height:11pt;text-align:center'><span style='color:#ffffff;font-weight:400;text-decoration:none;vertical-align:sub;font-size:16pt;font-family:"Aboreto";font-style:normal'></span></p><p style='padding:0;margin:0;color:#000000;font-size:18pt;font-family:"Arial";line-height:2;orphans:2;widows:2;text-align:center'><span style='color:#ffffff;font-weight:400;text-decoration:none;vertical-align:sub;font-size:14pt;font-family:"Aboreto";font-style:normal'>Man-Made of Real Imitation</span></p>
+<p style='padding:0;margin:0;color:#000000;font-size:18pt;font-family:"Arial";line-height:1.0;orphans:2;widows:2;text-align:center'><span style='font-size:32pt;font-family:"Vina Sans";color:#ffffff;font-weight:400'>Artificial Organics</span></p>
+<p style='padding:0;margin:0;color:#000000;font-size:11pt;font-family:"Arial";line-height:1.15;orphans:2;widows:2;text-align:center'><span style='vertical-align:super;font-size:28pt;font-family:"Chewy";color:#ffffff;font-weight:700'>&amp;</span><span style='color:#ffffff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:32pt;font-family:"Antonio";font-style:normal'> Synthetic Naturals</span></p>
+<p style='padding:0;margin:0;color:#000000;font-size:20pt;font-family:"Arial";line-height:2;orphans:2;widows:2;text-align:center'><span style='vertical-align:super;font-size:18pt;font-family:"Amatic SC";font-style:bold;color:#ffffff;font-weight:600'>ACTUAL FABRICATIONS GROWN IN MANUFACTURED ENVIRONMENTS</span><hr/></p>
+<div class="rainbow-divider"></div>
+<p style='padding:0;margin:0;color:#000000;font-size:18pt;font-family:"Arial";line-height:1.0;orphans:2;widows:2;text-align:center'><span style='color:#ffffff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:18pt;font-family:"Alkatra";font-style:normal'>I hate being the only known species that contemplates its existence…</span></p><p style='padding:0;margin:0;color:#000000;font-size:18pt;font-family:"Arial";line-height:1.25;orphans:2;widows:2;text-align:center'><span style='color:#ffffff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:18pt;font-family:"Alkatra";font-style:normal'>…Now I'm contemplating the contemplation of my own existence</span></p>
+<p style='padding:0;margin:0;color:#000000;font-size:18pt;font-family:"Arial";line-height:1.15;orphans:2;widows:2;text-align:center'><span style='color:#ffffff;font-weight:200;text-decoration:none;vertical-align:baseline;font-size:18pt;font-family:"Anton";font-style:normal'>third hand contemplation</span></p>
+<p style='padding:0;margin:0;color:#000000;font-size:11pt;font-family:"Arial";line-height:1.15;orphans:2;widows:2;text-align:center'><span style='color:#ffffff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:18pt;font-family:"Anton";font-style:normal'>from a first person perspective</span></p>is<p style='padding:0;margin:0;color:#000000;font-size:11pt;font-family:"Arial";line-height:1.0;orphans:2;widows:2;text-align:center'><span style='color:#ffffff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:22pt;font-family:"Aboreto";font-style:normal'>Fourth Person Point of View</span></p><p style='padding:0;margin:0;color:#000000;font-size:11pt;font-family:"Arial";line-height:1.0;orphans:2;widows:2;height:11pt;text-align:center'><span style='color:#ffffff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:11pt;font-family:"Aboreto";font-style:normal'></span></p>
+<br/><br/><p style='padding:0;margin:0;color:#000000;font-size:11pt;font-family:"Arial";line-height:1.0;orphans:2;widows:2;text-align:center'><span style='color:#ffffff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:26pt;font-family:"Fjalla One";font-style:normal'>I keep forgetting that <strong>I already know</strong></span></p><p style='padding:0;margin:0;color:#000000;font-size:11pt;font-family:"Arial";line-height:1.0;orphans:2;widows:2;height:11pt;text-align:center'><span style='color:#ffffff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:11pt;font-family:"Fjalla One";font-style:normal'></span></p>
+<div class="rainbow-divider"></div>
+<p style='padding:0;margin:0;color:#000000;font-size:18pt;font-family:"Arial";line-height:1.0;orphans:2;widows:2;text-align:center'><span style='color:#ffffff;font-weight:400;font-family:"Amatic SC"'>I want to </span><span style='color:#ffffff;font-weight:700;font-family:"Amatic SC"'>eat my way out of myself</span><span style='color:#ffffff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:18pt;font-family:"Amatic SC";font-style:normal'>…</span></p><p style='padding:0;margin:0;color:#000000;font-size:18pt;font-family:"Arial";line-height:1.0;orphans:2;widows:2;text-align:center'><span style='color:#ffffff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:18pt;font-family:"Amatic SC";font-style:normal'> swallow myself inside out from the <i>outside in</i>. <br/>eating myself while being eaten by myself… </span></p><p style='padding:0;margin:0;color:#000000;font-size:18pt;font-family:"Arial";line-height:1.0;orphans:2;widows:2;text-align:center'><span style='color:#ffffff;font-weight:400;font-family:"Amatic SC"'>choking to death on myself from within</span><span style='color:#ffffff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:18pt;font-family:"Crushed";font-style:normal'>.</span></p><p style='padding:0;margin:0;color:#000000;font-size:18pt;font-family:"Arial";line-height:1.0;orphans:2;widows:2;height:11pt;text-align:center'><span style='color:#ffffff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:18pt;font-family:"Crushed";font-style:normal'></span></p><p style='padding:0;margin:0;color:#000000;font-size:18pt;font-family:"Arial";line-height:1.0;orphans:2;widows:2;text-align:center'><span style='color:#ffffff;font-weight:400;font-family:"Crushed"'>Most things are </span><span style='color:#ffffff;font-weight:700;font-family:"Acme"'>EDIBLE</span><span style='color:#ffffff;font-weight:400;font-family:"Crushed"'> but not always </span><span style='color:#ffffff;font-weight:700;font-family:"Acme"'>CHEWABLE</span><span style='color:#ffffff;font-weight:400;font-family:"Crushed"'> though If you can chew it, you can swallow it but it's not always </span><span style='color:#ffffff;font-weight:700;font-family:"Acme"'>DIGESTIBLE</span></p><p style='padding:0;margin:0;color:#000000;font-size:11pt;font-family:"Arial";line-height:1.0;orphans:2;widows:2;height:11pt;text-align:center'><span style='color:#ffffff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:11pt;font-family:"Crushed";font-style:normal'></span></p>
+<div class="rainbow-divider"></div>
+<p style='padding:0;margin:0;color:#000000;font-size:24pt;font-family:"Arial";line-height:1.0;orphans:2;widows:2;text-align:center'><span style='color:#ffffff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:24pt;font-family:"Girassol";font-style:normal'>WHY WON'T THE BEAT DROP?</span></p><p style='padding:0;margin:0;color:#000000;font-size:11pt;font-family:"Arial";line-height:1.0;orphans:2;widows:2;height:11pt;text-align:center'><span style='color:#ffffff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:11pt;font-family:"Crushed";font-style:normal'></span></p><p style='padding:0;margin:0;color:#000000;font-size:11pt;font-family:"Arial";line-height:1.0;orphans:2;widows:2;height:11pt;text-align:center'><span style='color:#ffffff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:11pt;font-family:"Crushed";font-style:normal'></span></p>
+<p style='padding:0;margin:0;color:#000000;font-size:11pt;font-family:"Arial";line-height:1.15;orphans:2;widows:2;text-align:center'><span style='color:#ffffff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:24pt;font-family:"Road Rage";font-style:normal'><strong>𓆣</strong> <br/>INSECT OVERLORDS  <br/> are desguised as <br/> REPTILIAN UNDERLORDS <br/><strong>𓆈</strong></span></p><p style='padding:0;margin:0;color:#000000;font-size:16pt;font-family:"Arial";line-height:1.0;orphans:2;widows:2;height:16pt;text-align:center'><span style='color:#ffffff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:16pt;font-family:"Crushed";font-style:normal'></span></p>
+<p style='padding:0;margin:0;color:#000000;font-size:16pt;font-family:"Arial";line-height:1.0;orphans:2;widows:2;text-align:center'><span style='color:#ffffff;font-weight:400;font-family:"Crushed"'>We are </span><span style='color:#ffffff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:16pt;font-family:"Chewy";font-style:normal'>caterpillars</span></p><p style='padding:0;margin:0;color:#000000;font-size:16pt;font-family:"Arial";line-height:1.0;orphans:2;widows:2;text-align:center'><span style='color:#ffffff;font-weight:400;font-family:"Crushed"'> always in </span><span style='color:#ffffff;font-weight:400;font-family:"Chewy"'>contemplation</span><span style='color:#ffffff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:16pt;font-family:"Crushed";font-style:normal'>.</span></p><p style='padding:0;margin:0;color:#000000;font-size:16pt;font-family:"Arial";line-height:1.0;orphans:2;widows:2;text-align:center'>
+<span style='color:#ffffff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:16pt;font-family:"Crushed";font-style:normal'></span></p><p style='padding:0;margin:0;color:#000000;font-size:16pt;font-family:"Arial";line-height:1.0;orphans:2;widows:2;text-align:center'><span style='color:#ffffff;font-weight:400;font-family:"Crushed"'>They wear silk slippers to </span><span style='color:#ffffff;font-weight:400;font-family:"Chewy"'>silence the mind</span><span style='color:#ffffff;font-weight:400;font-family:"Crushed"'> in a </span><span style='color:#ffffff;font-weight:400;font-family:"Kavoon"'></span><span style='color:#ffffff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:16pt;font-family:"Chewy";font-style:normal'>cocoon of trust. </span></p><p style='padding:0;margin:0;color:#000000;font-size:16pt;font-family:"Arial";line-height:1.0;orphans:2;widows:2;text-align:center'><span style='color:#ffffff;font-weight:400;font-family:"Crushed"'>Only then can they </span><span style='font-size:16pt;font-family:"Chewy";color:#ffffff;font-weight:400'>transcend dimensions</span><span style='color:#ffffff;font-weight:400;font-family:"Crushed"'> and </span><span style='color:#ffffff;font-weight:400;font-family:"Chewy"'>flutter by into dust</span><span style='color:#ffffff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:16pt;font-family:"Crushed";font-style:normal'>.</span></p><p style='padding:0;margin:0;color:#000000;font-size:16pt;font-family:"Arial";line-height:1.0;orphans:2;widows:2;height:16pt;text-align:center'><span style='color:#ffffff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:16pt;font-family:"Crushed";font-style:normal'></span></p><p style='padding:0;margin:0;color:#000000;font-size:16pt;font-family:"Arial";line-height:1.0;orphans:2;widows:2;height:16pt;text-align:center'><span style='color:#ffffff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:16pt;font-family:"Crushed";font-style:normal'></span></p><p style='padding:0;margin:0;color:#000000;font-size:16pt;font-family:"Arial";line-height:1.0;orphans:2;widows:2;height:16pt;text-align:center'><span style='color:#ffffff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:16pt;font-family:"Crushed";font-style:normal'></span></p><p style='padding:0;margin:0;color:#000000;font-size:16pt;font-family:"Arial";line-height:1.0;orphans:2;widows:2;height:16pt;text-align:center'><span style='color:#ffffff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:16pt;font-family:"Crushed";font-style:normal'></span></p>
+<div class="rainbow-divider"></div>
+<p style='padding:0;margin:0;color:#000000;font-size:16pt;font-family:"Arial";line-height:1.0;orphans:2;widows:2;text-align:center'><span style='color:#ffffff;font-weight:400;font-family:"Crushed"'>Time is of </span><span style='font-size:16pt;font-family:"Crushed";font-style:italic;color:#ffffff;font-weight:400'>essence</span><span style='color:#ffffff;font-weight:400;font-family:"Crushed"'> </span><span style='font-size:16pt;font-family:"Crushed";font-style:italic;color:#ffffff;font-weight:400'>essentially</span><span style='color:#ffffff;font-weight:400;font-family:"Crushed"'> </span><span style='font-size:16pt;font-family:"Crushed";font-style:italic;color:#ffffff;font-weight:400'>easy</span><span style='color:#ffffff;font-weight:400;font-family:"Crushed"'> to </span><span style='color:#ffffff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:16pt;font-family:"Crushed";font-style:italic'>escape</span></p><p style='padding:0;margin:0;color:#000000;font-size:oo16pt;font-family:"Arial";line-height:1.0;orphans:2;widows:2;height:16pt;text-align:center'><span style='color:#ffffff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:16pt;font-family:"Crushed";font-style:normal'></span></p><p style='padding:0;margin:0;color:#000000;font-size:16pt;font-family:"Arial";line-height:1.0;orphans:2;widows:2;text-align:center'><span style='color:#ffffff;font-weight:400;font-family:"Crushed"'>The </span><span style='font-size:16pt;font-family:"Crushed";font-style:italic;color:#ffffff;font-weight:400'>essence</span><span style='color:#ffffff;font-weight:400;font-family:"Crushed"'> is in </span><span style='font-size:16pt;font-family:"Crushed";font-style:italic;color:#ffffff;font-weight:400'>senses</span><span style='color:#ffffff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:16pt;font-family:"Crushed";font-style:normal'>. </span></p><p style='padding:0;margin:0;color:#000000;font-size:16;font-family:"Arial";line-height:1.0;orphans:2;widows:2;text-align:center'><span style='color:#ffffff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:16pt;font-family:"Crushed";font-style:normal'>Uninterested in terrestriance. </span></p><p style='padding:0;margin:0;color:#000000;font-size:16pt;font-family:"Arial";line-height:1.0;orphans:2;widows:2;text-align:center'><span style='color:#ffffff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:16pt;font-family:"Crushed";font-style:normal'>Only extra terrestrials need more land.</span></p><p style='padding:0;margin:0;color:#000000;font-size:16pt;font-family:"Arial";line-height:1.0;orphans:2;widows:2;height:11pt;text-align:center'><span style='color:#ffffff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:11pt;font-family:"Crushed";font-style:normal'></span></p>
+<p style='padding:0;margin:0;color:#000000;font-size:16pt;font-family:"Arial";line-height:1.0;orphans:2;widows:2;text-align:center'><span style='color:#ffffff;font-weight:400;font-family:"Crushed"'>Our </span><span style='font-size:16pt;font-family:"Crushed";color:#ffffff;font-weight:700'>frequency</span><span style='color:#ffffff;font-weight:400;font-family:"Crushed"'> of </span><span style='font-size:16pt;font-family:"Crushed";color:#ffffff;font-weight:700'>frequently</span><span style='color:#ffffff;font-weight:400;font-family:"Crushed"'> </span><span style='font-size:16pt;font-family:"Aclonica";color:#ffffff;font-weight:700'>questioning</span><span style='font-size:16pt;font-family:"Crushed";color:#ffffff;font-weight:700'> </span><span style='color:#ffffff;font-weight:400;font-family:"Crushed"'>the</span><span style='font-size:16pt;font-family:"Crushed";color:#ffffff;font-weight:700'> </span><span style='font-size:16pt;font-family:"Aclonica";color:#ffffff;font-weight:700'>quest</span><span style='color:#ffffff;font-weight:400;font-family:"Crushed"'> we are </span><span style='font-size:16pt;font-family:"Aclonica";color:#ffffff;font-weight:700'>quilting</span><span style='color:#ffffff;font-weight:400;font-family:"Crushed"'> is </span><span style='font-family:"Aboreto";font-style:italic;color:#ffffff;font-weight:400'>infectious</span><span style='color:#ffffff;font-weight:400;font-family:"Crushed"'> to our </span><span style='font-family:"Aboreto";font-style:italic;color:#ffffff;font-weight:400'>affection</span><span style='color:#ffffff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:16pt;font-family:"Crushed";font-style:normal'>.</span></p>
+<p style='padding:0;margin:0;color:#000000;font-size:16pt;font-family:"Arial";line-height:1.0;orphans:2;widows:2;text-align:center'><span style='color:#ffffff;font-weight:400;font-family:"Crushed"'>In </span><span style='font-size:16pt;font-family:"Aboreto";font-style:italic;color:#ffffff;font-weight:400'>effect</span><span style='color:#ffffff;font-weight:400;font-family:"Crushed"'>, we have fabrications of </span><span style='color:#ffffff;font-weight:400;font-family:"Aladin"'>material matter</span><span style='color:#ffffff;font-weight:400;font-family:"Crushed"'> fluxing light and dark by </span><span style='color:#ffffff;font-weight:400;font-family:"Almendra SC"'>deflecting defecations</span><span style='color:#ffffff;font-weight:400;font-family:"Crushed"'>, </span><span style='font-size:16pt;font-family:"Anton";color:#ffffff;font-weight:400'>inflecting infections</span><span style='color:#ffffff;font-weight:400;font-family:"Crushed"'>, </span><span style='font-size:16pt;font-family:"Bokor";font-style:italic;color:#ffffff;font-weight:400'>reflecting refluxions</span><span style='color:#ffffff;font-weight:400;font-family:"Crushed"'>, and </span><span style='font-size:16pt;font-family:"Aboreto";font-style:italic;color:#ffffff;font-weight:700'>refracting reactions</span><span style='color:#ffffff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:16pt;font-family:"Crushed";font-style:normal'>. </span></p>
+<p style='padding:0;margin:0;color:#000000;font-size:16pt;font-family:"Arial";line-height:1.0;orphans:2;widows:2;text-align:center'><span style='color:#ffffff;font-weight:400;font-family:"Crushed"'>A sorrow awareness </span><span style='color:#ffffff;font-weight:400;font-family:"Antonio"'>consequences</span><span style='color:#ffffff;font-weight:400;font-family:"Crushed"'> our </span><span style='color:#ffffff;font-weight:400;font-family:"Antonio"'>consciousness</span><span style='color:#ffffff;font-weight:400;font-family:"Crushed"'> with </span><span style='color:#ffffff;font-weight:400;font-family:"Antonio"'>conscience</span><span style='color:#ffffff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:16pt;font-family:"Crushed";font-style:normal'> </span></p>
+<p style='padding:0;margin:0;color:#000000;font-size:16pt;font-family:"Arial";line-height:1.0;orphans:2;widows:2;height:16pt;text-align:center'><span style='color:#ffffff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:16pt;font-family:"Crushed";font-style:normal'></span></p><p style='padding:0;margin:0;color:#000000;font-size:16pt;font-family:"Arial";line-height:1.0;orphans:2;widows:2;text-align:center'><span style='color:#ffffff;font-weight:400;font-family:"Crushed"'>…And thus </span><span style='font-size:16pt;font-family:"Agu Display";color:#ffffff;font-weight:700'>Karma</span><span style='color:#ffffff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:16pt;font-family:"Crushed";font-style:normal'> is born.</span></p>
+<p style='padding:0;margin:0;color:#000000;font-size:11pt;font-family:"Arial";line-height:1.0;orphans:2;widows:2;height:11pt;text-align:center'><span style='color:#ffffff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:11pt;font-family:"Crushed";font-style:normal'></span></p><p style='padding:0;margin:0;color:#000000;font-size:11pt;font-family:"Arial";line-height:1.0;orphans:2;widows:2;height:11pt;text-align:center'><span style='color:#ffffff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:11pt;font-family:"Crushed";font-style:normal'></span></p>
+<p style='padding:0;margin:0;color:#000000;font-size:11pt;font-family:"Arial";line-height:1.0;orphans:2;widows:2;height:11pt;text-align:center'><span style='color:#ffffff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:11pt;font-family:"Crushed";font-style:normal'></span></p>
+<div class="rainbow-divider"></div>
+<p style='padding:0;margin:0;color:#000000;font-size:24pt;font-family:"Arial";line-height:1.0;orphans:2;widows:2;text-align:center'><span style='color:#ffffff;font-weight:700;text-decoration:none;vertical-align:baseline;font-size:24pt;font-family:"Julius Sans One";font-style:normal'>I have </span></p><p style='padding:0;margin:0;color:#000000;font-size:24pt;font-family:"Arial";line-height:1.0;orphans:2;widows:2;text-align:center'><span style='font-size:24pt;font-family:"Crushed";color:#ffffff;font-weight:700'>A DICTION</span><span style='color:#ffffff;font-weight:700;text-decoration:none;vertical-align:baseline;font-size:24pt;font-family:"Julius Sans One";font-style:normal'>ary </span></p><p style='padding:0;margin:0;color:#000000;font-size:24pt;font-family:"Arial";line-height:1.0;orphans:2;widows:2;text-align:center'><span style='color:#ffffff;font-weight:700;text-decoration:none;vertical-align:baseline;font-size:24pt;font-family:"Crushed";font-style:normal'>ADDICTION</span></p>
+<p style='padding:0;margin:0;color:#000000;font-size:11pt;font-family:"Arial";line-height:1.0;orphans:2;widows:2;height:11pt;text-align:center'><span style='color:#ffffff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:11pt;font-family:"Crushed";font-style:normal'></span></p>
+<br/>
+<p style='padding:0;margin:0;color:#000000;font-size:18pt;font-family:"Arial";line-height:1.0;orphans:2;widows:2;text-align:center'><span style='font-size:24pt;font-family:"Miltonian";color:#ffffff;font-weight:400'>”AVOID A VOID”</span><span style='color:#ffffff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:18pt;font-family:"Cuprum";font-style:normal'> </span></p><p style='padding:0;margin:0;color:#000000;font-size:18pt;font-family:"Arial";line-height:1.0;orphans:2;widows:2;text-align:center'><span style='color:#ffffff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:16pt;font-family:"Cuprum";font-style:normal'>-Gravity</span></p><p style='padding:0;margin:0;color:#000000;font-size:11pt;font-family:"Arial";line-height:1.0;orphans:2;widows:2;height:11pt;text-align:center'><span style='color:#ffffff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:16pt;font-family:"Crushed";font-style:normal'></span></p>
+<br/>
+<p style='padding:0;margin:0;color:#000000;font-size:16pt;font-family:"Arial";line-height:1.0;orphans:2;widows:2;text-align:center'><span style='color:#ffffff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:16pt;font-family:"Dokdo";font-style:normal'>You need</span></p><p style='padding:0;margin:0;color:#000000;font-size:16pt;font-family:"Arial";line-height:1.0;orphans:2;widows:2;text-align:center'><span style='font-size:16pt;font-family:"Anton";color:#ffffff;font-weight:400'> </span><span style='font-size:16pt;font-family:"Antonio";color:#ffffff;font-weight:200'>CONSTANT PATIENCE</span><span style='color:#ffffff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:16pt;font-family:"Dokdo";font-style:normal'> </span></p><p style='padding:0;margin:0;color:#000000;font-size:16pt;font-family:"Arial";line-height:1.0;orphans:2;widows:2;text-align:center'><span style='font-size:16pt;font-family:"Dokdo";color:#ffffff;font-weight:400'>FOR </span><span style='font-size:16pt;font-family:"Antonio";color:#ffffff;font-weight:400'>CONSTIPATION</span></p><p style='padding:0;margin:0;color:#000000;font-size:11pt;font-family:"Arial";line-height:1.0;orphans:2;widows:2;height:11pt;text-align:center'><span style='color:#ffffff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:11pt;font-family:"Crushed";font-style:normal'></span></p>
+<br/>
+<p style='padding:0;margin:0;color:#000000;font-size:28pt;font-family:"Arial";line-height:1.0;orphans:2;widows:2;text-align:center'><span style='color:#ffffff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:34pt;font-family:"Antonio";font-style:normal'>CAFFEINE COFFIENDS</span></p><p style='padding:0;margin:0;color:#000000;font-size:11pt;font-family:"Arial";line-height:1.0;orphans:2;widows:2;height:11pt;text-align:center'><span style='color:#ffffff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:11pt;font-family:"Crushed";font-style:normal'></span></p>
+<p style='padding:0;margin:0;color:#000000;font-size:11pt;font-family:"Arial";line-height:1.0;orphans:2;widows:2;height:11pt;text-align:center'><span style='color:#ffffff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:11pt;font-family:"Crushed";font-style:normal'></span></p>
+<div class="rainbow-divider"></div>
+<p style='padding:0;margin:0;color:#000000;font-size:11pt;font-family:"Arial";line-height:1.15;orphans:2;widows:2;text-align:center'><span style='color:#ffffff;font-weight:700;text-decoration:none;vertical-align:baseline;font-size:20pt;font-family:"Elsie Swash Caps";font-style:normal'>WORD  WARFARE</span></p><p style='padding:0;margin:0;color:#000000;font-size:18pt;font-family:"Arial";line-height:1.0;orphans:2;widows:2;text-align:center'><span style='color:#ffffff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:18pt;font-family:"Crushed";font-style:normal'>Dropping Bombs by Talking Shit</span></p><p style='padding:0;margin:0;color:#000000;font-size:18pt;font-family:"Arial";line-height:1.0;orphans:2;widows:2;text-align:center'><span style='color:#ffffff;font-weight:400;font-family:"Crushed"'>Words are </span><span style='color:#ffffff;font-weight:700;text-decoration:none;vertical-align:baseline;font-size:18pt;font-family:"Delius Unicase";font-style:italic'>Weapons of Mass Defecation.</span></p><p style='padding:0;margin:0;color:#000000;font-size:11pt;font-family:"Arial";line-height:1.0;orphans:2;widows:2;text-align:center'><span style='color:#ffffff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:18pt;font-family:"Denk One";font-style:italic'>Weapons of Ass Discussion.</span></p><p style='padding:0;margin:0;color:#000000;font-size:18pt;font-family:"Arial";line-height:1.0;orphans:2;widows:2;text-align:center'><span style='color:#ffffff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:18pt;font-family:"Crushed";font-style:normal'>Get Butt hurt over Word Wounds.</span></p><p style='padding:0;margin:0;color:#000000;font-size:18pt;font-family:"Arial";line-height:1.0;orphans:2;widows:2;height:18pt;text-align:center'><span style='color:#ffffff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:11pt;font-family:"Crushed";font-style:normal'></span></p>
+<p style='padding:0;margin:0;color:#000000;font-size:11pt;font-family:"Arial";line-height:1.0;orphans:2;widows:2;text-align:center'><span style='color:#ffffff;font-weight:700;text-decoration:none;vertical-align:baseline;font-size:28pt;font-family:"Delicious Handrawn";font-style:normal'>Sewers are Sowers</span></p><p style='padding:0;margin:0;color:#000000;font-size:18pt;font-family:"Arial";line-height:1.0;orphans:2;widows:2;text-align:center'><span style='color:#ffffff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:18pt;font-family:"Crushed";font-style:normal'>-Septic perception</span></p>
+<p style='padding:0;margin:0;color:#000000;font-size:11pt;font-family:"Arial";line-height:1.0;orphans:2;widows:2;height:11pt;text-align:center'><span style='color:#ffffff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:11pt;font-family:"Crushed";font-style:normal'></span></p>
+<p style='padding:0;margin:0;color:#000000;font-size:11pt;font-family:"Arial";line-height:1.0;orphans:2;widows:2;height:11pt;text-align:center'><span style='color:#ffffff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:20pt;font-family:"Crushed";font-style:normal'>Tuning forks are pitch forks&lt;</span></p>
+<br/><br/><br/>
+<p style='padding:0;margin:0;color:#000000;font-size:18pt;font-family:"Arial";line-height:1.0;orphans:2;widows:2;text-align:center'><span style='font-size:22pt;font-family:"Cabin Sketch";color:#ffffff;font-weight:400;font-style:normal'>for small favors</span><br/><span style='font-size:28pt;font-family:"Cuprum";color:#ffffff;font-weight:400'><span class="sr-only">Thank GOD</span><span aria-hidden="true">Thank 𝗚𝗢𝗗</span></span><br/> <span ;font-style:normal"="" style='font-size:22pt;line-height:1.0;orphans:2;widows:2;text-align:center;;font-family:"Cabin Sketch";color:#ffffff;font-weight:400'>for large favors</span>
+<br/><span style='font-size:28pt;font-family:"Cuprum";color:#ffffff;font-weight:400'><span class="sr-only">Hail SATAN</span><span aria-hidden="true">Hail 𝗦𝗔𝗧𝗔𝗡</span></span></p>
+<span>
+<p style='padding:0;margin:0;color:#000000;font-size:11pt;font-family:"Arial";line-height:1.0;orphans:2;widows:2;height:11pt;text-align:center'><span style='color:#ffffff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:11pt;font-family:"Crushed";font-style:normal'></span></p>
+<div class="rainbow-divider"></div>
+<p style='padding:0;margin:0;color:#000000;font-size:11pt;font-family:"Arial";line-height:1.5;orphans:2;widows:2;text-align:center'><span style='color:#ffffff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:36pt;font-family:"Cabin Sketch";font-style:display'>HOW FAR?</span></p><p style='padding:0;margin:0;color:#000000;font-size:18pt;font-family:"Arial";line-height:1.0;orphans:2;widows:2;text-align:center'><span style='font-size:18pt;font-family:"Crushed";color:#ffffff;font-weight:400'>does</span><span style='font-size:18pt;font-family:"Amatic SC";color:#ffffff;font-weight:700'>not </span><span style='font-size:18pt;font-family:"Crushed";color:#ffffff;font-weight:400'>ask to measure</span><br/>
+<span style='font-size:24pt;font-family:"Cabin Sketch";color:#ffffff;font-weight:400'>DISTANCE </span><span style='font-size:18pt;font-family:"Crushed";color:#ffffff;font-weight:400'> or </span><span style='font-size:24pt;font-family:"Cabin Sketch";color:#ffffff;font-weight:400'>DURATION.</span><br/>
+<span style='font-size:18pt;font-family:"Crushed";color:#ffffff;font-weight:400'>Instead it begs to question <br/>the extent of one's </span><br/><span style='font-size:28pt;font-family:"Cabin Sketch";color:#ffffff;font-weight:400'>DETERMINATION</span><span style='color:#ffffff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:11pt;font-family:"Crushed";font-style:normal'>.</span></p><p style='padding:0;margin:0;color:#000000;font-size:11pt;font-family:"Arial";line-height:1.0;orphans:2;widows:2;height:11pt;text-align:center'><span style='color:#ffffff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:11pt;font-family:"Crushed";font-style:normal'></span></p>
+<div class="rainbow-divider"></div>
+<p style='padding:0;margin:0;color:#000000;font-size:11pt;font-family:"Arial";line-height:1.0;orphans:2;widows:2;text-align:center'><span style='font-size:12pt;font-family:"Michroma";color:#ffffff;font-weight:400'>Listen to your </span><span style='color:#ffffff;font-weight:400;font-family:"Bungee"'>heart…</span><span style='color:#ffffff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-family:"Michroma";font-style:normal'> </span></p><p style='padding:0;margin:0;color:#000000;font-size:11pt;font-family:"Arial";line-height:1.0;orphans:2;widows:2;text-align:center'><span style='font-size:12pt;font-family:"Michroma";color:#ffffff;font-weight:400'>…. you’ll get </span><span style='color:#ffffff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-family:"Bungee";font-style:italic'>hurt</span></p><p style='padding:0;margin:0;color:#000000;font-size:11pt;font-family:"Arial";line-height:1.0;orphans:2;widows:2;text-align:center'><span style='font-size:12pt;font-family:"Michroma";color:#ffffff;font-weight:400'>Overthinking with your </span><span style='color:#ffffff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-family:"Bungee";font-style:normal'>head…</span></p><p style='padding:0;margin:0;color:#000000;font-size:11pt;font-family:"Arial";line-height:1.0;orphans:2;widows:2;text-align:center'><span style='font-size:12pt;font-family:"Michroma";color:#ffffff;font-weight:400'>…takes too long and you'll be </span><span style='color:#ffffff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-family:"Bungee";font-style:italic'>dead</span></p><p style='padding:0;margin:0;color:#000000;font-size:11pt;font-family:"Arial";line-height:1.0;orphans:2;widows:2;text-align:center'><span style='font-size:12pt;font-family:"Michroma";color:#ffffff;font-weight:400'>So follow your </span><span style='color:#ffffff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-family:"Bungee";font-style:normal'>gut…</span></p><p style='padding:0;margin:0;color:#000000;font-size:11pt;font-family:"Arial";line-height:1.0;orphans:2;widows:2;text-align:center'><span style='font-size:12pt;font-family:"Michroma";color:#ffffff;font-weight:400'>…it will always save your </span><span style='color:#ffffff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:12pt;font-family:"Bungee";font-style:normal'>butt</span></p><p style='padding:0;margin:0;color:#000000;font-size:11pt;font-family:"Arial";line-height:1.0;orphans:2;widows:2;height:11pt;text-align:center'><span style='color:#ffffff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:11pt;font-family:"Crushed";font-style:normal'></span></p>
+<div class="rainbow-divider"></div>
+<p style='padding:0;margin:0;color:#000000;font-size:18pt;font-family:"Arial";line-height:1.0;orphans:2;widows:2;text-align:center'><span style='color:#ffffff;font-weight:700;text-decoration:none;vertical-align:baseline;font-size:28pt;font-family:"Rock Salt";font-style:normal'>LE'GO YOUR EGO</span></p><p style='padding:0;margin:0;color:#000000;font-size:11pt;font-family:"Arial";line-height:1.0;orphans:2;widows:2;height:11pt;text-align:center'><span style='color:#ffffff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:11pt;font-family:"Crushed";font-style:normal'></span></p><p style='padding:0;margin:0;color:#000000;font-size:11pt;font-family:"Arial";line-height:1.0;orphans:2;widows:2;height:11pt;text-align:center'><span style='color:#ffffff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:11pt;font-family:"Crushed";font-style:normal'></span></p><p style='padding:0;margin:0;color:#000000;font-size:11pt;font-family:"Arial";line-height:1.0;orphans:2;widows:2;text-align:center'>
+<p style='padding:0;margin:0;color:#000000;font-size:11pt;font-family:"Arial";line-height:1.0;orphans:2;widows:2;text-align:center'><span style='color:#ffffff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:18pt;font-family:"Crushed";font-style:normal'>Hands down the shittiest shit i ever shot•••</span></p><p style='padding:0;margin:0;color:#000000;font-size:11pt;font-family:"Arial";line-height:1.0;orphans:2;widows:2;text-align:center'><span style='color:#ffffff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:18pt;font-family:"Crushed";font-style:normal'>•You got a point when your on track</span></p><p style='padding:0;margin:0;color:#000000;font-size:11pt;font-family:"Arial";line-height:1.0;orphans:2;widows:2;height:11pt;text-align:center'><span style='color:#ffffff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:11pt;font-family:"Crushed";font-style:normal'></span></p>
+<div class="rainbow-divider"></div>
+<p style='padding:0;margin:0;color:#000000;font-size:28pt;font-family:"Arial";line-height:1.5;orphans:2;widows:2;text-align:center'><span style='color:#ffffff;font-weight:400;font-family:"Crushed"'><span class="sr-only">Lif℮</span><span aria-hidden="true">𝕷ⅈ𝒇℮</span>
+<p style='padding:0;margin:0;color:#000000;font-size:18pt;font-family:"Arial";line-height:1.0;orphans:2;widows:2;text-align:center'><span style='color:#ffffff;font-weight:400;font-family:"Crushed"'>is not a </span><span style='color:#ffffff;font-weight:400;font-family:"Anton"'>problem</span><span style='color:#ffffff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:18pt;font-family:"Crushed";font-style:normal'>to be</span><span style='color:#ffffff;font-weight:400;font-size: 18pt;font-family:"Anton"'> solved</span></p><p style='padding:0;margin:0;color:#000000;font-size:18pt;font-family:"Arial";line-height:1.0;orphans:2;widows:2;text-align:center'><span style='color:#ffffff;font-weight:400;font-family:"Crushed"'>It is an </span><span style='color:#ffffff;font-weight:400;font-family:"Anton"'>expression</span><span style='color:#ffffff;font-weight:400;font-family:"Crushed"'> to </span><span style='color:#ffffff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:18pt;font-family:"Anton";font-style:normal'>simplify.</span></p>
+<br/>
+<span style='color:#ffffff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:11pt;font-family:"Crushed";font-style:normal'>I stopped drawing and started painting with words. I call it language arts.</span></span></p>
+<p style='padding:0;margin:0;color:#000000;font-size:18pt;font-family:"Arial";line-height:1.0;orphans:2;widows:2;height:18pt;text-align:center'><span style='color:#ffffff;font-weight:400;text-decoration:none;vertical-align:super;font-size:18pt;font-family:"Bahiana";font-style:normal'></span></p>
+<p style='padding:0;margin:0;color:#ffffff;font-size:28pt;font-family:"Arial";line-height:2.0;orphans:2;widows:2;text-align:center'><span class="sr-only">SOUNDS MADE UP</span><span aria-hidden="true">𝚂𝙾𝚄𝙽𝙳𝚂 𝙼𝙰𝙳𝙴 𝚄𝙿</span></p></p></span>
+<p style='padding:0;margin:0;color:#fffffff;font-size:18pt;font-family:"Arial";line-height:1.0;orphans:2;widows:2;text-align:center'><span style='color:#ffffff;font-weight:700;font-family:"Amatic SC"'>It is </span><span style='color:#ffffff;font-weight:400;font-family:"Fjalla One"'>make believe </span><span style='color:#ffffff;font-weight:700;font-family:"Amatic SC"'>until you </span>
+<span style='color:#ffffff;font-weight:400;font-family:"Fjalla One"'>make me believe it.</span>
+<br/><br/>
+<p style='padding:0;margin:0;color:#000000;font-size:32pt;font-family:"Arial";line-height:1.0;orphans:2;widows:2;text-align:center'><span style='color:#ffffff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:32pt;font-family:"Princess Sofia";font-style:display'>Spider Silk Corn Cob Webs</span></p>
+<br/>
+<p style='padding:0;margin:0;color:#000000;font-size:11pt;font-family:"Arial";line-height:1.0;orphans:2;widows:2;height:11pt;text-align:center'>
+<span style='color:#ffffff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:11pt;font-family:"Crushed";font-style:normal'></span></p>
+<p style='padding:0;margin:0;color:#000000;font-size:11pt;font-family:"Arial";line-height:1.0;orphans:2;widows:2;text-align:center'><span style='color:#ffffff;font-weight:400;font-family:"Anton"'>Bio-necro-illuminascention</span></p>
+<p style='padding:0;margin:0;color:#000000;font-size:11pt;font-family:"Arial";line-height:1.0;orphans:2;widows:2;text-align:center'><span style='font-size:12pt;font-family:"Crushed";color:#ffffff;font-weight:400'>Permanenlightently infinilluminated</span></p><p style='padding:0;margin:0;color:#000000;font-size:11pt;font-family:"Arial";line-height:1.0;orphans:2;widows:2;height:11pt;text-align:center'><span style='color:#ffffff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:11pt;font-family:"Crushed";font-style:normal'></span></p>
+<div class="rainbow-divider"></div>
+<p class="c23"><span class="c133"><span class="sr-only">$̸LAB CiTY</span><span aria-hidden="true">$̸𝗟𝐀𝔹 𝗖𝖎𝕋𝐘</span></span></p>
+<br/>
+<p class="c5"><span class="c48 c56 c92">WHERE THINGS NEVER LAST BUT PEOPLE NEVER LEAVE</span></p>
+<hr/>
+<p style='padding:0;margin:0;color:#000000;font-size:11pt;font-family:"Arial";line-height:1.5;orphans:2;widows:2;height:11pt;text-align:center'><span style='color:#ffffff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:18pt;font-family:"Crushed";font-style:normal'></span></p>
+<p style='padding:0;margin:0;color:#000000;font-size:20pt;font-family:"Arial";line-height:1.0;orphans:2;widows:2;text-align:center'><span style='font-size:24pt;font-family:"Crushed";color:#ffffff;font-weight:400'>Freedom </span><span style='color:#ffffff;font-weight:400;font-family:"Crushed";font-style:normal'>is a</span><span style='font-size:16pt;font-family:"Crushed";color:#ffffff;font-weight:700'>lie</span><span style='color:#ffffff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:18pt;font-family:"Crushed";font-style:normal'> </span></p><p style='padding:0;margin:0;color:#000000;font-size:20pt;font-family:"Arial";line-height:2.0;orphans:2;widows:2;text-align:center'><span style='vertical-align:super;font-size:14pt;font-family:"Crushed";color:#ffffff;font-weight:400'>where your</span><span style='color:#ffffff;font-weight:400;font-family:"Crushed"'> </span><span style='font-size:18pt;font-family:"Crushed";color:#ffffff;font-weight:400'>dreams</span><span style='color:#ffffff;font-weight:400;font-family:"Crushed"'> go to </span><span style='color:#ffffff;font-weight:700;text-decoration:none;vertical-align:baseline;font-size:14pt;font-family:"Crushed";font-style:normal'>die</span></p><p style='padding:0;margin:0;color:#000000;font-size:11pt;font-family:"Arial";line-height:2.0;orphans:2;widows:2;height:11pt;text-align:center'><span style='color:#ffffff;font-weight:700;text-decoration:none;vertical-align:baseline;font-size:14pt;font-family:"Crushed";font-style:normal'></span></p>
+<p style='padding:0;margin:0;color:#000000;font-size:18pt;font-family:"Arial";line-height:1.0;orphans:2;widows:2;text-align:center'><span style='color:#ffffff;font-weight:400;font-family:"Aboreto"'>ANCIENT VIBRATIONAL ENERGY TESTING</span><span style='color:#ffffff;font-weight:400;font-family:"Crushed"'> IN THIS </span><span style='font-size:18pt;font-family:"Crushed";color:#ffffff;font-weight:700'>OBSIDIAN ABYSS</span><span style='color:#ffffff;font-weight:400;font-family:"Crushed"'> WITH </span><span style='color:#ffffff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:18pt;font-family:"Anton";font-style:normal'>MAGMA PLASMA</span></p><p style='padding:0;margin:0;color:#000000;font-size:11pt;font-family:"Arial";line-height:1.0;orphans:2;widows:2;text-align:center'><span style='color:#ffffff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:18pt;font-family:"Crushed";font-style:normal'>THIS IS WHERE </span></p><p style='padding:0;margin:0;color:#000000;font-size:18pt;font-family:"Arial";line-height:1.0;orphans:2;widows:2;text-align:center'><span style='color:#ffffff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:18pt;font-family:"Crushed";font-style:normal'>DREAMS YOUR DREAMS COULD ONLY DREAM OF DREAMING </span></p><p style='padding:0;margin:0;color:#000000;font-size:18pt;font-family:"Arial";line-height:1.0;orphans:2;widows:2;text-align:center'><span style='color:#ffffff;font-weight:400;font-family:"Crushed"'>START TO SPILL </span><span style='color:#ffffff;font-weight:400;font-family:"Aboreto"'>CONTAMIMAGINATIONS</span><span style='color:#ffffff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:18pt;font-family:"Crushed";font-style:normal'> OUT  INTO REALITY.</span></p><p style='padding:0;margin:0;color:#000000;font-size:18pt;font-family:"Arial";line-height:1.0;orphans:2;widows:2;text-align:center'><span style='color:#ffffff;font-weight:400;font-family:"Alexandria"'>REALITY GETS REALLY REAL REALLY FAST</span><span style='color:#ffffff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:18pt;font-family:"Crushed";font-style:normal'> </span></p><p style='padding:0;margin:0;color:#000000;font-size:18pt;font-family:"Arial";line-height:1.0;orphans:2;widows:2;text-align:center'><span style='color:#ffffff;font-weight:400;font-family:"Crushed"'>WHEN PROJECTED FROM THE REELS OF BOTH YOUR </span><span style='font-size:18pt;font-family:"Crushed";color:#ffffff;font-weight:700'>DAY DREAMS</span><span style='color:#ffffff;font-weight:400;font-family:"Crushed"'> AND </span><span style='font-size:18pt;font-family:"Crushed";color:#ffffff;font-weight:700'>NIGHT TERRORS</span><span style='color:#ffffff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:18pt;font-family:"Crushed";font-style:normal'>.</span></p><p style='padding:0;margin:0;color:#000000;font-size:18pt;font-family:"Arial";line-height:1.0;orphans:2;widows:2;text-align:center'><span style='color:#ffffff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:18pt;font-family:"Crushed";font-style:normal'>NO IMAGINARIUM CAN CAPACITATE THE FLUX OF </span></p><p style='padding:0;margin:0;color:#000000;font-size:18pt;font-family:"Arial";line-height:1.0;orphans:2;widows:2;text-align:center'><span style='color:#ffffff;font-weight:400;font-family:"Crushed"'>A </span><span style='color:#ffffff;font-weight:400;font-family:"Aboreto"'>CRAYON BOX OF INFINITE COLOURS</span><span style='color:#ffffff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:18pt;font-family:"Crushed";font-style:normal'>.</span></p><p style='padding:0;margin:0;color:#000000;font-size:18pt;font-family:"Arial";line-height:1.0;orphans:2;widows:2;height:11pt;text-align:center'><span style='color:#ffffff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:18pt;font-family:"Crushed";font-style:normal'></span></p><p style='padding:0;margin:0;color:#000000;font-size:18pt;font-family:"Arial";line-height:1.0;orphans:2;widows:2;height:18pt;text-align:center'><span style='color:#ffffff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:18pt;font-family:"Crushed";font-style:normal'></span></p>
+<p style='padding:0;margin:0;color:#000000;font-size:18pt;font-family:"Arial";line-height:1.25;orphans:2;widows:2;text-align:center'><span style='-webkit-text-decoration-skip:none;color:#ffffff;font-weight:400;text-decoration:underline;text-decoration-skip-ink:none;font-size:24pt;font-family:"Anton"'>EGONOMICS</span><span style='font-size:18pt;font-family:"Antonio";color:#ffffff;font-weight:400'> </span>
+<span style='color:#ffffff;font-weight:400;font-family:"Antonio"'>→The COST of FREEDOM</span><span style='color:#ffffff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:14pt;font-family:"Crushed";font-style:normal'>:</span></p><p style='padding:0;margin:0;color:#000000;font-size:11pt;font-family:"Arial";line-height:1.0;orphans:2;widows:2;text-align:center'><span style='font-size:12pt;font-family:"Anton";color:#ffffff;font-weight:400'>•ALL YOUR STUFF</span><span style='font-size:14pt;font-family:"Crushed";color:#ffffff;font-weight:400'> </span><span style='color:#ffffff;font-weight:400;text-decoration:none;vertical-align:super;font-size:14pt;font-family:"Crushed";font-style:normal'>POSSESSIONs POSSESS sessions</span></p><p style='padding:0;margin:0;color:#000000;font-size:11pt;font-family:"Arial";line-height:1.0;orphans:2;widows:2;text-align:center'><span style='font-size:12pt;font-family:"Anton";color:#ffffff;font-weight:400'>•YOUR MIND</span><span style='font-size:14pt;font-family:"Crushed";color:#ffffff;font-weight:400'> </span><span style='color:#ffffff;font-weight:400;text-decoration:none;vertical-align:super;font-size:14pt;font-family:"Crushed";font-style:normal'>InSanity in salinity</span></p><p style='padding:0;margin:0;color:#000000;font-size:11pt;font-family:"Arial";line-height:1.0;orphans:2;widows:2;text-align:center'><span style='font-size:12pt;font-family:"Anton";color:#ffffff;font-weight:400'>•ALL INSPIRATION</span><span style='font-size:14pt;font-family:"Crushed";color:#ffffff;font-weight:400'> </span><span style='color:#ffffff;font-weight:400;text-decoration:none;vertical-align:super;font-size:14pt;font-family:"Crushed";font-style:normal'>dreaming for meaning</span></p><p style='padding:0;margin:0;color:#000000;font-size:11pt;font-family:"Arial";line-height:1.0;orphans:2;widows:2;text-align:center'><span style='font-size:12pt;font-family:"Anton";color:#ffffff;font-weight:400'>•YOUR HOPE</span><span style='font-size:14pt;font-family:"Crushed";color:#ffffff;font-weight:400'> </span><span style='color:#ffffff;font-weight:400;text-decoration:none;vertical-align:super;font-size:14pt;font-family:"Crushed";font-style:normal'>destination desperation</span></p><p style='padding:0;margin:0;color:#000000;font-size:11pt;font-family:"Arial";line-height:1.0;orphans:2;widows:2;text-align:center'><span style='color:#ffffff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:10pt;font-family:"Crushed";font-style:normal'>…AND EVENTUALLY</span></p><p style='padding:0;margin:0;color:#000000;font-size:11pt;font-family:"Arial";line-height:1.0;orphans:2;widows:2;text-align:center'><span style='color:#ffffff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:14pt;font-family:"Anton";font-style:normal'>•YOUR SOUL</span></p><p style='padding:0;margin:0;color:#000000;font-size:11pt;font-family:"Arial";line-height:1.0;orphans:2;widows:2;height:11pt;text-align:center'><span style='color:#ffffff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:14pt;font-family:"Anton";font-style:normal'></span></p>
+<p class="c23"><span class="c54">EVIL TASTES LIKE CHOCOLATE</span></p>
+<br/>
+<p class="c23"><span class="c86">Just Another Day in PARADOX</span></p>
+<br/>
+<p style='padding:0;margin:0;color:#000000;font-size:11pt;font-family:"Arial";line-height:1.75;orphans:2;widows:2;text-align:center'><span style='color:#ffffff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:18pt;font-family:"Boldonse";font-style:normal'>DO NOT FEED THE SOFAS</span></p>
+<div class="rainbow-divider"></div>
+<p style='padding:0;margin:0;color:#000000;font-size:24pt;font-family:"Arial";line-height:1.0;orphans:2;widows:2;text-align:center'>
+<span style="color:#e06666;"><span class="sr-only">R</span><span aria-hidden="true">𝗥</span></span>
+<span style="color:#ff9900;"><span class="sr-only">A</span><span aria-hidden="true">𝗔</span></span>
+<span style="color:#ffff00;"><span class="sr-only">I</span><span aria-hidden="true">𝗜</span></span>
+<span style="color:#00ff00;"><span class="sr-only">N</span><span aria-hidden="true">𝗡</span></span>
+<span style="color:#00ffff;"><span class="sr-only">B</span><span aria-hidden="true">𝗕</span></span>
+<span style="color:#4a86e8;"><span class="sr-only">O</span><span aria-hidden="true">𝗢</span></span>
+<span style="color:#8e7cc3;"><span class="sr-only">W</span><span aria-hidden="true">𝗪</span></span>
+<span style="color:#e06666;"><span class="sr-only">S</span><span aria-hidden="true">𝗦</span></span><br/>
+<span style='color:#ffffff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:18pt;font-family:"Anton";font-style:normal'>-are <strong>MOLDY LIGHT</strong>-</span></p>
+<p style='padding:0;margin:0;color:#000000;font-size:11pt;font-family:"Arial";line-height:1.5;orphans:2;widows:2;text-align:center'><span style='color:#ffffff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:18pt;font-family:"Crushed";font-style:normal'>ROTTING BEAMS of PURE DECAYING DECADENCE </span></p><p style='padding:0;margin:0;color:#000000;font-size:18pt;font-family:"Arial";line-height:1.5;orphans:2;widows:2;text-align:center'><span style='color:#ffffff;font-weight:700;text-decoration:none;vertical-align:baseline;font-size:26pt;font-family:"Rubik Vinyl";font-style:normal'>DECOMPHOTOVISION</span></p><p style='padding:0;margin:0;color:#000000;font-size:11pt;font-family:"Arial";line-height:1.0;orphans:2;widows:2;height:11pt;text-align:center'><span style='color:#ffffff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:20pt;font-family:"Crushed";font-style:normal'></span></p>
+<style="padding:0;margin:0;color:#000000;font-size:11pt;font-family:&quot;arial&quot;;line-height:1.0;orphans:2;widows:2;height:11pt;text-align:center"><span style='color:#ffffff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:28pt;font-family:"Anton";font-style:normal'>FREE WILL POWER</span></style="padding:0;margin:0;color:#000000;font-size:11pt;font-family:&quot;arial&quot;;line-height:1.0;orphans:2;widows:2;height:11pt;text-align:center"></p>
+<p class="c23"><span class="c105">free will power</span></p>
+<p class="c5"><span class="c12"><span class="sr-only">The ”LITHIUM” desert is ”IN BLOOM” ”IN UTERO” of planet ”TERRA” and it “SMELLS LIKE TEAM SPIRIT” -Nirvana</span><span aria-hidden="true">The ”𝕃𝕀𝕋ℍ𝕀𝕌𝕄” desert is ”𝕀ℕ 𝔹𝕃𝕆𝕆𝕄” ”𝕀ℕ 𝕌𝕋𝔼ℝ𝕆” of planet ”𝕋𝔼ℝℝ𝔸” and it “𝕊𝕄𝔼𝕃𝕃𝕊 𝕃𝕀𝕂𝔼 𝕋𝔼𝔸𝕄 𝕊ℙ𝕀ℝ𝕀𝕋” -𝓝𝐢𝐫𝐯𝐚𝐧𝐚</span></span></p>
+<div class="rainbow-divider"></div>
+<p style='padding:0;margin:0;color:#000000;font-size:18pt;font-family:"Arial";line-height:1.15;orphans:2;widows:2;text-align:center'><span style='color:#ffffff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:16pt;font-family:"Crushed";font-style:italic'>To talk about the</span></p>
+<p style='padding:0;margin:0;color:#000000;font-size:11pt;font-family:"Arial";line-height:1.15;orphans:2;widows:2;text-align:center'><span style='font-size:20pt;font-family:"Antonio";color:#ffffff;font-weight:400'>ELEPHANT IN THE ROOM</span><br/><span style='color:#ffffff;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:18pt;font-family:"Crushed";font-style:italic'>you have to let the</span>
+<br/>
+<span style='font-size:20pt;font-family:"Antonio";color:#ffffff;font-weight:400'>CAT OUT OF THE BAG</span>
+<br/><br/>
+<br/>
+<p class="c23"><span class="c32">OBSTACLE INTRUSIONS <br/> are only <br/>OPTICAL ILLUSIONS</span></p>
+<div class="rainbow-divider"></div>
+<p style='padding:0;margin:0;color:#000000;font-size:11pt;font-family:"Arial";line-height:1.15;orphans:2;widows:2;text-align:center'><span style='font-size:20pt;font-family:"Anton";color:#ffffff;font-weight:400'>DAMN GIRL <br/>
+<span style='font-size:20pt;font-family:"Antonio";color:#ffffff;font-weight:400'>what you got in dem Genes?</span>
+<br/>
+<span style='font-size:20pt;font-family:"Antonio";color:#ffffff;font-weight:400'>Must be<br/>
+<span style='font-size:24pt;font-family:"Anton";color:#ffffff;font-weight:400'>CARCINOGENETICS<br/>
+<span style='font-size:20pt;font-family:"Antonio";color:#ffffff;font-weight:400'>cuz dat ass is killin me like<br/>
+<span style='font-size:24pt;font-family:"Anton";color:#ffffff;font-weight:400'>SECOND GENERATION CANCER.</span></span></span></span></span></p>
+<br/>
+<span style='font-size:32pt;font-family:"Sail";color:#ffffff;font-weight:400'>May the joke be with you</span></p>
+<p style='padding:0;margin:0;color:#000000;font-size:11pt;font-family:"Arial";line-height:1.15;orphans:2;widows:2;text-align:center'><span style='font-size:20pt;font-family:"Antonio";color:#ffffff;font-weight:400'>I was supposed to <strong> drown in dreams </strong> and then you were going to <strong> die of boredom </strong></span></p>
+<p class="c5"><span class="c12">You have the most refracting piece of part of the hole.</span></p>
+<p class="c5"><span class="c12">You have the thing that's missing from the realest shit you ever saw on some shit you never see.</span></p>
+<div class="rainbow-divider"></div>
+<p class="c23"><span class="c28">Euthanasia for the youth in Asia</span></p>
+<br/><br/>
+<p style='padding:0;margin:0;color:#ffffff;font-size:32pt;font-family:"Noto Sans";line-height:1.0;orphans:2;widows:2;text-align:center'>GOD<br/><span style='font-size:28pt;font-family:"Sail";color:#ffffff;font-weight:400'><span class="sr-only">A brilliance so strong that it destroys itself even, but leaves behind Beauty as Nature.</span><span aria-hidden="true">A brilliance so strong that it destroys itself even, but leaves behind ℬ𝒆𝒂𝒖𝒕𝒚 as Nature.</span></span></p>
+<p class="c5"><span class="c12"><span class="sr-only">Insect ultralords interdimensionally tailored every bit of this sensory stimulus called</span><span aria-hidden="true">Insect 𝘂𝗹𝘁𝗿𝗮lords interdimensionally tailored every bit of this sensory stimulus called </span><br/><span class="sr-only">REALITY</span><span aria-hidden="true">𝗥𝗘𝗔𝗟𝗜𝗧𝗬</span></span></p>
+<hr/><hr/><hr/><br/>
+<p class="c23"><span class="c110"><strong>MYCOTHEOLOGY</strong><br/>the taboo of the fungi</span></p><br/><hr/><hr/><hr/>
+<p class="c5"><span class="c12">Dragons speak through vibrations produced only by cat purrs as they watch through the eyes of monitor lizards</span></p>
+<div class="rainbow-divider"></div>
+<p class="c5"><span class="c50">To make space, <br/> anti-matter 
+<br/><br/>Space-time perpendiculum</span></p>
+<br/><br/>
+<p class="c5"><span class="c12"><i>Dandelions</i> are to <strong>thistles</strong> as <i>otters</i> are to <strong>mustelids</strong></span></p>
+<p class="c5"><span class="c12"><i>Camels</i> are to <strong>cacti</strong>as <i>humans</i> are to <strong>cannabis</strong></span></p>
+<br/>
+<p class="c5"><span class="c87">This is only going to tickle just an itchy bit</span></p>
+<br/>
+<br/>
+<p class="c23"><span class="c63">Erotic Manipulations<br/> Toxic Mutilationsa<br/> Exotic Mutations</span></p>
+<br/>
+<p class="c23"><span class="c51">Evolve… or Die.</span></p>
+<br/>
+<p class="c5"><span class="c14">The sound of her voice tastes like the smell of guavas</span></p>
+<br/>
+<p class="c5"><span class="c12">Leverage is stationary momentum as is Torque in rotational motion.</span></p>
+<br/>
+<p class="c5"><span class="c19">If you give me your word you still have to keep it</span></p>
+<div class="rainbow-divider"></div>
+<p class="c5"><span class="c2">Nowadays people are TOO DIGITAL for an ANALOG ANALAGY</span></p>
+<br/>
+<p class="c5"><span class="c28">Needless to say it seams weave been spun back in the loom again</span></p>
+<p class="c23"><span class="c73">Trust the Rust</span></p>
+<p class="c5"><span class="c12">All that remains are stains from the rains</span></p>
+<br/>
+<br/>
+<div class="rainbow-divider"></div>
+<div class="rainbow-divider"></div>
+<p style="text-align: left;font-size: 14pt;">
+<span style="color: #8181ef;">⸨̹̜̹̜̹̜̥̥̊͜͡⸨̬̬̬̬̥̬̬̥̥̊͜͜͡͡⸩̬̬̬̥̬̬̥̥̬̬̥̈͜͡͡⸩̜̹̜̹̜̹̥̊ </span>      ° 𔒥
+    </p>
+<p style="text-align: center;font-size:20pt;">
+<span style="color: #e88de8;">⸨͜⸨̰̬̬̥͜⸨̹̜̹̜̹̜̥̥̊͜͡⸨̬̬̬̬̥̬̬̥̥̊͜͜͡͡⸩̬̬̬̥̬̬̥̥̬̬̥̈͜͡͡⸩̰̬̬̥͜⸩ </span>       ⬤° <span style="color: #ffff00;">𔒥</span>
+</p>
+<p style="text-align: center;">
+      ° •° 𔒥
+    </p>
+<p style="text-align: left;">
+         ⬤° <span style="color: #ff9900;">𔒥</span>
+</p>
+<p style="text-align: left;font-size: 20pt;">
+                                              <span style="color: #a77cc5;">   <span style="color: #bbc5e8;">⸨͜⸨̰̬̬̥̹̹̟̹̟̹̟̹̩̥̥̥͜⸨̹̜̹̜̹̜̥̥̬̥̬̥̥̟̥̬̊͜͡ˌ⸨̬̬̬̬̥̬̬̥̥̥̥̥̥̥̬̬̥̬̥̬̊͜͜͡͡⸩̬̬̬̥̬̬̥̥̬̬̥̈͜͡͡⸩̰̬̬̥̥̥̥̬̥̟̹̟̹̟͜⸩</span></span>
+      ཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾ 
+                 ⸨̹̜̹̜̹̜̥̥̊͜͡⸨̬̬̬̬̥̬̬̥̥̊͜͜͡͡⸩̬̬̬̥̬̬̥̥̬̬̥̈͜͡͡⸩̜̹̜̹̜̹̥̊       
+    </p>
+<p style="text-align: right;font-size: 20pt;">
+<span style="color: #8181ef;">⸨̹̜̹̜̹̜̥̥̊͜͡⸨̬̬̬̬̥̬̬̥̥̊͜͜͡͡⸩̬̬̬̥̬̬̥̥̬̬̥̈͜͡͡⸩̜̹̜̹̜̹̥̊</span>                     
+    </p>
+<p style="text-align: right;font-size: 20pt;">
+               °                               
+                               <span style="color: #93c57c;">𔒥 </span>                
+                      <span style="color: #00ffff;"> ⸨͜⸨̰̬̬̥͜⸨̹̜̹̜̹̜̥̥̊͜͡⸨̬̬̬̬̥̬̬̥̥̊͜͜͡͡⸩̬̬̬̥̬̬̥̥̬̬̥̈͜͡͡⸩̰̬̬̥͜⸩</span>
+</p>
+<p style="text-align: center;font-size: 20pt;">
+      ⸨̹̜̹̜̹̜̥̥̊͜͡⸨̬̬̬̬̥̬̬̥̥̊͜͜͡͡⸩̬̬̬̥̬̬̥̥̬̬̥̈͜͡͡⸩̜̹̜̹̜̹̥̊                                        
+               
+    </p>
+<p style="text-align: center;font-size: 20pt;">
+<span style="color: #c381df;">⸨͜⸨̰̬̬̥̹̹̟̹̟̹̟̹̩̥̥̥͜⸨̹̜̹̜̹̜̥̥̬̥̬̥̥̟̥̬̊͜͡ˌ⸨̬̬̬̬̥̬̬̥̥̥̥̥̥̥̬̬̥̬̥̬̊͜͜͡͡⸩̬̬̬̥̬̬̥̥̬̬̥̈͜͡͡⸩̰̬̬̥̥̥̥̬̥̟̹̟̹̟͜⸩</span> <span style="color: #00ffff;">ཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾཾ</span>𔒥 
+    </p>
+<p style="text-align: right;">
+      ⬤°•<span style="color: #e36664;">𔒥 </span>  
+    </p>
+</span></p></p></div>
+
+<br/>
+<br/>
+<div class="rainbow-divider"></div>
+<div class="rainbow-divider"></div>
+<!----FOOTER---->
+<footer class="footer">
+<div class="container">
+<div class="footer-social">
+<a href="https://facebook.com/catrinastoner" rel="noopener noreferrer" target="_blank"><img alt="Facebook" src="https://img.icons8.com/ios-filled/100/ffffff/facebook-new.png"/></a>
+<a href="https://www.instagram.com/robot_jellyfish?igsh=MzRlODBiNWFlZA==" rel="noopener noreferrer" target="_blank"><img alt="Instagram" src="https://img.icons8.com/ios-filled/100/ffffff/instagram-new.png"/></a>
+<a href="https://youtube.com/@catrinastoner" rel="noopener noreferrer" target="_blank"><img alt="YouTube" src="https://img.icons8.com/ios-filled/100/ffffff/youtube-play.png"/></a>
+<a href="https://pin.it/6wEfEdAP3" rel="noopener noreferrer" target="_blank"><img alt="Pinterest" src="https://img.icons8.com/ios-filled/100/ffffff/pinterest--v1.png"/></a>
+<a href="https://t.me/robotjellyfish" rel="noopener noreferrer" target="_blank"><img alt="Telegram" src="https://img.icons8.com/ios-filled/100/ffffff/telegram-app.png"/></a>
+<a href="https://reddit.com/user/Carnidendrophiliac" rel="noopener noreferrer" target="_blank"><img alt="Reddit" src="https://img.icons8.com/ios-filled/100/ffffff/reddit.png"/></a>
+</div>
+<div class="footer-links">
+<a href="https://robotjellyfish.github.io/CatrinaStoner/about.html" rel="noopener noreferrer" target="_blank">ABOUT</a> / 
+      <a href="https://gravatar.com/catrinastoner" rel="noopener noreferrer" target="_blank">CONTACT</a>
+</div>
+<div class="footer-copyright">
+      COPYRIGHT © 2026 CATRINA STONER. SOME RIGHTS RESERVED.<br/>
+      LICENSED UNDER <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/" rel="noopener noreferrer" target="_blank">CC BY-NC-ND 4.0</a>
+<img alt="CC BY-NC-ND 4.0" class="cc-badge" src="https://licensebuttons.net/l/by-nc-nd/4.0/88x31.png"/>
+</div>
+</div>
+</footer>
+</body>
+</html>
