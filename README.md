@@ -1,4 +1,4 @@
-![Screenshot of the site](https://github.com/robotjellyfish/CatrinaStoner/blob/main/robotjellyfish%20(1).png) <!-- upload a screenshot if you want -->
+![Screenshot of the site](https://github.com/robotjellyfish/CatrinaStoner/blob/main/robotjellyfishbanner.jpg) <!-- upload a screenshot if you want -->
 
 # CatrinaStoner |
 ⚠ WARNING ⚠
