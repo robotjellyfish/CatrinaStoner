@@ -1,7 +1,5 @@
 ![](https://raw.githubusercontent.com/robotjellyfish/CatrinaStoner/refs/heads/main/robotlogo.png)
 
-![](https://raw.githubusercontent.com/robotjellyfish/CatrinaStoner/refs/heads/main/icon.png)
-
 •[PHOTOGRAPHY](https://photos.app.goo.gl/pp1PdFq5dbE7Q2XaA)
 
 •[THE ARTHIVE](https://robotjellyfish.github.io/CatrinaStoner/arthive.html)
