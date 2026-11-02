@@ -1,5 +1,5 @@
 ![Screenshot of the site](https://github.com/robotjellyfish/CatrinaStoner/blob/main/robotjellyfishbanner.jpg) <!-- upload a screenshot if you want -->
-# CATRINA STONER 𓊈𐍂❍ᖲ꩜ᡶ•Ꭻ℮𝕃ꛚჄꝻⅈ𑂘𐪘𓊉
+# CATRINA STONER
 ⚠ WARNING ⚠
  DO NOT OVERTHINK THIS 
  OR YOU WILL LOSE YOUR MIND
@@ -18,12 +18,9 @@ My montagalogue and contamimagination fossilized in the bedrock of world wide we
 ### ![THE VESPA VEDA](https://sites.google.com/view/thevespaveda) <!-- upload a screenshot if you want -->
 ### ![ALPHABET IMAGINARIUM](https://robotjellyfish.github.io/CatrinaStoner/Alphabet-Imaginarium.html) <!-- upload a screenshot if you want -->
 
-*“Don't forget to feed your mind some mindful food for thought until your mind gets so full that your mind is blown to pieces and you find some peace of mind in mindlessness. ”*
-
 ----
 𓊈𐍂❍ᖲ꩜ᡶ•Ꭻ℮𝕃ꛚჄꝻⅈ𑂘𐪘𓊉 
 ----
-
 Copyright © 2026 Catrina Stoner. 
 Licensed under [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/). 
 
