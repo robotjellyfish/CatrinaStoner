@@ -22,11 +22,11 @@
 [ALPHABET IMAGINARIUM](https://robotjellyfish.github.io/CatrinaStoner/Alphabet-Imaginarium.html)
 
 ----
-![](https://raw.githubusercontent.com/robotjellyfish/CatrinaStoner/refs/heads/main/black%20icon.png)
+![](https://raw.githubusercontent.com/robotjellyfish/CatrinaStoner/refs/heads/main/black%20icon.png) ![](https://raw.githubusercontent.com/robotjellyfish/CatrinaStoner/refs/heads/main/snakeicon.png) ![](https://raw.githubusercontent.com/robotjellyfish/CatrinaStoner/refs/heads/main/baphomet.png)
 
+----
 𓊈𐍂❍ᖲ꩜ᡶ•Ꭻ℮𝕃ꛚჄꝻⅈ𑂘𐪘𓊉
-
-[contact](https://gravatar.com/catrinastoner) | [about](https://robotjellyfish.github.io/CatrinaStoner/about.html)
+[☪㉧𐰵ⴕձcⴕ](https://gravatar.com/catrinastoner) | [𝐀ᗷ⚆𝗨T](https://robotjellyfish.github.io/CatrinaStoner/about.html)
 
 ----
 Copyright © 2026 Catrina Stoner. 
