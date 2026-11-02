@@ -17,12 +17,12 @@
 
 •[ALPHABET IMAGINARIUM](https://robotjellyfish.github.io/CatrinaStoner/Alphabet-Imaginarium.html)
 
-----
 ![](https://raw.githubusercontent.com/robotjellyfish/CatrinaStoner/refs/heads/main/black%20icon.png)
 
 
 ----
 𐍂❍ᖲ꩜ᡶ•Ꭻ℮𝕃ꛚჄꝻⅈ𑂘𐪘
+
 [CONTACT](https://gravatar.com/catrinastoner) | [ABOUT](https://robotjellyfish.github.io/CatrinaStoner/about.html)
 
 Copyright © 2026 Catrina Stoner. Sone rights reseeved.
