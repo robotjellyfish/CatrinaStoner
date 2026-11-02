@@ -1,7 +1,6 @@
 ![Screenshot of the site](https://github.com/robotjellyfish/CatrinaStoner/blob/main/robotjellyfishbanner.jpg) <!-- upload a screenshot if you want -->
 
 # CATRINA STONER
-### 𐍂❍ᖲ꩜ᡶ•Ꭻ℮𝕃ꛚჄꝻⅈ𑂘𐪘
 ## Artist • Photographer • Researcher • Archivist
 ----
 •[PHOTOGRAPHY](https://photos.app.goo.gl/pp1PdFq5dbE7Q2XaA)
