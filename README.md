@@ -2,7 +2,6 @@
 
 # CATRINA STONER
 ## THIS MONTAGALOGUE IS THE DIGITALLY FOSSILIZED ARCHIVE OF MY CONTAMIMAGINATED MIND
-
 ⚠ WARNING!
  DO NOT OVERTHINK THIS 
  OR YOU WILL LOSE YOUR MIND
@@ -26,6 +25,7 @@
 ![](https://raw.githubusercontent.com/robotjellyfish/CatrinaStoner/refs/heads/main/black%20icon.png)
 
 𓊈𐍂❍ᖲ꩜ᡶ•Ꭻ℮𝕃ꛚჄꝻⅈ𑂘𐪘𓊉
+
 [contact](https://gravatar.com/catrinastoner) | [about](https://robotjellyfish.github.io/CatrinaStoner/about.html)
 
 ----
