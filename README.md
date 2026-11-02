@@ -10,12 +10,15 @@ My montagalogue and contamimagination fossilized in the bedrock of world wide we
 "This is the devil's work..." "...Are you not entertained?"
 
 ### •GALLERIES
--PHOTOGRAPHY ![(https://photos.app.goo.gl/pp1PdFq5dbE7Q2XaA)]<!
--THE ARTHIVE (https://robotjellyfish.github.io/CatrinaStoner/arthive.html)
+-PHOTOGRAPHY ![Screenshot of the site](https://photos.app.goo.gl/pp1PdFq5dbE7Q2XaA) <!-- upload a screenshot if you want -->
+-THE ARTHIVE  ![Screenshot of the site](https://robotjellyfish.github.io/CatrinaStoner/arthive.html) <!-- upload a screenshot if you want -->
 ### •JOURNALS
--BLOG -BRAIN VOMIT -POEMS
+-BLOG  ![Screenshot of the site](https://catrinastoner.blogspot.com) <!-- upload a screenshot if you want -->
+-BRAIN VOMIT  ![Screenshot of the site](https://robotjellyfish.github.io/CatrinaStoner/brainvomit.html) <!-- upload a screenshot if you want -->
+-POEMS  ![Screenshot of the site](https://robotjellyfish.github.io/CatrinaStoner/poems.html) <!-- upload a screenshot if you want -->
 ### •PROJECTS
--THE VESPA VEDA -ALPHABET IMAGINARIUM
+-THE VESPA VEDA  ![Screenshot of the site](https://sites.google.com/view/thevespaveda) <!-- upload a screenshot if you want -->
+-ALPHABET IMAGINARIUM  ![Screenshot of the site](https://robotjellyfish.github.io/CatrinaStoner/Alphabet-Imaginarium.html) <!-- upload a screenshot if you want -->
 
 ---
 *“Don't forget to feed your mind some mindful food for thought until your mind gets so full that your mind is blown to pieces and you find some peace of mind in mindlessness. ”*
