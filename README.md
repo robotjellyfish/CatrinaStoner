@@ -25,7 +25,7 @@
 
 [CONTACT](https://gravatar.com/catrinastoner) | [ABOUT](https://robotjellyfish.github.io/CatrinaStoner/about.html)
 
-Copyright © 2026 Catrina Stoner. Sone rights reseeved.
+Copyright © 2026 Catrina Stoner. Some rights reserved.
 Licensed under [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/). 
 
 
