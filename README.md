@@ -18,8 +18,7 @@ My montagalogue and contamimagination fossilized in the bedrock of world wide we
 
 ----
 𓊈𐍂❍ᖲ꩜ᡶ•Ꭻ℮𝕃ꛚჄꝻⅈ𑂘𐪘𓊉 
-![](https://raw.githubusercontent.com/robotjellyfish/CatrinaStoner/refs/heads/main/
-black%20icon.png)
+![](https://raw.githubusercontent.com/robotjellyfish/CatrinaStoner/refs/heads/main/black%20icon.png)
 ----
 Copyright © 2026 Catrina Stoner. 
 Licensed under [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/). 
