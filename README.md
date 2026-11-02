@@ -1,4 +1,4 @@
-![](https://raw.githubusercontent.com/robotjellyfish/CatrinaStoner/refs/heads/main/robotlogo.png)
+![](https://raw.githubusercontent.com/robotjellyfish/CatrinaStoner/refs/heads/main/robotbanner.png)
 
 •[PHOTOGRAPHY](https://photos.app.goo.gl/pp1PdFq5dbE7Q2XaA)
 
