@@ -1,8 +1,5 @@
-![Screenshot of the site](https://github.com/robotjellyfish/CatrinaStoner/blob/main/robotjellyfishbanner.jpg) <!-- upload a screenshot if you want -->
+![](https://raw.githubusercontent.com/robotjellyfish/CatrinaStoner/refs/heads/main/black%20icon.png)
 
-# CATRINA STONER
-## Artist • Photographer • Researcher • Archivist
-----
 •[PHOTOGRAPHY](https://photos.app.goo.gl/pp1PdFq5dbE7Q2XaA)
 
 •[THE ARTHIVE](https://robotjellyfish.github.io/CatrinaStoner/arthive.html)
@@ -17,7 +14,6 @@
 
 •[ALPHABET IMAGINARIUM](https://robotjellyfish.github.io/CatrinaStoner/Alphabet-Imaginarium.html)
 
-![](https://raw.githubusercontent.com/robotjellyfish/CatrinaStoner/refs/heads/main/black%20icon.png)
 
 
 ----
