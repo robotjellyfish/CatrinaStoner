@@ -22,7 +22,8 @@
 [ALPHABET IMAGINARIUM](https://robotjellyfish.github.io/CatrinaStoner/Alphabet-Imaginarium.html)
 
 ----
-![](https://raw.githubusercontent.com/robotjellyfish/CatrinaStoner/refs/heads/main/black%20icon.png) ![](https://raw.githubusercontent.com/robotjellyfish/CatrinaStoner/refs/heads/main/snakeicon.png) ![](https://raw.githubusercontent.com/robotjellyfish/CatrinaStoner/refs/heads/main/baphomet.png)
+![](https://raw.githubusercontent.com/robotjellyfish/CatrinaStoner/refs/heads/main/black%20icon.png) 
+![](https://raw.githubusercontent.com/robotjellyfish/CatrinaStoner/refs/heads/main/snakeicon.png)![](https://raw.githubusercontent.com/robotjellyfish/CatrinaStoner/refs/heads/main/baphomet.png)
 
 
 ----
