@@ -1,3 +1,5 @@
+![](https://raw.githubusercontent.com/robotjellyfish/CateinaStoner/refs/heads/main/robotlogo.jpg)
+
 ![](https://raw.githubusercontent.com/robotjellyfish/CatrinaStoner/refs/heads/main/black%20icon.png)
 
 •[PHOTOGRAPHY](https://photos.app.goo.gl/pp1PdFq5dbE7Q2XaA)
