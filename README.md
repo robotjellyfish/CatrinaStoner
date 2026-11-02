@@ -10,7 +10,8 @@ My montagalogue and contamimagination fossilized in the bedrock of world wide we
 "This is the devil's work..." "...Are you not entertained?"
 
 ### •GALLERIES
--PHOTOGRAPHY -THE ARTHIVE
+-PHOTOGRAPHY (https://photos.app.goo.gl/pp1PdFq5dbE7Q2XaA) 
+-THE ARTHIVE (https://robotjellyfish.github.io/CatrinaStoner/arthive.html)
 ### •JOURNALS
 -BLOG -BRAIN VOMIT -POEMS
 ### •PROJECTS
