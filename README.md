@@ -17,7 +17,7 @@ My montagalogue and contamimagination fossilized in the bedrock of world wide we
 ### ![ALPHABET IMAGINARIUM](https://robotjellyfish.github.io/CatrinaStoner/Alphabet-Imaginarium.html) <!-- upload a screenshot if you want -->
 
 ----
-𓊈𐍂❍ᖲ꩜ᡶ•Ꭻ℮𝕃ꛚჄꝻⅈ𑂘𐪘𓊉 
+𓊈𐍂❍ᖲ꩜ᡶ•Ꭻ℮𝕃ꛚჄꝻⅈ𑂘𐪘𓊉 ![Screenshot of the site](https://github.com/robotjellyfish/CatrinaStoner/blob/main/blackicon.png)
 ----
 Copyright © 2026 Catrina Stoner. 
 Licensed under [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/). 
