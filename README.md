@@ -18,7 +18,6 @@
 
 
 ----
-𐍂❍ᖲ꩜ᡶ•Ꭻ℮𝕃ꛚჄꝻⅈ𑂘𐪘
 
 [CONTACT](https://gravatar.com/catrinastoner) | [ABOUT](https://robotjellyfish.github.io/CatrinaStoner/about.html)
 
