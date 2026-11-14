@@ -163,15 +163,24 @@ body.child-page img { display: block; max-width: 100%; }
   width: 100%;
   background: linear-gradient(90deg, #ff00aa 0%, #ff8a3c 16%, #ffff00 32%, #92cc00 48%, #03a6f7 64%, #8702f4 82%, #ff00aa 100%);
   background-size: 100% 100%;
+  margin: 0;
+  border-radius: 0;
 }
 .site-header .header-banner {
   display: block;
   width: 100%;
   height: auto;
   max-height: 300px;
+  margin: 0;
   object-fit: cover;
   object-position: center;
   background: #000;
+}
+.site-header .contam-title-image {
+  display: block;
+  width: min(100%, 900px);
+  height: auto;
+  margin: 0 auto;
 }
 
 .site-footer {
