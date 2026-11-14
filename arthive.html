@@ -14,7 +14,7 @@
 <meta property="fb:app_id" content="966242223397117">
   
   <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/robotjellyfish/CatrinaStoner/refs/heads/main/icon.png"/>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;700&family=Fjalla+One&family=Amarante&family=Crushed&family=Roboto+Condensed&family=Anton&family=Antonio&family=Amarante&family=Nosifer&family=Rubik+Wet+Paint&family=Bebas+Neue&family=Protest+Revolution&family=Akronim&family=Love+Ya+Like+A+Sister&family=Silkscreen:wght@400;700&family=Special+Elite&family=Fredericka+the+Great&family=Frijole&family=Rye&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;700&family=Fjalla+One&family=Amarante&family=Crushed&family=Roboto+Condensed&family=Anton&family=Antonio&family=Amarante&family=Nosifer&family=Rubik+Wet+Paint&family=Bebas+Neue&family=Protest+Revolution&family=Akronim&family=Love+Ya+Like+A+Sister&family=Silkscreen:wght@400;700&family=Special+Elite&family=Fredericka+the+Great&family=Frijole&family=Rye&family=Major+Mono+Display&display=swap" rel="stylesheet">
 
   <style>
     :root {
@@ -146,14 +146,20 @@
       margin: 0.75rem calc(50% - 50vw) 1rem;
       width: 100vw;
     }
+    .arthive-poison-image {
+      display: block;
+      width: min(100%, 900px);
+      height: auto;
+      margin: 0.25rem auto 0.5rem;
+    }
     .medium-prompt {
       background: linear-gradient(180deg, #C6FD00 0%, #92CC00 66%, #FF00AA 100%);
       background-clip: text;
       -webkit-background-clip: text;
       color: transparent;
       -webkit-text-fill-color: transparent;
-      font-family: 'Nosifer', 'Rubik Wet Paint', cursive;
-      font-size: clamp(1.35rem, 4vw, 2.35rem);
+      font-family: 'Major Mono Display', monospace;
+      font-size: clamp(1.15rem, 3.5vw, 2.15rem);
       letter-spacing: 0.06em;
       margin: 0 0 0.9rem;
       text-transform: none;
@@ -411,7 +417,7 @@
   </style>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Noto+Sans:wght@400;500;700&family=Euphoria+Script&family=Anton&family=Antonio&family=Amarante&family=Nosifer&family=Rubik+Wet+Paint&family=Bebas+Neue&family=Protest+Revolution&family=Akronim&family=Love+Ya+Like+A+Sister&family=Silkscreen:wght@400;700&family=Special+Elite&family=Fredericka+the+Great&family=Frijole&family=Rye&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Noto+Sans:wght@400;500;700&family=Euphoria+Script&family=Anton&family=Antonio&family=Amarante&family=Nosifer&family=Rubik+Wet+Paint&family=Bebas+Neue&family=Protest+Revolution&family=Akronim&family=Love+Ya+Like+A+Sister&family=Silkscreen:wght@400;700&family=Special+Elite&family=Fredericka+the+Great&family=Frijole&family=Rye&family=Major+Mono+Display&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="shared.css">
 </head>
   <!-- Google tag (gtag.js) -->
@@ -450,7 +456,8 @@
   <h1 class="arthive-title"><span class="title-the">The</span><span class="title-art">ART</span><span class="title-hive">HIVE</span></h1>
   <p class="archive-tagline">An Archive of Artwork</p>
   <div class="rainbow-divider arthive-divider"></div>
-  <p class="medium-prompt">Pick your poison</p>
+  <img class="arthive-poison-image" src="arthive.png" alt="Surreal collection of creatures and objects">
+  <p class="medium-prompt">PICK YOUR POISON</p>
   <div class="medium-selector">
     <a href="#acrylic" class="medium-btn">Acrylic</a>
     <a href="#charcoal" class="medium-btn">Charcoal</a>
