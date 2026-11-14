@@ -14,7 +14,7 @@
 <meta property="fb:app_id" content="966242223397117">
   
   <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/robotjellyfish/CatrinaStoner/refs/heads/main/icon.png"/>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;700&family=Fjalla+One&family=Amarante&family=Crushed&family=Roboto+Condensed&family=Anton&family=Antonio&family=Amarante&family=Nosifer&family=Rubik+Wet+Paint&family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;700&family=Fjalla+One&family=Amarante&family=Crushed&family=Roboto+Condensed&family=Anton&family=Antonio&family=Amarante&family=Nosifer&family=Rubik+Wet+Paint&family=Bebas+Neue&family=Protest+Revolution&family=Akronim&family=Love+Ya+Like+A+Sister&family=Silkscreen:wght@400;700&family=Special+Elite&family=Fredericka+the+Great&family=Frijole&family=Rye&display=swap" rel="stylesheet">
 
   <style>
     :root {
@@ -147,7 +147,11 @@
       width: 100vw;
     }
     .medium-prompt {
-      color: var(--lime-green);
+      background: linear-gradient(180deg, #C6FD00 0%, #92CC00 66%, #FF00AA 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      -webkit-text-fill-color: transparent;
       font-family: 'Nosifer', 'Rubik Wet Paint', cursive;
       font-size: clamp(1.35rem, 4vw, 2.35rem);
       letter-spacing: 0.06em;
@@ -205,6 +209,21 @@
       border-bottom: 0;
       padding-bottom: 0.8rem;
     }
+    .section-heading--acrylic { font-family: 'Protest Revolution', cursive; }
+    .section-heading--charcoal { font-family: 'Akronim', cursive; }
+    .section-heading--colored {
+      font-family: 'Love Ya Like A Sister', cursive;
+      background: linear-gradient(90deg, #FF00AA, #FF8A3C, #FFF700, #92CC00, #03A6F7, #8702F4);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      -webkit-text-fill-color: transparent;
+    }
+    .section-heading--digital { font-family: 'Silkscreen', monospace; }
+    .section-heading--ink { font-family: 'Special Elite', monospace; }
+    .section-heading--graphite { font-family: 'Fredericka the Great', cursive; }
+    .section-heading--oil { font-family: 'Frijole', cursive; }
+    .section-heading--watercolor { font-family: 'Rye', 'Rubik Wet Paint', cursive; }
     .section-heading::after {
       content: '';
       position: absolute;
@@ -391,7 +410,7 @@
   </style>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Noto+Sans:wght@400;500;700&family=Euphoria+Script&family=Anton&family=Antonio&family=Amarante&family=Nosifer&family=Rubik+Wet+Paint&family=Bebas+Neue&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Noto+Sans:wght@400;500;700&family=Euphoria+Script&family=Anton&family=Antonio&family=Amarante&family=Nosifer&family=Rubik+Wet+Paint&family=Bebas+Neue&family=Protest+Revolution&family=Akronim&family=Love+Ya+Like+A+Sister&family=Silkscreen:wght@400;700&family=Special+Elite&family=Fredericka+the+Great&family=Frijole&family=Rye&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="shared.css">
 </head>
   <!-- Google tag (gtag.js) -->
@@ -445,7 +464,7 @@
 
 <div class="gallery container">
 
-  <h2 class="section-heading">Acrylic Paint</h2>
+  <h2 class="section-heading section-heading--acrylic">Acrylic Paint</h2>
   <div class="gallery-grid" id="acrylic">
     <div class="gallery-item"><img src="https://res.cloudinary.com/dhkclqh4d/image/upload/v1770088525/monolithic_evolution_lofmth.png" alt="Monolithic Evolution"></div>
     <div class="gallery-item"><img src="https://res.cloudinary.com/dhkclqh4d/image/upload/v1770087943/the_spider_and_the_moth_hpywku.png" alt="The Spider and the Moth"></div>
@@ -458,7 +477,7 @@
     <div class="gallery-item"><img src="https://res.cloudinary.com/dhkclqh4d/image/upload/v1781754846/blue_eye_pmufrp.jpg" alt="Blue Eye"></div>
   </div>
 
-  <h2 class="section-heading">Charcoal Pencil</h2>
+  <h2 class="section-heading section-heading--charcoal">Charcoal Pencil</h2>
   <div class="gallery-grid" id="charcoal">
     <div class="gallery-item"><img src="https://res.cloudinary.com/dhkclqh4d/image/upload/v1770087546/frank_xagglb.png" alt="Frank"></div>
     <div class="gallery-item"><img src="https://res.cloudinary.com/dhkclqh4d/image/upload/v1770087606/jellyfish_y1vfsd.png" alt="Jellyfish"></div>
@@ -466,7 +485,7 @@
     <div class="gallery-item"><img src="https://res.cloudinary.com/dhkclqh4d/image/upload/v1770088326/rattlesnake_ow7c6b.png" alt="Rattlesnake"></div>
   </div>
 
-  <h2 class="section-heading">Colored Pencil</h2>
+  <h2 class="section-heading section-heading--colored">Colored Pencil</h2>
   <div class="gallery-grid" id="colored-pencil">
     <div class="gallery-item"><img src="https://res.cloudinary.com/dhkclqh4d/image/upload/v1770086031/apple_smoke_molhgf.png" alt="Apple Smoke"></div>
     <div class="gallery-item"><img src="https://res.cloudinary.com/dhkclqh4d/image/upload/v1770086094/Alice_in_wonderland_b0ege7.png" alt="Alice in Wonderland"></div>
@@ -475,7 +494,7 @@
     <div class="gallery-item"><img src="https://res.cloudinary.com/dhkclqh4d/image/upload/v1770168155/fear_and_loathing_ob3xir.png" alt="Fear and Loathing"></div>
   </div>
 
-  <h2 class="section-heading">Digital</h2>
+  <h2 class="section-heading section-heading--digital">Digital</h2>
   <div class="gallery-grid" id="digital">
     <div class="gallery-item"><img src="https://res.cloudinary.com/dhkclqh4d/image/upload/v1770172588/wasp_djinn_oehluu.png" alt="Wasp Djinn"></div>
     <div class="gallery-item"><img src="https://res.cloudinary.com/dhkclqh4d/image/upload/v1770172389/catrina_2_xf7vxx.png" alt="Catrina 2"></div>
@@ -510,7 +529,7 @@
   </div>
   </div>
 
-  <h2 class="section-heading">Ink</h2>
+  <h2 class="section-heading section-heading--ink">Ink</h2>
   <div class="gallery-grid" id="ink">
     <div class="gallery-item"><img src="https://res.cloudinary.com/dhkclqh4d/image/upload/v1770172918/mycoredemption_xpghrk.jpg" alt="Mycoredemption"></div>
     <div class="gallery-item"><img src="https://res.cloudinary.com/dhkclqh4d/image/upload/v1770169047/Picsart_26-02-03_17-35-12-726_k27yxz.png" alt="Picsart Ink"></div>
@@ -519,7 +538,7 @@
     <div class="gallery-item"><img src="https://res.cloudinary.com/dhkclqh4d/image/upload/v1770086216/alien_language_lbvibe.jpg" alt="Alien Language"></div>
   </div>
 
-  <h2 class="section-heading">Graphite Pencil</h2>
+  <h2 class="section-heading section-heading--graphite">Graphite Pencil</h2>
   <div class="gallery-grid" id="graphite">
     <div class="gallery-item"><img src="https://res.cloudinary.com/dhkclqh4d/image/upload/v1770088541/smushing_eye_q4fyst.png" alt="Smushing Eye"></div>
     <div class="gallery-item"><img src="https://res.cloudinary.com/dhkclqh4d/image/upload/v1770088169/wonka_hsszoq.png" alt="Wonka"></div>
@@ -534,14 +553,14 @@
     <div class="gallery-item"><img src="https://res.cloudinary.com/dhkclqh4d/image/upload/v1770086307/charles_Manson_btxedy.png" alt="Charles Manson"></div>
   </div>
 
-  <h2 class="section-heading">Oil Pastel</h2>
+  <h2 class="section-heading section-heading--oil">Oil Pastel</h2>
   <div class="gallery-grid" id="oil-pastel">
     <div class="gallery-item"><img src="https://res.cloudinary.com/dhkclqh4d/image/upload/v1770168181/spongebob_eyqb2i.png" alt="Spongebob"></div>
     <div class="gallery-item"><img src="https://res.cloudinary.com/dhkclqh4d/image/upload/v1770088443/poison_heizsm.png" alt="Poison"></div>
     <div class="gallery-item"><img src="https://res.cloudinary.com/dhkclqh4d/image/upload/v1770086055/alert_zme0zh.png" alt="Alert"></div>
   </div>
 
-  <h2 class="section-heading">Watercolor Paint</h2>
+  <h2 class="section-heading section-heading--watercolor">Watercolor Paint</h2>
   <div class="gallery-grid" id="watercolor">
     <div class="gallery-item"><img src="https://res.cloudinary.com/dhkclqh4d/image/upload/v1770087601/fungus_is_god_xkgcft.png" alt="Fungus is God"></div>
     <div class="gallery-item"><img src="https://res.cloudinary.com/dhkclqh4d/image/upload/v1770087598/icons_vxik3j.png" alt="Icons"></div>
