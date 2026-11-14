@@ -14,7 +14,7 @@
 <meta property="fb:app_id" content="966242223397117">
   
   <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/robotjellyfish/CatrinaStoner/refs/heads/main/icon.png"/>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;700&family=Fjalla+One&family=Amarante&family=Crushed&family=Roboto+Condensed&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;700&family=Fjalla+One&family=Amarante&family=Crushed&family=Roboto+Condensed&family=Anton&family=Antonio&family=Amarante&family=Nosifer&family=Rubik+Wet+Paint&display=swap" rel="stylesheet">
 
   <style>
     :root {
@@ -110,25 +110,50 @@
       margin: 2rem 0 1rem;
     }
     .arthive-title {
-      font-family: 'Fjalla One', sans-serif;
       color: #C6FD00;
+      font-family: 'Anton', sans-serif;
       font-size: clamp(3.5rem, 12vw, 8rem);
+      line-height: 0.95;
       text-decoration: underline;
       text-underline-offset: 0.2em;
-      letter-spacing: 0.05em;
+      letter-spacing: 0;
+      white-space: nowrap;
     }
-    .arthive-title span { font-weight: 900; }
-
-    .arthive-subtitle {
-      font-family: 'Crushed', cursive;
-      color: white;
-      font-size: clamp(1.8rem, 6vw, 3.2rem);
-      margin: 0.3rem 0 1.2rem;
-      letter-spacing: 0.1em;
-      opacity: 0.95;
+    .arthive-title .title-the {
+      display: inline-block;
+      font-family: 'Fjalla One', sans-serif;
+      font-size: 0.34em;
+      letter-spacing: 0.02em;
+      margin-right: 0.12em;
+      vertical-align: 0.95em;
     }
-    .arthive-subtitle span { font-weight: bolder; }
-
+    .arthive-title .title-art {
+      font-family: 'Antonio', sans-serif;
+      font-weight: 700;
+    }
+    .arthive-title .title-hive {
+      font-family: 'Anton', sans-serif;
+      font-weight: 400;
+    }
+    .archive-tagline {
+      color: var(--school-bus-yellow);
+      font-family: 'Fjalla One', sans-serif;
+      font-size: clamp(1.35rem, 4vw, 2.35rem);
+      letter-spacing: 0.04em;
+      margin: 0.8rem 0 1.25rem;
+    }
+    .arthive-divider {
+      margin: 0.75rem calc(50% - 50vw) 1rem;
+      width: 100vw;
+    }
+    .medium-prompt {
+      color: var(--lime-green);
+      font-family: 'Nosifer', 'Rubik Wet Paint', cursive;
+      font-size: clamp(1.35rem, 4vw, 2.35rem);
+      letter-spacing: 0.06em;
+      margin: 0 0 0.9rem;
+      text-transform: none;
+    }
     .medium-selector {
       display: flex;
       flex-wrap: wrap;
@@ -168,17 +193,35 @@
       padding: 0.5rem 0 3rem;
     }
     .section-heading {
+      --section-line: #FF00AA;
+      position: relative;
       text-align: left;
-      color: #00DDFF;
-      font-family: 'Roboto Condensed', sans-serif;
-      font-size: clamp(1.4rem, 3.5vw, 1.9rem);
+      color: var(--section-line);
+      font-family: 'Amarante', 'Fjalla One', cursive;
+      font-size: clamp(1.45rem, 3.5vw, 2rem);
       margin: 2.5rem 0 1rem;
       text-transform: uppercase;
       letter-spacing: 0.08em;
-      border-bottom: 2px solid rgba(0, 221, 255, 0.4);
-      padding-bottom: 0.5rem;
+      border-bottom: 0;
+      padding-bottom: 0.8rem;
     }
-
+    .section-heading::after {
+      content: '';
+      position: absolute;
+      left: calc(50% - 50vw);
+      bottom: 0;
+      width: 100vw;
+      height: 3px;
+      background: var(--section-line);
+      box-shadow: 0 0 12px color-mix(in srgb, var(--section-line) 70%, transparent);
+    }
+    .section-heading:nth-of-type(2) { --section-line: #FF8A3C; }
+    .section-heading:nth-of-type(3) { --section-line: #FFF700; }
+    .section-heading:nth-of-type(4) { --section-line: #92CC00; }
+    .section-heading:nth-of-type(5) { --section-line: #03A6F7; }
+    .section-heading:nth-of-type(6) { --section-line: #8702F4; }
+    .section-heading:nth-of-type(7) { --section-line: #FF00AA; }
+    .section-heading:nth-of-type(8) { --section-line: #FF8A3C; }
     .gallery-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);           /* 4 columns mobile */
@@ -348,7 +391,7 @@
   </style>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Noto+Sans:wght@400;500;700&family=Euphoria+Script&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Noto+Sans:wght@400;500;700&family=Euphoria+Script&family=Anton&family=Antonio&family=Amarante&family=Nosifer&family=Rubik+Wet+Paint&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="shared.css">
 </head>
   <!-- Google tag (gtag.js) -->
@@ -384,9 +427,10 @@
 </header>
 
 <div id="page-content" class="arthive-header container">
-  <h1 class="arthive-title">ᵀᴴᴱ<span>ARTHIVE</span></h1>
-  <h2 class="arthive-subtitle">[contam<span>imagination</span>]</h2>
-
+  <h1 class="arthive-title"><span class="title-the">The</span><span class="title-art">ART</span><span class="title-hive">HIVE</span></h1>
+  <p class="archive-tagline">An Archive of Artwork</p>
+  <div class="rainbow-divider arthive-divider"></div>
+  <p class="medium-prompt">Pick your poison</p>
   <div class="medium-selector">
     <a href="#acrylic" class="medium-btn">Acrylic</a>
     <a href="#charcoal" class="medium-btn">Charcoal</a>
@@ -507,9 +551,7 @@
 </div>
 
 <br><br>
-<div class="rainbow-divider"></div>
-•☽꧂ॐ꧁☾•☽꧂ॐ꧁☾•☽꧂ॐ꧁☾•☽꧂ॐ꧁☾•
-<div class="rainbow-divider"></div>
+<div class="rainbow-divider footer-divider"></div>
 
 <!-- LIGHTBOX with slider -->
 <div id="lightbox" class="lightbox">
