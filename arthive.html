@@ -203,6 +203,7 @@
       color: var(--section-line);
       font-family: 'Amarante', 'Fjalla One', cursive;
       font-size: clamp(1.45rem, 3.5vw, 2rem);
+      font-weight: 400;
       margin: 2.5rem 0 1rem;
       text-transform: uppercase;
       letter-spacing: 0.08em;
@@ -213,17 +214,17 @@
     .section-heading--charcoal { font-family: 'Akronim', cursive; }
     .section-heading--colored {
       font-family: 'Love Ya Like A Sister', cursive;
-      background: linear-gradient(90deg, #FF00AA, #FF8A3C, #FFF700, #92CC00, #03A6F7, #8702F4);
-      background-clip: text;
-      -webkit-background-clip: text;
-      color: transparent;
-      -webkit-text-fill-color: transparent;
     }
-    .section-heading--digital { font-family: 'Silkscreen', monospace; }
-    .section-heading--ink { font-family: 'Special Elite', monospace; }
-    .section-heading--graphite { font-family: 'Fredericka the Great', cursive; }
-    .section-heading--oil { font-family: 'Frijole', cursive; }
-    .section-heading--watercolor { font-family: 'Rye', 'Rubik Wet Paint', cursive; }
+    .section-heading--colored .colored-letter:nth-child(5n + 1) { color: #FF3030; }
+    .section-heading--colored .colored-letter:nth-child(5n + 2) { color: #FF8A3C; }
+    .section-heading--colored .colored-letter:nth-child(5n + 3) { color: #92CC00; }
+    .section-heading--colored .colored-letter:nth-child(5n + 4) { color: #03A6F7; }
+    .section-heading--colored .colored-letter:nth-child(5n + 5) { color: #8702F4; }
+    .section-heading--digital { font-family: 'Silkscreen', monospace; color: #FFF700; }
+    .section-heading--ink { font-family: 'Special Elite', monospace; color: #C6FD00; }
+    .section-heading--graphite { font-family: 'Fredericka the Great', cursive; color: #20B7E8; }
+    .section-heading--oil { font-family: 'Frijole', cursive; color: #C9A0FF; }
+    .section-heading--watercolor { font-family: 'Rye', 'Rubik Wet Paint', cursive; color: #FF69B4; }
     .section-heading::after {
       content: '';
       position: absolute;
@@ -485,7 +486,7 @@
     <div class="gallery-item"><img src="https://res.cloudinary.com/dhkclqh4d/image/upload/v1770088326/rattlesnake_ow7c6b.png" alt="Rattlesnake"></div>
   </div>
 
-  <h2 class="section-heading section-heading--colored">Colored Pencil</h2>
+  <h2 class="section-heading section-heading--colored"><span class="colored-letter">C</span><span class="colored-letter">o</span><span class="colored-letter">l</span><span class="colored-letter">o</span><span class="colored-letter">r</span><span class="colored-letter">e</span><span class="colored-letter">d</span> <span class="colored-letter">P</span><span class="colored-letter">e</span><span class="colored-letter">n</span><span class="colored-letter">c</span><span class="colored-letter">i</span><span class="colored-letter">l</span></h2>
   <div class="gallery-grid" id="colored-pencil">
     <div class="gallery-item"><img src="https://res.cloudinary.com/dhkclqh4d/image/upload/v1770086031/apple_smoke_molhgf.png" alt="Apple Smoke"></div>
     <div class="gallery-item"><img src="https://res.cloudinary.com/dhkclqh4d/image/upload/v1770086094/Alice_in_wonderland_b0ege7.png" alt="Alice in Wonderland"></div>
